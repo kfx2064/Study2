@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Vue.js</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <label><input type="radio" value="face1.png" v-model="fileName">
+            face1</label><br>
+            <label><input type="radio" value="face2.png" v-model="fileName">
+            face2</label><br>
+            <p>{{ fileName }} 선택</p>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    fileName: ''
+                }
+            })
+        </script>
+    </body>
+</html>

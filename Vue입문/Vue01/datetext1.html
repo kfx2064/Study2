@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Vue.js</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{ myNumber }}</p>
+            <p>{{ myText }}</p>
+            <p>{{ myBool }}</p>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    myNumber: 12345,
+                    myText: 'Hello!!!',
+                    myBool: true
+                }
+            })
+        </script>
+    </body>
+</html>
