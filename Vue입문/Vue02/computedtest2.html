@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Vue.js</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input v-model.number="price" type="number">원 x
+            <input v-model.number="count" type="number">개
+            <p>합계 {{ sum }} 원</p>
+            <p>세금포함 {{ taxIncluded }} 원</p>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    price: 100,
+                    count: 1
+                },
+                computed: {
+                    sum: function() {
+                        return this.price * this.count;
+                    },
+                    taxIncluded: function() {
+                        return this.sum * 1.08;
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
