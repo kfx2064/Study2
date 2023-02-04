@@ -7,7 +7,6 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
     </head>
     <body>
-        <h2>ToDo리스트</h2>
         <div id="app">
             <div v-for="todo in todos">
                 <label>
@@ -21,17 +20,11 @@
             <p>{{ remaining }} / {{ todos.length }}건 처리</p>
         </div>
 
-        <style>
-            .donestyle {
-                text-decoration: line-through;
-                color: lightgray;
-            }
-        </style>
-
         <script>
             new Vue({
                 el: '#app',
                 data: {
+                    addtext: '',
                     todos: [
                         {done:false, text:'빵사기'},
                         {done:false, text:'커피사기'}
@@ -40,8 +33,21 @@
                 computed: {
                     remaining: function() {
                         return this.todos.filter(function(val) {
-                            return val.done;
+                            return val.done == true;
                         }).length;
+                    }
+                },
+                methods: {
+                    addToDo: function() {
+                        if (this.addtext) {
+                            this.todos.push({done:false, text:this.addtext});
+                            this.addtext = '';
+                        }
+                    },
+                    cleanToDo: function() {
+                        this.todos = this.todos.filter(function(val) {
+                            return val.done == false;
+                        })
                     }
                 }
             })

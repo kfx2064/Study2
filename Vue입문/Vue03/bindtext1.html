@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue.js sample</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <img src="book.png">직접지정</img>
+            <img v-bind:src="fileName">v-bind로 지정</img>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    fileName: 'book.png'
+                }
+            })
+        </script>
+    </body>
+</html>
