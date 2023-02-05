@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue.js sample</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+                <li v-for="(item, index) in myArray">{{ index }} : {{ item }}</li>
+            </ul>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    myArray: ['쨈빵', '멜론빵', '크로와상', '슈크림빵']
+                }
+            })
+        </script>
+    </body>
+</html>

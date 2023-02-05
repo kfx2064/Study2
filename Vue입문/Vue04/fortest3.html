@@ -7,7 +7,15 @@
     </head>
     <body>
         <div id="app">
-            <label><input type="radio" value="book.png"></label>
+            <ul>
+                <li v-for="n in 10">{{ n }} X 5 = {{ n * 5 }}</li>
+            </ul>
         </div>
+
+        <script>
+            new Vue({
+                el: '#app'
+            })
+        </script>
     </body>
 </html>

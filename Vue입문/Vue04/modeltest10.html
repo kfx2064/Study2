@@ -7,7 +7,17 @@
     </head>
     <body>
         <div id="app">
-            <label><input type="radio" value="book.png"></label>
+            <input v-model.lazy="myText">
+            <p>입력 후 표시 {{ myText }}</p>
         </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    myText: ''
+                }
+            })
+        </script>
     </body>
 </html>
