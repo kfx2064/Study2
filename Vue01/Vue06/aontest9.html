@@ -7,19 +7,19 @@
     </head>
     <body>
         <div id="app">
-            <p>{{ count }}</p>
-            <button v-on:click="countUp">1씩증가</button>
+            <button value="good" v-bind:disabled="isClick" v-on:click="oneClick">좋아~</button>
         </div>
 
         <script>
             new Vue({
                 el: '#app',
                 data: {
-                    count: 0
+                    isClick: false
                 },
                 methods: {
-                    countUp: function() {
-                        this.count++;
+                    oneClick: function() {
+                        this.isClick = true;
+                        good();
                     }
                 }
             })
