@@ -7,20 +7,16 @@
     </head>
     <body>
         <div id="app">
-            <input v-on:keyup.enter.shift="showAlert" v-model="myText">
-            <p>{{ myText }}</p>
+            <label><input type="checkbox" v-model="myVisible">표시</label>
+            <p v-if="myVisible">체크박스 ON</p>
+            <p v-else>체크박스 OFF</p>
         </div>
 
         <script>
             new Vue({
                 el: '#app',
                 data: {
-                    myText: 'Hello'
-                },
-                methods: {
-                    showAlert: function() {
-                        alert("Shift + Enter 를 눌렀습니다.");
-                    }
+                    myVisible: falses
                 }
             })
         </script>

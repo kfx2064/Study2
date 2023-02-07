@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue.js sample</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <label><input type="checkbox" v-model="myVisible">표시</label>
+            <p v-if="myVisible">체크박스 
+                ON
+            </p>
+            <p v-else>체크박스 OFF</p>
+        </div>
+    </body>
+</html>
