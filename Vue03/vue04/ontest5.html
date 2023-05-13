@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue.js sample</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <button value="good" v-bind:disabled="isClick" v-on:click="oneClick">좋아~</button>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    isClick: false
+                },
+                methods: {
+                    oneClick: function() {
+                        this.isClick = true;
+                        good();
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

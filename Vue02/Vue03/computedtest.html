@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue.js sample</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input v-model.number="price" type="number">원
+            <p>소비세 포함 금액 {{ taxIncluded }} 원</p>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    price: 100
+                },
+                computed: {
+                    taxIncluded: function() {
+                        return this.price * 1.08;
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

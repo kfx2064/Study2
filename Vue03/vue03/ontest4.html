@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue.js sample</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{ count }}</p>
+            <button v-on:click="countUp">1씩증가</button>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    count: 0
+                },
+                methods: {
+                    countUp: function() {
+                        this.count++;
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
