@@ -75,7 +75,11 @@ public class MemberController {
 
         model.addAttribute("jobList", jobList);
 
-        model.addAttribute(service.read(userNo));
+        Member getVO = service.read(userNo);
+
+        System.out.println("getVO : " + getVO.toString());
+
+        model.addAttribute(getVO);
     }
 
     @RequestMapping(value = "/remove", method = RequestMethod.POST)

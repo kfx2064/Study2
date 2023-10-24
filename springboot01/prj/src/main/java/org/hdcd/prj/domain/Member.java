@@ -109,4 +109,20 @@ public class Member implements Serializable {
     public void setAuthList(List<MemberAuth> authList) {
         this.authList = authList;
     }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "userNo=" + userNo +
+                ", userId='" + userId + '\'' +
+                ", userPw='" + userPw + '\'' +
+                ", userName='" + userName + '\'' +
+                ", job='" + job + '\'' +
+                ", coin=" + coin +
+                ", enabled=" + enabled +
+                ", regDate=" + regDate +
+                ", updDate=" + updDate +
+                ", authList=" + authList +
+                '}';
+    }
 }

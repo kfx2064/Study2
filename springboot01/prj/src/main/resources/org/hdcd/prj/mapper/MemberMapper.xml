@@ -25,8 +25,8 @@
     </resultMap>
 
     <select id="readByUserId" resultMap="memberMap">
-        SELECT  mem.user_no
-                , mem.user_id
+        SELECT  mem.user_no         AS user_no
+                , mem.user_id       AS user_id
                 , user_pw
                 , user_name
                 , job
@@ -60,6 +60,7 @@
 
     <select id="read" resultMap="memberMap">
         SELECT  mem.user_no
+                , mem.user_id
                 , user_pw
                 , user_name
                 , job
@@ -67,7 +68,7 @@
                 , reg_date
                 , upd_date
                 , auth
-        FROM    key_member mem
+        FROM    member mem
         LEFT OUTER JOIN member_auth auth
         ON  mem.user_no = auth.user_no
         WHERE   mem.user_no = #{userNo}
