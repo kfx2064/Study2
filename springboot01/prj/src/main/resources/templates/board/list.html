@@ -31,11 +31,25 @@
 
         <tr th:each="board : ${list}">
             <td align="center" th:text="${board.boardNo}">${board.boardNo}</td>
-            <td align="left"><a href="read.html" th:href="@{|/board/read?boardNo=${board.boardNo}|}" th:text="${board.title}">${board.title}</a></td>
+            <td align="left"><a href="read.html" th:href="@{|/board/read${pagination.makeQuery(pagination.pageRequest.page)}&boardNo=${board.boardNo}|}" th:text="${board.title}">${board.title}</a></td>
             <td align="right" th:text="${board.writer}">${board.writer}</td>
             <td align="center" th:text="${#dates.format(board.regDate, 'yyyy-MM-dd HH:mm')}"></td>
         </tr>
     </table>
+
+    <div>
+        <th:block th:if="${pagination.prev}">
+            <a href="list.html" th:href="${pagination.startPage - 1}">&laquo;</a>
+        </th:block>
+
+        <th:block th:each="idx: ${#numbers.sequence(pagination.startPage, pagination.endPage)}">
+            <a href="list.html" th:href="@{|/board/list${pagination.makeQuery(idx)}|}" th:text="${idx}">${idx}</a>
+        </th:block>
+
+        <th:block th:if="${pagination.next && pagination.endPage > 0}">
+            <a href="list.html" th:href="${pagination.endPage + 1}">&raquo;</a>
+        </th:block>
+    </div>
 
     <script th:inline="javascript">
         var result = [[${msg}]];

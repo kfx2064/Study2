@@ -14,6 +14,8 @@
 
     <form id="board" action="list.html" th:action="@{/board/remove}" th:object="${board}" method="POST">
         <input type="hidden" name="boardNo" th:field="*{boardNo}" />
+        <input type="hidden" name="page" th:field="*{page}" />
+        <input type="hidden" name="sizePerPage" th:field="*{sizePerPage}" />
 
         <table>
             <tr>
@@ -52,10 +54,16 @@
 
             var formObj = $("#board");
 
+            var pageObj = $("#page");
+            var sizePerPageObj = $("#sizePerPage");
+
+            var pageVal = pageObj.val();
+            var sizePerPageVal = sizePerPageObj.val();
+
             $("#btnEdit").on("click", function() {
                 var boardNo = $("#boardNo");
                 var boardNoVal = boardNo.val();
-                self.location = "/board/modify?boardNo=" + boardNoVal;
+                self.location = "/board/modify?boardNo=" + boardNoVal + "&page=" + pageVal + "&sizePerPage=" + sizePerPageVal;
             });
 
             $("#btnRemove").on("click", function() {
@@ -64,7 +72,7 @@
             });
 
             $("#btnList").on("click", function() {
-                self.location = "/board/list";
+                self.location = "/board/list?" + "page=" + pageVal + "&sizePerPage=" + sizePerPageVal;
             });
 
         });
