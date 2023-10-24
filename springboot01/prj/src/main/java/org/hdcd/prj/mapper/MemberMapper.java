@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface MemberMapper {
 
-    public Member readyByUserId(String userId);
+    public Member readByUserId(String userId);
 
     public void create(Member member) throws Exception;
 
