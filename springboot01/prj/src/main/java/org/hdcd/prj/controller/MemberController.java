@@ -109,4 +109,34 @@ public class MemberController {
 
         return "redirect:/user/list";
     }
+
+    @RequestMapping(value = "/setup", method = RequestMethod.POST)
+    public String setupAdmin(Member member, RedirectAttributes rttr) throws Exception {
+        if (service.countAll() == 0) {
+            String inputPassword = member.getUserPw();
+
+            member.setUserId("superadmin");
+            member.setUserName("관리자");
+
+            member.setUserPw(passwordEncoder.encode("1234"));
+
+            member.setJob("00");
+
+            service.setupAdmin(member);
+
+            rttr.addFlashAttribute("userName", member.getUserName());
+            return "redirect:/user/registerSuccess";
+        }
+
+        return "redirect:/user/setupFailure";
+    }
+
+    @RequestMapping(value = "/setup", method = RequestMethod.GET)
+    public String setupAdminForm(Member member, Model model) throws Exception {
+        if (service.countAll() == 0) {
+            return "user/setup";
+        }
+
+        return "user/setupFailure";
+    }
 }
