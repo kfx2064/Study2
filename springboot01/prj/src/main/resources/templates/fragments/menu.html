@@ -6,10 +6,25 @@
 			<tr>
 				<td width="80">
 					<a href="../home.html" th:href="@{/}" th:text="#{header.home}">홈</a>
-					<!-- 코드그룹 관리를 메뉴에 추가한다. -->
-					<td width="120"><a href="../codeclass/list.html" th:href="@{/codeclass/list}" th:text="#{menu.codeclass.list}">코드그룹관리</a>
-					<td width="120"><a href="../codedetail/list.html" th:href="@{/codedetail/list}" th:text="#{menu.codedetail.list}">코드관리</a>
-					<td width="120"><a href="../user/list.html" th:href="@{/user/list}" th:text="#{menu.user.admin}">회원관리</a></td>
+
+					<th:block sec:authorize="!isAuthenticated()">
+
+					</th:block>
+
+					<th:block sec:authorize="isAuthenticated()">
+						<th:block sec:authorize="hasRole('ROLE_ADMIN')">
+							<!-- 코드그룹 관리를 메뉴에 추가한다. -->
+							<td width="120"><a href="../codeclass/list.html" th:href="@{/codeclass/list}" th:text="#{menu.codeclass.list}">코드그룹관리</a>
+							<td width="120"><a href="../codedetail/list.html" th:href="@{/codedetail/list}" th:text="#{menu.codedetail.list}">코드관리</a>
+							<td width="120"><a href="../user/list.html" th:href="@{/user/list}" th:text="#{menu.user.admin}">회원관리</a></td>
+						</th:block>
+
+						<th:block sec:authorize="hasRole('ROLE_MEMBER')">
+
+						</th:block>
+
+					</th:block>
+
 				</td>
 			</tr>
 		</table>

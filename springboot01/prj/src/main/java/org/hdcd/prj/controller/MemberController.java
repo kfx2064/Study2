@@ -5,6 +5,7 @@ import org.hdcd.prj.domain.common.CodeLabelValue;
 import org.hdcd.prj.service.CodeService;
 import org.hdcd.prj.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -64,6 +65,7 @@ public class MemberController {
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public void list(Model model) throws Exception {
         model.addAttribute("list", service.list());
     }
@@ -83,6 +85,7 @@ public class MemberController {
     }
 
     @RequestMapping(value = "/remove", method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String remove(int userNo, RedirectAttributes rttr) throws Exception {
         service.remove(userNo);
 
