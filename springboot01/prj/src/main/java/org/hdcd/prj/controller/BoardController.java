@@ -3,6 +3,7 @@ package org.hdcd.prj.controller;
 import org.hdcd.prj.common.security.domain.CustomUser;
 import org.hdcd.prj.domain.Board;
 import org.hdcd.prj.domain.Member;
+import org.hdcd.prj.domain.common.CodeLabelValue;
 import org.hdcd.prj.domain.common.PageRequest;
 import org.hdcd.prj.domain.common.Pagination;
 import org.hdcd.prj.service.BoardService;
@@ -15,6 +16,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("/board")
@@ -52,9 +56,20 @@ public class BoardController {
         Pagination pagination = new Pagination();
         pagination.setPageRequest(pageRequest);
 
-        pagination.setTotalCount(service.count());
+        pagination.setTotalCount(service.count(pageRequest));
 
         model.addAttribute("pagination", pagination);
+
+        List<CodeLabelValue> searchTypeCodeValueList = new ArrayList<CodeLabelValue>();
+        searchTypeCodeValueList.add(new CodeLabelValue("n", "---"));
+        searchTypeCodeValueList.add(new CodeLabelValue("t", "Title"));
+        searchTypeCodeValueList.add(new CodeLabelValue("c", "Content"));
+        searchTypeCodeValueList.add(new CodeLabelValue("w", "Writer"));
+        searchTypeCodeValueList.add(new CodeLabelValue("tc", "Title OR Content"));
+        searchTypeCodeValueList.add(new CodeLabelValue("cw", "Content OR Writer"));
+        searchTypeCodeValueList.add(new CodeLabelValue("tcw", "Title OR Content OR Writer"));
+
+        model.addAttribute("searchTypeCodeValueList", searchTypeCodeValueList);
     }
 
     @RequestMapping(value = "/read", method = RequestMethod.GET)
@@ -65,8 +80,9 @@ public class BoardController {
 
         Board board = service.read(boardNo);
 
+        /*
         board.setPageRequest(pageRequest);
-
+         */
         model.addAttribute(board);
     }
 
@@ -77,6 +93,9 @@ public class BoardController {
 
         rttr.addAttribute("page", pageRequest.getPage());
         rttr.addAttribute("sizePerPage", pageRequest.getSizePerPage());
+
+        rttr.addAttribute("searchType", pageRequest.getSearchType());
+        rttr.addAttribute("keyword", pageRequest.getKeyword());
 
         rttr.addFlashAttribute("msg", "SUCCESS");
 
@@ -90,7 +109,9 @@ public class BoardController {
         model.addAttribute(service.read(boardNo));
          */
         Board board = service.read(boardNo);
+        /*
         board.setPageRequest(pageRequest);
+         */
         model.addAttribute(board);
     }
 
@@ -102,6 +123,9 @@ public class BoardController {
 
         rttr.addAttribute("page", pageRequest.getPage());
         rttr.addAttribute("sizePerPage", pageRequest.getSizePerPage());
+
+        rttr.addAttribute("searchType", pageRequest.getSearchType());
+        rttr.addAttribute("keyword", pageRequest.getKeyword());
 
         return "redirect:/board/list";
     }
