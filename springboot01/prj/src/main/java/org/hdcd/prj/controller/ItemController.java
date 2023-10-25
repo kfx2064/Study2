@@ -1,10 +1,15 @@
 package org.hdcd.prj.controller;
 
 import org.apache.commons.io.IOUtils;
+import org.hdcd.prj.common.security.domain.CustomUser;
 import org.hdcd.prj.domain.Item;
+import org.hdcd.prj.domain.Member;
 import org.hdcd.prj.service.ItemService;
+import org.hdcd.prj.service.MemberService;
+import org.hdcd.prj.service.UserItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.MessageSource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -25,6 +30,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 
 @Controller
@@ -34,8 +40,17 @@ public class ItemController {
     @Autowired
     private ItemService itemService;
 
+    @Autowired
+    private MemberService memberService;
+
+    @Autowired
+    private UserItemService userItemService;
+
     @Value("${upload.path}")
     private String uploadPath;
+
+    @Autowired
+    private MessageSource messageSource;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public void list(Model model) throws Exception {
@@ -225,5 +240,29 @@ public class ItemController {
         model.addAttribute(item);
 
         return "item/read";
+    }
+
+    @RequestMapping(value = "/buy", method = RequestMethod.POST)
+    public String buy(Integer itemId, RedirectAttributes rttr, Authentication authentication) throws Exception {
+        CustomUser customUser = (CustomUser) authentication.getPrincipal();
+        Member member = customUser.getMember();
+
+        int userNo = member.getUserNo();
+
+        member.setCoin(memberService.getCoin(userNo));
+
+        Item item = itemService.read(itemId);
+
+        userItemService.register(member, item);
+
+        String message = messageSource.getMessage("item.purchaseComplete", null, Locale.KOREAN);
+        rttr.addFlashAttribute("msg", message);
+
+        return "redirect:/item/success";
+    }
+
+    @RequestMapping(value = "/success", method = RequestMethod.GET)
+    public String success() throws Exception {
+        return "item/success";
     }
 }
