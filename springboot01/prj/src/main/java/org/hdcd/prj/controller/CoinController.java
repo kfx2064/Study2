@@ -81,4 +81,10 @@ public class CoinController {
     public String success() throws Exception {
         return "coin/success";
     }
+
+    @RequestMapping(value = "/notEnoughCoin", method = RequestMethod.GET)
+    @PreAuthorize("hasRole('ROLE_MEMBER')")
+    public void notEnoughCoin(Model model) throws Exception {
+
+    }
 }
