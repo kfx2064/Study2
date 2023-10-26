@@ -7,26 +7,17 @@
 <body>
 <h1>Register Form</h1>
 
-<form th:action="@{/register01}" method="post">
-    userId: <input type="text" name="userId" value="hongkd"><br>
-    password: <input type="text" name="password" value="1234"><br>
-    coin: <input type="text" name="coin" value="100"><br>
-    <input type="submit" value="register01">
-</form>
+<a th:href="@{registerByGet01?userId=hongkd&dateOfBirth=1234}">registerByGet01?userId=hongkd</a><br>
+<a th:href="@{registerByGet01?userId=hongkd&dateOfBirth=2018-09-08}">registerByGet01?2018-09-08</a><br>
+<a th:href="@{registerByGet01?userId=hongkd&dateOfBirth=20180908}">registerByGet01?20180908</a><br>
+<a th:href="@{registerByGet01?userId=hongkd&dateOfBirth=2018/09/08}">registerByGet01?2018/09/08</a>
+<a th:href="@{registerByGet02?userId=hongkd&dateOfBirth=20180908}">registerByGet02?2018908</a>
 
-<form th:action="@{/register02}" method="post">
+<form th:action="@{/register}" method="post">
     userId: <input type="text" name="userId" value="hongkd"><br>
     password: <input type="text" name="password" value="1234"><br>
-    coin: <input type="text" name="coin" value="100"><br>
-    <input type="submit" value="register02">
-</form>
-
-<form th:action="@{/register03}" method="post">
-    uid: <input type="text" name="uid" value="50"><br>
-    userId: <input type="text" name="userId" value="hongkd"><br>
-    password: <input type="text" name="password" value="1234"><br>
-    coin: <input type="text" name="coin" value="100"><br>
-    <input type="submit" value="register03">
+    dateOfBirth: <input type="text" name="dateOfBirth" value="20180908"><br>
+    <input type="submit" value="register">
 </form>
 
 </body>

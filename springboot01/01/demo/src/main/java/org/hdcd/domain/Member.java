@@ -1,11 +1,18 @@
 package org.hdcd.domain;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
+
 public class Member {
 
     private String userId = "hongkd";
     private String password = "1234";
 
     private int coin = 100;
+
+    @DateTimeFormat(pattern = "yyyyMMdd")
+    private Date dateOfBirth;
 
     public String getUserId() {
         return userId;
@@ -29,5 +36,13 @@ public class Member {
 
     public void setCoin(int coin) {
         this.coin = coin;
+    }
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 }
