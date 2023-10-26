@@ -1,6 +1,7 @@
 package org.hdcd.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Board implements Serializable {
 
@@ -10,6 +11,8 @@ public class Board implements Serializable {
     private String title;
     private String content;
     private String writer;
+
+    private Date regDate;
 
     public int getBoardNo() {
         return boardNo;
@@ -43,13 +46,11 @@ public class Board implements Serializable {
         this.writer = writer;
     }
 
-    @Override
-    public String toString() {
-        return "Board{" +
-                "boardNo=" + boardNo +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", writer='" + writer + '\'' +
-                '}';
+    public Date getRegDate() {
+        return regDate;
+    }
+
+    public void setRegDate(Date regDate) {
+        this.regDate = regDate;
     }
 }
