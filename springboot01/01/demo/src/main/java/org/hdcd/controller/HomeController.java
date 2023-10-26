@@ -16,23 +16,14 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-	
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		String formattedDate = dateFormat.format(date);
-	
-		model.addAttribute("serverTime", formattedDate );
-	
-		return "formHome";
+	@RequestMapping(value = "/goHome0101", method = RequestMethod.GET)
+	public void home0101() {
+		logger.info("home0101");
 	}
 
-	@RequestMapping(value = "/ajaxHome", method = RequestMethod.GET)
-	public String ajaxHome() {
-
-		return "ajaxHome";
+	@RequestMapping(value = "/sub/goHome0102", method = RequestMethod.GET)
+	public void home0102() {
+		logger.info("home0102");
 	}
 
 }
