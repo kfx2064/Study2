@@ -2,15 +2,17 @@ package org.hdcd.domain;
 
 public class Member {
 
-    private String userName = "hongkd";
+    private String userId = "hongkd";
     private String password = "1234";
 
-    public String getUserName() {
-        return userName;
+    private int coin = 100;
+
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getPassword() {
@@ -19,5 +21,13 @@ public class Member {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getCoin() {
+        return coin;
+    }
+
+    public void setCoin(int coin) {
+        this.coin = coin;
     }
 }
