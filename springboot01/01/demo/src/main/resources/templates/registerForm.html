@@ -7,141 +7,60 @@
 <body>
 <h1>Register Form</h1>
 
-<form th:action="@{/registerUserId}" method="post">
-    userId: <input type="text" name="userId" /><br>
-    <input type="submit" value="registerUserId">
+<form th:action="@{/registerFile01}" method="post" enctype="multipart/form-data">
+    <input type="file" name="picture"> <input type="submit">
 </form>
 
-<form th:action="@{/registerMemberUserId}" method="post">
-    userId: <input type="text" name="userId" /><br>
-    <input type="submit" value="registerMemberUserId">
+<form th:action="@{/registerFile02}" method="post" enctype="multipart/form-data">
+    userId: <input type="text" name="userId" value="hongkd"><br>
+    password: <input type="text" name="password" value="1234"><br>
+    <input type="file" name="picture"> <input type="submit">
 </form>
 
-<form th:action="@{/registerPassword}" method="post">
-    password: <input type="password" name="password" /><br>
-    <input type="submit" value="registerPassword">
+<form th:action="@{/registerFile03}" method="post" enctype="multipart/form-data">
+    userId: <input type="text" name="userId" value="hongkd"><br>
+    password: <input type="text" name="password" value="1234"><br>
+    <input type="file" name="picture"> <input type="submit">
 </form>
 
-<form th:action="@{/registerRadio}" method="post">
-    gender: <br>
-    <input type="radio" name="gender" value="male" checked>Male<br>
-    <input type="radio" name="gender" value="female">Female<br>
-    <input type="radio" name="gender" value="other">Other<br>
-    <input type="submit" value="registerRadio">
+<form th:action="@{/registerFile04}" method="post" enctype="multipart/form-data">
+    userId: <input type="text" name="userId" value="hongkd"><br>
+    password: <input type="text" name="password" value="1234"><br>
+    <input type="file" name="picture"> <input type="submit">
 </form>
 
-<form th:action="@{/registerSelect}" method="post">
-    nationality:
-    <select name="nationality">
-        <option value="Korea" selected>대한민국</option>
-        <option value="Germany">독일</option>
-        <option value="Australia">호주</option>
-        <option value="Canada">캐나다</option>
-    </select><br>
-    <input type="submit" value="registerSelect">
+<form th:action="@{/registerFile05}" method="post" enctype="multipart/form-data">
+    userId: <input type="text" name="userId" value="hongkd"><br>
+    password: <input type="text" name="password" value="1234"><br>
+    <input type="file" name="picture"><br>
+    <input type="file" name="picture2"><input type="submit">
 </form>
 
-<form th:action="@{/registerMultipleSelect01}" method="post">
-    cars:
-    <select name="cars" multiple>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="audi">Audi</option>
-    </select><br>
-    <input type="submit" value="registerMultipleSelect01">
+<form th:action="@{/registerFile06}" method="post" enctype="multipart/form-data">
+    userId: <input type="text" name="userId" value="hongkd"><br>
+    password: <input type="text" name="password" value="1234"><br>
+    <input type="file" name="pictureList[0]"><br>
+    <input type="file" name="pictureList[1]"><input type="submit">
 </form>
 
-<form th:action="@{/registerMultipleSelect02}" method="post">
-    carArray:
-    <select name="carArray" multiple>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="audi">Audi</option>
-    </select><br>
-    <input type="submit" value="registerMultipleSelect02">
+<form th:action="@{/registerFile06}" method="post" enctype="multipart/form-data">
+    userId: <input type="text" name="userId" value="hongkd"><br>
+    password: <input type="text" name="password" value="1234"><br>
+    <input type="file" name="pictureList"><br>
+    <input type="file" name="pictureList"><input type="submit">
 </form>
 
-<form th:action="@{/registerMultipleSelect03}" method="post">
-    carList:
-    <select name="carList" multiple>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="Audi">Audi</option>
-    </select><br>
-    <input type="submit" value="registerMultileSelect03">
+<form th:action="@{/registerFile07}" method="post" enctype="multipart/form-data">
+    userId: <input type="text" name="userId" value="hongkd"><br>
+    password: <input type="text" name="password" value="1234"><br>
+    <input type="file" name="pictureList[0]"><br>
+    <input type="file" name="pictureList[1]"><input type="submit">
 </form>
 
-<form th:action="@{/registerCheckbox01}" method="post">
-    hobby:<br>
-    <input type="checkbox" name="hobby" value="Sports">Sports<br>
-    <input type="checkbox" name="hobby" value="Music">Music<br>
-    <input type="checkbox" name="hobby" value="Movie">Movie<br>
-    <input type="submit" value="registerCheckbox01">
-</form>
-
-<form th:action="@{/registerCheckbox02}" method="post">
-    hobbyList:<br>
-    <input type="checkbox" name="hobbyList" value="Sports">Sports<br>
-    <input type="checkbox" name="hobbyList" value="Music">Music<br>
-    <input type="checkbox" name="hobbyList" value="Movie">Movie<br>
-    <input type="submit" value="registerCheckbox02">
-</form>
-
-<form th:action="@{/registerCheckbox03}" method="post">
-    hobbyArray:<br>
-    <input type="checkbox" name="hobbyArray" value="Sports">Sports<br>
-    <input type="checkbox" name="hobbyArray" value="Music">Music<br>
-    <input type="checkbox" name="hobbyArray" value="Movie">Movie<br>
-    <input type="submit" value="registerCheckbox03">
-</form>
-
-<form th:action="@{/registerCheckbox04}" method="post">
-    developer: <input type="checkbox" name="developer" value="Y"><br>
-    <input type="submit" value="registerCheckbox04">
-</form>
-
-<form th:action="@{/registerCheckbox05}" method="post">
-    foreigner: <input type="checkbox" name="foreigner" value="false"><br>
-    <input type="submit" value="registerCheckbox05">
-</form>
-
-<form th:action="@{/registerAddress}" method="post">
-    postCode: <input type="text" name="postCode" /><br>
-    location: <input type="text" name="location" /><br>
-    <input type="submit" value="registerAddress">
-</form>
-
-<form th:action="@{/registerAddress}" method="post">
-    address.postCode: <input type="text" name="address.postCode" /><br>
-    address.location: <input type="text" name="address.location" /><br>
-    <input type="submit" value="registerUserAddress">
-</form>
-
-<form th:action="@{/registerUserCardList}" method="post">
-    카드1 - 번호: <input type="text" name="cardList[0].no" /><br>
-    카드1 - 유효년월: <input type="text" name="cardList[0].validMonth" /><br><br>
-    카드2 - 번호: <input type="text" name="cardList[1].no" /><br>
-    카드2 - 유효년월: <input type="text" name="cardList[1].validMonth" /><br><br>
-    <input type="submit" value="registerUserCardList">
-</form>
-
-<form th:action="@{/registerTextArea}" method="post">
-    introduction: <br>
-    <textarea name="introduction" rows="6" cols="50"></textarea><br>
-    <input type="submit" value="registerTextArea">
-</form>
-
-<form th:action="@{/registerDate01}" method="post">
-    dateOfBirth: <input type="text" name="dateOfBirth" /><br>
-    <input type="submit" value="registerDate01">
-</form>
-
-<form th:action="@{/registerDate02}" method="post">
-    dateOfBirth: <input type="text" name="dateOfBirth" /><br>
-    <input type="submit" value="registerDate02">
+<form th:action="@{/registerFile08}" method="post" enctype="multipart/form-data">
+    userId: <input type="text" name="userId" value="hongkd"><br>
+    password: <input type="text" name="password" value="1234"><br>
+    <input type="file" name="pictureList" multiple><input type="submit">
 </form>
 
 </body>
