@@ -1,12 +1,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
-
 <html>
 <head>
     <title>Home</title>
 </head>
 <body>
-<h1>Home0301</h1>
-
-<img src="../static/images/player.png" th:src="@{/images/player.png}" />
+<th:block th:each="hobby : ${member.hobbyArray}">
+    <p th:text="${hobby}">hobby</p>
+</th:block>
 </body>
 </html>

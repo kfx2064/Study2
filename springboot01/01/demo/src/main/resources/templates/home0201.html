@@ -1,21 +1,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
-
 <html>
 <head>
     <title>Home</title>
 </head>
 <body>
-<h1>Home0201</h1>
-
-<form id="board" action="success.html" th:action="@{/register}" method="POST">
-    <table>
-        <tr>
-            <td>Title</td>
-            <td><input type="text" name="title" /></td>
-        </tr>
-    </table>
-
-    <button type="submit" id="btnRegister">Regiser</button>
-</form>
+<div th:switch="${member.gender}">
+    <p th:case="M">male</p>
+    <p th:case="F">female</p>
+    <p th:case="*">others</p>
+</div>
 </body>
 </html>

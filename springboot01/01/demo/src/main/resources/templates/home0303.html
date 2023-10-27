@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+<th:block th:each="card : ${member.cardList}">
+    <span th:text="${card.no}">card.no</span>
+    <span th:text="${card.validMonth}">card.validMonth</span>
+    <br/>
+</th:block>
+
+<th:block th:each="card : ${member.cardList}">
+    [[${card.no}]]
+    [[${card.validMonth}]]
+</th:block>
+</body>
+</html>

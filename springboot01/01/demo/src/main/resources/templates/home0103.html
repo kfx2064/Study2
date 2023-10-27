@@ -4,12 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<th:block th:if="${member.hobbyArray == null}">
-    <p>member.hobbyArray == null</p>
-</th:block>
-
-<th:block th:if="${member.hobbyArray eq null}">
-    <p>member.hobbyArray eq null</p>
+<th:block th:unless="${member.foreigner}">
+    <p>member.foreigner == false</p>
 </th:block>
 </body>
 </html>
