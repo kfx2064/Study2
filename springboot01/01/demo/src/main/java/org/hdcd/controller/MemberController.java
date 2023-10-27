@@ -24,15 +24,6 @@ public class MemberController {
         return "registerForm";
     }
 
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String register(Member member, RedirectAttributes rttr) throws Exception {
-        logger.info("register");
-
-        rttr.addFlashAttribute("msg", "success");
-
-        return "redirect:/result";
-    }
-
     @RequestMapping(value = "/result", method = RequestMethod.GET)
     public String result() {
         logger.info("result");
