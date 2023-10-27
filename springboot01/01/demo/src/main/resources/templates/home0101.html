@@ -4,8 +4,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<p th:text="|Hello, ${username}!|">greeting</p>
-<p>Hello, <span th:text="${username}">name</span></p>
-<p>Hello, [[${username}]]</p>
+<div th:insert="~{fragments/header::header}"></div>
+
+<div>
+    <h1 th:text="${msg}">greeting</h1>
+</div>
+
+<div th:insert="~{fragments/footer::footer}"></div>
 </body>
 </html>

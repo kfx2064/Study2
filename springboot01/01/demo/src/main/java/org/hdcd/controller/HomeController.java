@@ -38,37 +38,16 @@ public class HomeController {
 
 	@RequestMapping(value = "/home0101", method = RequestMethod.GET)
 	public String home0101(Model model) {
-		model.addAttribute("username", "Sebastian");
+		model.addAttribute("msg", "Hello world!");
 
 		return "home0101";
 	}
 
-	@RequestMapping(value = "/home0102", method = RequestMethod.GET)
-	public String home0102(Model model) {
-		model.addAttribute("username", "<b>Sebastian</b>");
-
-		return "home0102";
-	}
-
 	@RequestMapping(value = "/home0201", method = RequestMethod.GET)
 	public String home0201(Model model) {
-		model.addAttribute("username", "<b>Sebastian</b>");
+		model.addAttribute("msg", "Hello world!");
 
 		return "home0201";
-	}
-
-	@RequestMapping(value = "/home0301", method = RequestMethod.GET)
-	public String home0301(Model model) {
-		model.addAttribute("username", "Sebastian");
-
-		return "home0301";
-	}
-
-	@RequestMapping(value = "/home0401", method = RequestMethod.GET)
-	public String home0401(Model model) {
-		model.addAttribute("username", "Sebastian");
-
-		return "home0401";
 	}
 
 }

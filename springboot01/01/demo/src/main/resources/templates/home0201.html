@@ -5,8 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<p>Hello, [[${username}]]!</p>
-<p>Hello, [(${username})]!</p>
-<p th:inline="none">Hello, [[${username}]]!</p>
+<div th:replace="~{fragments/header::header}"></div>
+
+<div>
+    <h1 th:text="${msg}">greeting</h1>
+</div>
+
+<div th:replace="~{fragments/footer::footer}"></div>
 </body>
 </html>
