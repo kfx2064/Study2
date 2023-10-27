@@ -19,6 +19,13 @@ public class BoardController {
 
     private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public String boardList() {
+        logger.info("boardList.");
+
+        return "board/list";
+    }
+
     @RequestMapping(value = "/{boardNo}", method = RequestMethod.GET, produces = "application/xml")
     public ResponseEntity<Board> readToXml(@PathVariable("boardNo") int boardNo) {
         logger.info("readToXml");
