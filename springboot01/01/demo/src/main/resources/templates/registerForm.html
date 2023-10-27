@@ -4,64 +4,42 @@
     <title>Home</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+
+<script src="/js/jQuery-3.7.1.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#inputFile").on("change", function (event) {
+
+            console.log("chagne");
+
+            var files = event.target.files;
+            var file = files[0];
+
+            console.log(file);
+
+            var formData = new FormData();
+
+            formData.append("file", file);
+
+            $.ajax({
+                type : "post"
+                , url : "/uploadAjax"
+                , data : formData
+                , dataType : "text"
+                , processData : false
+                , contentType : false
+                , success : function (data) {
+                    alert(data);
+                }
+            });
+        });
+    })
+</script>
 <body>
-<h1>Register Form</h1>
-
-<form th:action="@{/registerFile01}" method="post" enctype="multipart/form-data">
-    <input type="file" name="picture"> <input type="submit">
-</form>
-
-<form th:action="@{/registerFile02}" method="post" enctype="multipart/form-data">
-    userId: <input type="text" name="userId" value="hongkd"><br>
-    password: <input type="text" name="password" value="1234"><br>
-    <input type="file" name="picture"> <input type="submit">
-</form>
-
-<form th:action="@{/registerFile03}" method="post" enctype="multipart/form-data">
-    userId: <input type="text" name="userId" value="hongkd"><br>
-    password: <input type="text" name="password" value="1234"><br>
-    <input type="file" name="picture"> <input type="submit">
-</form>
-
-<form th:action="@{/registerFile04}" method="post" enctype="multipart/form-data">
-    userId: <input type="text" name="userId" value="hongkd"><br>
-    password: <input type="text" name="password" value="1234"><br>
-    <input type="file" name="picture"> <input type="submit">
-</form>
-
-<form th:action="@{/registerFile05}" method="post" enctype="multipart/form-data">
-    userId: <input type="text" name="userId" value="hongkd"><br>
-    password: <input type="text" name="password" value="1234"><br>
-    <input type="file" name="picture"><br>
-    <input type="file" name="picture2"><input type="submit">
-</form>
-
-<form th:action="@{/registerFile06}" method="post" enctype="multipart/form-data">
-    userId: <input type="text" name="userId" value="hongkd"><br>
-    password: <input type="text" name="password" value="1234"><br>
-    <input type="file" name="pictureList[0]"><br>
-    <input type="file" name="pictureList[1]"><input type="submit">
-</form>
-
-<form th:action="@{/registerFile06}" method="post" enctype="multipart/form-data">
-    userId: <input type="text" name="userId" value="hongkd"><br>
-    password: <input type="text" name="password" value="1234"><br>
-    <input type="file" name="pictureList"><br>
-    <input type="file" name="pictureList"><input type="submit">
-</form>
-
-<form th:action="@{/registerFile07}" method="post" enctype="multipart/form-data">
-    userId: <input type="text" name="userId" value="hongkd"><br>
-    password: <input type="text" name="password" value="1234"><br>
-    <input type="file" name="pictureList[0]"><br>
-    <input type="file" name="pictureList[1]"><input type="submit">
-</form>
-
-<form th:action="@{/registerFile08}" method="post" enctype="multipart/form-data">
-    userId: <input type="text" name="userId" value="hongkd"><br>
-    password: <input type="text" name="password" value="1234"><br>
-    <input type="file" name="pictureList" multiple><input type="submit">
-</form>
-
+<h1>Ajax File Upload</h1>
+<div>
+    <input type="file" id="inputFile">
+</div>
 </body>
 </html>
