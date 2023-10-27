@@ -1,16 +1,14 @@
-<html xmlns:th="http://www.thymeleaf.org">
-<html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/main_template}">
+
 <head>
     <title>Home</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<div th:replace="~{fragments/header::header}"></div>
-
-<div>
-    <h1 th:text="${msg}">greeting</h1>
+<div layout:fragment="content">
+    <p>Home0201 Content</p>
 </div>
-
-<div th:replace="~{fragments/footer::footer}"></div>
 </body>
 </html>

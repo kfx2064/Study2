@@ -5,14 +5,14 @@
 </head>
 <script src="/js/jQuery-3.7.1.min.js"></script>
 <body>
-<h1>Spring Form</h1>
-<form action="result.html" th:action="@{/register}" th:object="${member}" method="POST">
+<h2>Spring Form</h2>
+<form action="result.html" th:action="@{/register}" th:object="${user}" method="POST">
     <table>
         <tr>
             <td>유저ID</td>
             <td>
                 <input type="text" name="text" th:field="*{userId}" />
-                <font color="read">
+                <font color="red">
                     <span th:if="${#fields.hasErrors('userId')}" th:errors="*{userId}">userId의 에러 메시지</span>
                 </font>
             </td>
