@@ -26,16 +26,23 @@ public class HomeController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-
-		String formattedDate = dateFormat.format(date);
-
-		model.addAttribute("serverTime", formattedDate);
+		model.addAttribute("msg", "Hello world!");
 
 		return "home";
+	}
+
+	@RequestMapping(value = "/home0101", method = RequestMethod.GET)
+	public String home0101(Model model) {
+		model.addAttribute("msg", "<b>Hello world!</b>");
+
+		return "home0101";
+	}
+
+	@RequestMapping(value = "/home0102", method = RequestMethod.GET)
+	public String home0102(Model model) {
+		model.addAttribute("msg", "<b>Hello world!</b>");
+
+		return "home0102";
 	}
 
 }
