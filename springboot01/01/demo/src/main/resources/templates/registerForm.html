@@ -1,45 +1,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <title>Home</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-
 <script src="/js/jQuery-3.7.1.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("#inputFile").on("change", function (event) {
-
-            console.log("chagne");
-
-            var files = event.target.files;
-            var file = files[0];
-
-            console.log(file);
-
-            var formData = new FormData();
-
-            formData.append("file", file);
-
-            $.ajax({
-                type : "post"
-                , url : "/uploadAjax"
-                , data : formData
-                , dataType : "text"
-                , processData : false
-                , contentType : false
-                , success : function (data) {
-                    alert(data);
-                }
-            });
-        });
-    })
-</script>
 <body>
-<h1>Ajax File Upload</h1>
-<div>
-    <input type="file" id="inputFile">
-</div>
+<h1>Register Form</h1>
+<form action="result.html" th:action="@{/register}" method="post">
+    userId : <input type="text" name="userId" value="hongkd"><br>
+    password : <input type="text" name="password" value="1234"><br>
+
+    <input type="submit" value="register">
+</form>
 </body>
 </html>
