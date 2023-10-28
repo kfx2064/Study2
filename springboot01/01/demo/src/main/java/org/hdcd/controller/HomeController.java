@@ -12,6 +12,8 @@ import org.hdcd.domain.Card;
 import org.hdcd.domain.Member;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -29,25 +31,23 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
+	@Autowired
+	private MessageSource messageSource;
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		model.addAttribute("msg", "Hello world!");
+		logger.info("Welcome home! The client locale is {}.", locale);
+
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(
+				DateFormat.LONG, DateFormat.LONG, locale
+		);
+
+		String formattedDate = dateFormat.format(date);
+
+		model.addAttribute("serverTime", formattedDate);
 
 		return "home";
-	}
-
-	@RequestMapping(value = "/home0101", method = RequestMethod.GET)
-	public String home0101(Model model) {
-		model.addAttribute("msg", "Hello world!");
-
-		return "home0101";
-	}
-
-	@RequestMapping(value = "/home0201", method = RequestMethod.GET)
-	public String home0201(Model model) {
-		model.addAttribute("msg", "Hello world!");
-
-		return "home0201";
 	}
 
 }
