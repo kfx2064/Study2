@@ -3,6 +3,7 @@ package org.hdcd.domain;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -35,6 +36,7 @@ public class Member implements Serializable {
     private List<String> hobbyList;
     private List<String> carList;
     private String introduction;
+    private List<MemberAuth> authList;
 
     public int getUserNo() {
         return userNo;
@@ -218,5 +220,43 @@ public class Member implements Serializable {
 
     public void setIntroduction(String introduction) {
         this.introduction = introduction;
+    }
+
+    public List<MemberAuth> getAuthList() {
+        return authList;
+    }
+
+    public void setAuthList(List<MemberAuth> authList) {
+        this.authList = authList;
+    }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "userNo=" + userNo +
+                ", userId='" + userId + '\'' +
+                ", userPw='" + userPw + '\'' +
+                ", userName='" + userName + '\'' +
+                ", regDate=" + regDate +
+                ", updDate=" + updDate +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", birthDay='" + birthDay + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", address=" + address +
+                ", cardList=" + cardList +
+                ", gender='" + gender + '\'' +
+                ", developer='" + developer + '\'' +
+                ", foreigner=" + foreigner +
+                ", nationality='" + nationality + '\'' +
+                ", cars='" + cars + '\'' +
+                ", carArray=" + Arrays.toString(carArray) +
+                ", hobby='" + hobby + '\'' +
+                ", hobbyArray=" + Arrays.toString(hobbyArray) +
+                ", hobbyList=" + hobbyList +
+                ", carList=" + carList +
+                ", introduction='" + introduction + '\'' +
+                ", authList=" + authList +
+                '}';
     }
 }

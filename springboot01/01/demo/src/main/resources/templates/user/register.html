@@ -14,12 +14,16 @@
             formObj.attr("method", "post");
             formObj.submit();
         });
+
+        $("#btnList").on("click", function () {
+            self.location = "/user/list";
+        });
     });
 </script>
 <body>
 <h3>REGISTER</h3>
 
-<form id="member" action="success.html" th:action="@{/user/register}" th:object="${member}" method="POST">
+<form id="member" action="success.html" th:action="@{register}" th:object="${member}" method="POST">
     <table>
         <tr>
             <td>userid</td>
@@ -57,6 +61,7 @@
 
 <div>
     <button type="submit" id="btnRegister">Register</button>
+    <button type="submit" id="btnList">List</button>
 </div>
 </body>
 </html>
