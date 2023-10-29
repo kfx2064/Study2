@@ -23,9 +23,46 @@ public class BoardController {
     @Autowired
     private BoardService service;
 
-    @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public void registerForm(Board board, Model model) throws Exception {
+    @RequestMapping(value = "/search", method = RequestMethod.POST)
+    public String search(String title, Model model) throws Exception {
+        Board board = new Board();
+        board.setTitle(title);
 
+        model.addAttribute("board", board);
+
+        model.addAttribute("list", service.search(title));
+
+        return "board/list";
+    }
+
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public void list(Model model) throws Exception {
+        logger.info("list");
+        model.addAttribute("board", new Board());
+        model.addAttribute("list", service.list());
+    }
+
+    @RequestMapping(value = "/modify", method = RequestMethod.POST)
+    public String modify(Board board, Model model) throws Exception {
+        logger.info("modify");
+
+        service.modify(board);
+
+        model.addAttribute("msg", "수정이 완료되었습니다.");
+
+        return "board/success";
+    }
+
+    @RequestMapping(value = "/modify", method = RequestMethod.GET)
+    public void modifyForm(int boardNo, Model model) throws Exception {
+        logger.info("modifyForm");
+        model.addAttribute(service.read(boardNo));
+    }
+
+    @RequestMapping(value = "/read", method = RequestMethod.GET)
+    public void read(@RequestParam("boardNo") int boardNo, Model model) throws Exception {
+        logger.info("read");
+        model.addAttribute(service.read(boardNo));
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
@@ -39,16 +76,9 @@ public class BoardController {
         return "board/success";
     }
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public void list(Model model) throws Exception {
-        logger.info("list");
-        model.addAttribute("list", service.list());
-    }
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public void registerForm(Board board, Model model) throws Exception {
 
-    @RequestMapping(value = "/read", method = RequestMethod.GET)
-    public void read(@RequestParam("boardNo") int boardNo, Model model) throws Exception {
-        logger.info("read");
-        model.addAttribute(service.read(boardNo));
     }
 
     @RequestMapping(value = "/remove", method = RequestMethod.POST)
@@ -62,20 +92,5 @@ public class BoardController {
         return "board/success";
     }
 
-    @RequestMapping(value = "/modify", method = RequestMethod.GET)
-    public void modifyForm(int boardNo, Model model) throws Exception {
-        logger.info("modifyForm");
-        model.addAttribute(service.read(boardNo));
-    }
 
-    @RequestMapping(value = "/modify", method = RequestMethod.POST)
-    public String modify(Board board, Model model) throws Exception {
-        logger.info("modify");
-
-        service.modify(board);
-
-        model.addAttribute("msg", "수정이 완료되었습니다.");
-
-        return "board/success";
-    }
 }

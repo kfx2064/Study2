@@ -1,0 +1,60 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Item</title>
+</head>
+<script src="/js/jQuery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var formObj = $("#item");
+
+        $("#btnRemove").on("click", function () {
+            formObj.attr("action", "/item/remove");
+            formObj.attr("method", "post");
+            formObj.submit();
+        });
+
+        $("#btnList").on("click", function () {
+            self.location = "/item/list";
+        });
+    });
+</script>
+<body>
+<h2>REMOVE</h2>
+<form id="item" action="success.html" th:action="@{remove}"
+      th:object="${item}" method="POST">
+    <input type="hidden" name="itemId" th:field="*{itemId}" />
+
+    <table>
+        <tr>
+            <td>상품명</td>
+            <td>
+                <input type="text" name="itemName" th:field="*{itemName}" disabled="disabled" />
+            </td>
+        </tr>
+        <tr>
+            <td>가격</td>
+            <td>
+                <input type="text" name="price" th:field="*{price}" disabled="disabled" />&nbsp;원
+            </td>
+        </tr>
+        <tr>
+            <td>파일</td>
+            <td>
+                <img src="display?itemId=${item.itemId}" th:src="@{|display?itemId=${item.itemId}|}" width="210" height="240" />
+            </td>
+        </tr>
+        <tr>
+            <td>개요</td>
+            <td>
+                <textarea name="description" th:field="*{description}" disabled="disabled"></textarea>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<div>
+    <button type="submit" id="btnRemove">Remove</button>
+    <button type="submit" id="btnList">List</button>
+</div>
+</body>
+</html>

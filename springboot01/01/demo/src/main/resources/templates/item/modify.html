@@ -1,0 +1,80 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Item</title>
+</head>
+<script src="/js/jQuery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var formObj = $("#item");
+
+        $("#btnModify").on("click", function () {
+            formObj.attr("action", "/item/modify");
+            formObj.attr("method", "post");
+            formObj.submit();
+        });
+
+        $("#btnList").on("click", function () {
+            self.location = "/item/list";
+        });
+    });
+</script>
+<body>
+<h2>MODIFY</h2>
+
+<form id="item" action="success.html" th:action="@{modify}" th:object="${item}"
+      method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="itemId" th:field="*{itemId}" />
+    <input type="hidden" name="pictureUrl" th:field="*{pictureUrl}" />
+
+    <table>
+        <tr>
+            <td>상품명</td>
+            <td>
+                <input type="text" name="itemName" th:field="*{itemName}" />
+            </td>
+            <td>
+                <font color="red">
+                    <span th:if="${#fields.hasErrors('itemName')}" th:errors="*{itemName}">
+                        itemName의 에러 메시지
+                    </span>
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td>가격</td>
+            <td>
+                <input type="text" name="price" th:field="*{price}" />&nbsp;원
+            </td>
+            <td>
+                <font color="red">
+                    <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}">
+                        price의 에러 메시지
+                    </span>
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td>파일</td>
+            <td><input type="file" name="picture" /></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>개요</td>
+            <td>
+                <textarea name="description" th:field="*{description}"></textarea>
+            </td>
+            <td>
+                <font color="red">
+                    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}">description의 에러 메시지</span>
+                </font>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<div>
+    <button type="submit" id="btnModify">Modify</button>
+    <button type="submit" id="btnList">List</button>
+</div>
+</body>
+</html>
