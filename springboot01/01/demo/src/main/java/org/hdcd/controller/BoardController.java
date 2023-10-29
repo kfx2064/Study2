@@ -25,7 +25,7 @@ public class BoardController {
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public void registerForm(Board board, Model model) throws Exception {
-        logger.info("registerForm");
+
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)

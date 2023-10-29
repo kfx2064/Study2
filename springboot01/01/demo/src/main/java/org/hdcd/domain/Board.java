@@ -1,5 +1,6 @@
 package org.hdcd.domain;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,8 +9,11 @@ public class Board implements Serializable {
     private static final long serialVersionUID = -3195144465140529449L;
 
     private int boardNo;
+
     private String title;
+
     private String content;
+
     private String writer;
 
     private Date regDate;
@@ -52,5 +56,16 @@ public class Board implements Serializable {
 
     public void setRegDate(Date regDate) {
         this.regDate = regDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Board{" +
+                "boardNo=" + boardNo +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", writer='" + writer + '\'' +
+                ", regDate=" + regDate +
+                '}';
     }
 }
