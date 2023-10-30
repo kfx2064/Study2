@@ -5,31 +5,75 @@
 
 <mapper namespace="org.hdcd.mapper.TestMapper">
 
-    <select id="list" resultType="org.hdcd.domain.Board">
+    <insert id="create">
+        INSERT INTO item2
+        (
+            item_name
+            , price
+            , description
+            , picture_url
+            , picture_url2
+        )
+        VALUES
+        (
+            #{itemName}
+            , #{price}
+            , #{description}
+            , #{pictureUrl}
+            , #{pictureUrl2}
+        )
+    </insert>
+
+    <select id="read" resultType="org.hdcd.domain.Item">
+        SELECT  item_id             AS itemId
+                , item_name         AS itemName
+                , price             AS price
+                , description       AS description
+                , picture_url       AS pictureUrl
+                , picture_url2      AS pictureUrl2
+        FROM    item2
+        WHERE   item_id = #{itemId}
+    </select>
+
+    <update id="update">
+        UPDATE  item2
+        SET     item_name = #{itemName}
+                , price = #{price}
+                , description = #{description}
+                , picture_url = #{pictureUrl}
+                , picture_url2 = #{pictureUrl2}
+        WHERE   item_id = #{itemId}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM item2
+        WHERE   item_id = #{itemId}
+    </delete>
+
+    <select id="list" resultType="org.hdcd.domain.Item">
         <![CDATA[
-        SELECT  board_no AS boardNo
-             , title
-             , content
-             , writer
-             , reg_date AS regDate
-        FROM    board
-        WHERE   board_no > 0
-        ORDER BY    board_no DESC
-               , reg_date DESC
+            SELECT  item_id         AS itemId
+                    , item_name     AS itemName
+                    , price
+                    , description
+                    , picture_url   AS pictureUrl
+                    , picture_url2  AS pictureUrl2
+            FROM    item2
+            WHERE   item_id > 0
+            ORDER BY    item_id DESC
         ]]>
     </select>
 
-    <select id="itemList" resultType="org.hdcd.domain.Item">
-        <![CDATA[
-        SELECT  item_id
-             , item_name
-             , price
-             , description
-             , picture_url
-        FROM    item
-        WHERE   item_id > 0
-        ORDER BY    item_id DESC
-        ]]>
+    <select id="getPicture" resultType="String">
+        SELECT  picture_url AS pictureUrl
+        FROM    item2
+        WHERE   item_id = #{itemId}
+    </select>
+
+    <select id="getPicture2" resultType="String">
+        SELECT  picture_url2    AS pictureUrl2
+        FROM    item2
+        WHERE   item_id = #{itemId}
     </select>
 
 </mapper>

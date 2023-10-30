@@ -3,6 +3,7 @@ package org.hdcd.domain;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Item implements Serializable {
 
@@ -16,9 +17,11 @@ public class Item implements Serializable {
 
     private String description;
 
-    private MultipartFile picture;
+    private List<MultipartFile> pictures;
 
     private String pictureUrl;
+
+    private String pictureUrl2;
 
     public Integer getItemId() {
         return itemId;
@@ -52,12 +55,12 @@ public class Item implements Serializable {
         this.description = description;
     }
 
-    public MultipartFile getPicture() {
-        return picture;
+    public List<MultipartFile> getPictures() {
+        return pictures;
     }
 
-    public void setPicture(MultipartFile picture) {
-        this.picture = picture;
+    public void setPictures(List<MultipartFile> pictures) {
+        this.pictures = pictures;
     }
 
     public String getPictureUrl() {
@@ -68,15 +71,11 @@ public class Item implements Serializable {
         this.pictureUrl = pictureUrl;
     }
 
-    @Override
-    public String toString() {
-        return "Item{" +
-                "itemId=" + itemId +
-                ", itemName='" + itemName + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                ", picture=" + picture +
-                ", pictureUrl='" + pictureUrl + '\'' +
-                '}';
+    public String getPictureUrl2() {
+        return pictureUrl2;
+    }
+
+    public void setPictureUrl2(String pictureUrl2) {
+        this.pictureUrl2 = pictureUrl2;
     }
 }
