@@ -30,4 +30,14 @@ public interface TestMapper {
     public void replaceAttach(@Param("fullName") String fullName
             , @Param("itemId") Integer itemId) throws Exception;
 
+    public void createBoard(Board board) throws Exception;
+
+    public Board readBoard(Integer boardNo) throws Exception;
+
+    public void updateBoard(Board board) throws Exception;
+
+    public void deleteBoard(Integer boardNo) throws Exception;
+
+    public List<Board> listBoard() throws Exception;
+
 }

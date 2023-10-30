@@ -77,4 +77,29 @@ public class TestServiceImpl implements TestService {
     public List<String> getAttach(Integer itemId) throws Exception {
         return testMapper.getAttach(itemId);
     }
+
+    @Override
+    public void createBoard(Board board) throws Exception {
+        testMapper.createBoard(board);
+    }
+
+    @Override
+    public Board readBoard(Integer boardNo) throws Exception {
+        return testMapper.readBoard(boardNo);
+    }
+
+    @Override
+    public void updateBoard(Board board) throws Exception {
+        testMapper.updateBoard(board);
+    }
+
+    @Override
+    public void deleteBoard(Integer boardNo) throws Exception {
+        testMapper.deleteBoard(boardNo);
+    }
+
+    @Override
+    public List<Board> listBoard() throws Exception {
+        return testMapper.listBoard();
+    }
 }

@@ -240,4 +240,35 @@ public class Member implements Serializable {
     public void setAuthList(List<MemberAuth> authList) {
         this.authList = authList;
     }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "userNo=" + userNo +
+                ", userId='" + userId + '\'' +
+                ", userPw='" + userPw + '\'' +
+                ", userName='" + userName + '\'' +
+                ", regDate=" + regDate +
+                ", updDate=" + updDate +
+                ", auth='" + auth + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", birthDay='" + birthDay + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", address=" + address +
+                ", cardList=" + cardList +
+                ", gender='" + gender + '\'' +
+                ", developer='" + developer + '\'' +
+                ", foreigner=" + foreigner +
+                ", nationality='" + nationality + '\'' +
+                ", cars='" + cars + '\'' +
+                ", carArray=" + Arrays.toString(carArray) +
+                ", hobby='" + hobby + '\'' +
+                ", hobbyArray=" + Arrays.toString(hobbyArray) +
+                ", hobbyList=" + hobbyList +
+                ", carList=" + carList +
+                ", introduction='" + introduction + '\'' +
+                ", authList=" + authList +
+                '}';
+    }
 }

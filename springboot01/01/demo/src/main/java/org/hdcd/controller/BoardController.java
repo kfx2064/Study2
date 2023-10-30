@@ -1,7 +1,10 @@
 package org.hdcd.controller;
 
 import org.hdcd.domain.Board;
+import org.hdcd.domain.Member;
 import org.hdcd.service.BoardService;
+import org.hdcd.service.MemberService;
+import org.hdcd.service.TestService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +17,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping("/board")
@@ -23,6 +27,12 @@ public class BoardController {
 
     @Autowired
     private BoardService service;
+
+    @Autowired
+    private MemberService memberService;
+
+    @Autowired
+    private TestService testService;
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public void registerForm(Board board, Model model) throws Exception {
@@ -44,7 +54,23 @@ public class BoardController {
     public void list(Model model) throws Exception {
         logger.info("list");
 
-        model.addAttribute("list", service.list());
+        List<Board> list = service.list();
+
+        List<Member> mList = memberService.list();
+
+        List<Board> bList = testService.listBoard();
+
+        for (int i = 0; i < mList.size(); i++) {
+            Member member = mList.get(i);
+            System.out.println("member : " + member.toString());
+        }
+
+        for (int i = 0; i < bList.size(); i++) {
+            Board board = bList.get(i);
+            System.out.println("board : " + board.toString());
+        }
+
+        model.addAttribute("list", bList);
     }
 
     @RequestMapping(value = "/read", method = RequestMethod.GET)
