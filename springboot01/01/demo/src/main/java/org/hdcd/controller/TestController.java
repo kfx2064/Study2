@@ -5,6 +5,8 @@ import org.hdcd.domain.Board;
 import org.hdcd.domain.Item;
 import org.hdcd.service.BoardService;
 import org.hdcd.service.TestService;
+import org.hdcd.util.MediaUtils;
+import org.hdcd.util.UploadFileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -55,22 +58,10 @@ public class TestController {
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String register(Item item, Model model) throws Exception {
-        List<MultipartFile> pictures = item.getPictures();
+        String[] files = item.getFiles();
 
-        for (int i = 0; i < pictures.size(); i++) {
-            MultipartFile file = pictures.get(i);
-
-            logger.info("originalName : " + file.getOriginalFilename());
-            logger.info("size : " + file.getSize());
-            logger.info("contentType : " + file.getContentType());
-
-            String savedName = uploadFile(file.getOriginalFilename(), file.getBytes());
-
-            if (i == 0) {
-                item.setPictureUrl(savedName);
-            } else if (i == 1) {
-                item.setPictureUrl2(savedName);
-            }
+        for (int i = 0; i < files.length; i++) {
+            logger.info("files[i] = " + files[i]);
         }
 
         this.testService.regist(item);
@@ -91,24 +82,11 @@ public class TestController {
 
     @RequestMapping(value = "/modify", method = RequestMethod.POST)
     public String modify(Item item, Model model) throws Exception {
-        List<MultipartFile> pictures = item.getPictures();
 
-        for (int i = 0; i < pictures.size(); i++) {
-            MultipartFile file = pictures.get(i);
+        String[] files = item.getFiles();
 
-            if (file != null && file.getSize() > 0) {
-                logger.info("originalName : " + file.getOriginalFilename());
-                logger.info("size : " + file.getSize());
-                logger.info("contentType : " + file.getContentType());
-
-                String savedName = uploadFile(file.getOriginalFilename(), file.getBytes());
-
-                if (i == 0) {
-                    item.setPictureUrl(savedName);
-                } else if (i == 1) {
-                    item.setPictureUrl2(savedName);
-                }
-            }
+        for (int i = 0; i < files.length; i++) {
+            logger.info("files[i] = " + files[i]);
         }
 
         this.testService.modify(item);
@@ -136,6 +114,62 @@ public class TestController {
         return "item/success";
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/uploadAjax", method = RequestMethod.POST
+            , produces = "text/plain;charset=UTF-8")
+    public ResponseEntity<String> uploadAjax(MultipartFile file) throws Exception {
+        logger.info("originalName : " + file.getOriginalFilename());
+
+        String savedName = UploadFileUtils.uploadFile(uploadPath, file.getOriginalFilename()
+                , file.getBytes());
+
+        return new ResponseEntity<String>(savedName, HttpStatus.CREATED);
+    }
+
+    @ResponseBody
+    @RequestMapping("/displayFile")
+    public ResponseEntity<byte[]> displayFile(String fileName) throws Exception {
+        InputStream in = null;
+        ResponseEntity<byte[]> entity = null;
+
+        logger.info("FILE NAME : " + fileName);
+
+        try {
+            String formatName = fileName.substring(fileName.lastIndexOf(".") + 1);
+
+            MediaType mType = MediaUtils.getMediaType(formatName);
+
+            HttpHeaders headers = new HttpHeaders();
+
+            in = new FileInputStream(uploadPath + fileName);
+
+            if (mType != null) {
+                headers.setContentType(mType);
+            } else {
+                fileName = fileName.substring(fileName.indexOf("_") + 1);
+                headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+                headers.add("Content-Disposition", "attachment; filename\""
+                        + new String(fileName.getBytes("UTF-8"), "ISO-8859-1") + "\"");
+            }
+
+            entity = new ResponseEntity<byte[]>(IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
+        } catch (Exception e) {
+            e.printStackTrace();
+            entity = new ResponseEntity<byte[]>(HttpStatus.BAD_REQUEST);
+        } finally {
+            in.close();
+        }
+        return entity;
+    }
+
+    @RequestMapping("/getAttach/{itemId}")
+    @ResponseBody
+    public List<String> getAttach(@PathVariable("itemId") Integer itemId) throws Exception {
+        logger.info("getAttach itemId : " + itemId);
+
+        return testService.getAttach(itemId);
+    }
+
     private String uploadFile(String originalName, byte[] fileData) throws Exception {
         UUID uid = UUID.randomUUID();
 
@@ -146,75 +180,6 @@ public class TestController {
         FileCopyUtils.copy(fileData, target);
 
         return createdFileName;
-    }
-
-    @ResponseBody
-    @RequestMapping("/display")
-    public ResponseEntity<byte[]> displayFile(Integer itemId) throws Exception {
-        InputStream in = null;
-        ResponseEntity<byte[]> entity = null;
-
-        String fileName = testService.getPicture(itemId);
-
-        logger.info("FILE NAME: " + fileName);
-
-        try {
-
-            String formatName = fileName.substring(fileName.lastIndexOf(".") + 1);
-
-            MediaType mType = getMediaType(formatName);
-
-            HttpHeaders headers = new HttpHeaders();
-
-            in = new FileInputStream(uploadPath + File.separator + fileName);
-
-            if (mType != null) {
-                headers.setContentType(mType);
-            }
-
-            entity = new ResponseEntity<byte[]>(IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
-        } catch (Exception e) {
-            e.printStackTrace();
-            entity = new ResponseEntity<byte[]>(HttpStatus.BAD_REQUEST);
-        } finally {
-            in.close();
-        }
-        return entity;
-    }
-
-    @ResponseBody
-    @RequestMapping("/display2")
-    public ResponseEntity<byte[]> displayFile2(Integer itemId) throws Exception {
-        InputStream in = null;
-        ResponseEntity<byte[]> entity = null;
-
-        String fileName = testService.getPicture2(itemId);
-
-        logger.info("FILE NAME : " + fileName);
-
-        try {
-
-            String formatName = fileName.substring(fileName.lastIndexOf(".") + 1);
-
-            MediaType mType = getMediaType(formatName);
-
-            HttpHeaders headers = new HttpHeaders();
-
-            in = new FileInputStream(uploadPath + File.separator + fileName);
-
-            if (mType != null) {
-                headers.setContentType(mType);
-            }
-
-            entity = new ResponseEntity<byte[]>(IOUtils.toByteArray(in), headers, HttpStatus.CREATED);
-        } catch (Exception e) {
-            e.printStackTrace();
-            entity = new ResponseEntity<byte[]>(HttpStatus.BAD_REQUEST);
-        } finally {
-            in.close();
-        }
-
-        return entity;
     }
 
     private MediaType getMediaType(String formatName){

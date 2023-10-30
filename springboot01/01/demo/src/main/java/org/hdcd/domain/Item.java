@@ -17,11 +17,7 @@ public class Item implements Serializable {
 
     private String description;
 
-    private List<MultipartFile> pictures;
-
-    private String pictureUrl;
-
-    private String pictureUrl2;
+    private String[] files;
 
     public Integer getItemId() {
         return itemId;
@@ -55,27 +51,11 @@ public class Item implements Serializable {
         this.description = description;
     }
 
-    public List<MultipartFile> getPictures() {
-        return pictures;
+    public String[] getFiles() {
+        return files;
     }
 
-    public void setPictures(List<MultipartFile> pictures) {
-        this.pictures = pictures;
-    }
-
-    public String getPictureUrl() {
-        return pictureUrl;
-    }
-
-    public void setPictureUrl(String pictureUrl) {
-        this.pictureUrl = pictureUrl;
-    }
-
-    public String getPictureUrl2() {
-        return pictureUrl2;
-    }
-
-    public void setPictureUrl2(String pictureUrl2) {
-        this.pictureUrl2 = pictureUrl2;
+    public void setFiles(String[] files) {
+        this.files = files;
     }
 }
