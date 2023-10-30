@@ -22,9 +22,6 @@ public class TestController {
     private BoardService boardService;
 
     @Autowired
-    private ItemService itemService;
-
-    @Autowired
     private TestService testService;
 
     @RequestMapping(value = "/test/list")
