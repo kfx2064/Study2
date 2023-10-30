@@ -55,7 +55,7 @@
             var str = "";
             $(".uploadedList a").each(function (index) {
                 var value = $(this).attr("href");
-                value = vaule.substr(27);
+                value = value.substr(27);
                 str += "<input type='hidden' name='files[" + index + "]' value='" + value + "'> ";
             });
 
