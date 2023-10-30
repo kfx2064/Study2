@@ -1,22 +1,24 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Home</title>
+    <title>Insert title here</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <script src="/js/jQuery-3.7.1.min.js"></script>
 <body>
-<h2>Spring Form</h2>
-<form action="result.html" th:action="@{/register}" th:object="${member}" method="POST">
-    <table>
-        <tr>
-            <td>소개</td>
-            <td>
-                <textarea name="textarea" rows="6" cols="30" th:field="*{introduction}"></textarea>
-            </td>
-        </tr>
-    </table>
+<h2>Login Page</h2>
 
-    <button name="register" type="submit">등록</button>
+<form method="post" action="login.html" th:action="@{/login}">
+    <div>
+        <input type="text" name="userId" value="admin">
+    </div>
+
+    <div>
+        <input type="password" name="userPw" value="1234">
+    </div>
+
+    <div>
+        <input type="submit">
+    </div>
 </form>
 </body>
 </html>
