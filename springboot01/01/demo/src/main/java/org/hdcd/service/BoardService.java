@@ -16,5 +16,4 @@ public interface BoardService {
 
     public List<Board> list() throws Exception;
 
-    public List<Board> search(String title) throws Exception;
 }
