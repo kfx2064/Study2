@@ -3,7 +3,7 @@ package org.hdcd.controller;
 import org.hdcd.domain.Board;
 import org.hdcd.domain.Item;
 import org.hdcd.service.BoardService;
-import org.hdcd.service.ItemService;
+import org.hdcd.service.TestService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +24,14 @@ public class TestController {
     @Autowired
     private ItemService itemService;
 
+    @Autowired
+    private TestService testService;
+
     @RequestMapping(value = "/test/list")
     public String testList(Model model) throws Exception {
         logger.info("TestController, testList.");
 
-        List<Board> list = boardService.list();
+        List<Board> list = testService.list();
 
         model.addAttribute("board", new Board());
         model.addAttribute("list", list);
@@ -40,7 +43,7 @@ public class TestController {
     public String testItemList(Model model) throws Exception {
         logger.info("TestController, testItemList.");
 
-        List<Item> list = itemService.list();
+        List<Item> list = testService.itemList();
 
         model.addAttribute("itemList", list);
 
