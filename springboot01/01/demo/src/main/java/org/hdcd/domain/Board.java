@@ -1,6 +1,7 @@
 package org.hdcd.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,6 +11,7 @@ public class Board implements Serializable {
 
     private int boardNo;
 
+    @NotBlank
     private String title;
 
     private String content;

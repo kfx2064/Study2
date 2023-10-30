@@ -17,6 +17,9 @@ public class Member implements Serializable {
     private String userName;
     private Date regDate;
     private Date updDate;
+
+    private String auth;
+
     private String password;
     private String email;
     private String birthDay;
@@ -84,6 +87,14 @@ public class Member implements Serializable {
 
     public void setUpdDate(Date updDate) {
         this.updDate = updDate;
+    }
+
+    public String getAuth() {
+        return auth;
+    }
+
+    public void setAuth(String auth) {
+        this.auth = auth;
     }
 
     public String getPassword() {
@@ -228,35 +239,5 @@ public class Member implements Serializable {
 
     public void setAuthList(List<MemberAuth> authList) {
         this.authList = authList;
-    }
-
-    @Override
-    public String toString() {
-        return "Member{" +
-                "userNo=" + userNo +
-                ", userId='" + userId + '\'' +
-                ", userPw='" + userPw + '\'' +
-                ", userName='" + userName + '\'' +
-                ", regDate=" + regDate +
-                ", updDate=" + updDate +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", birthDay='" + birthDay + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", address=" + address +
-                ", cardList=" + cardList +
-                ", gender='" + gender + '\'' +
-                ", developer='" + developer + '\'' +
-                ", foreigner=" + foreigner +
-                ", nationality='" + nationality + '\'' +
-                ", cars='" + cars + '\'' +
-                ", carArray=" + Arrays.toString(carArray) +
-                ", hobby='" + hobby + '\'' +
-                ", hobbyArray=" + Arrays.toString(hobbyArray) +
-                ", hobbyList=" + hobbyList +
-                ", carList=" + carList +
-                ", introduction='" + introduction + '\'' +
-                ", authList=" + authList +
-                '}';
     }
 }

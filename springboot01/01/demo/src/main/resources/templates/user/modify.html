@@ -5,21 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <script src="/js/jQuery-3.7.1.min.js"></script>
-<script>
-    $(document).ready(function () {
-        var formObj = $("#member");
-
-        $("#btnModify").on("click", function () {
-            formObj.attr("action", "/user/modify");
-            formObj.attr("method", "post");
-            formObj.submit();
-        });
-
-        $("#btnList").on("click", function () {
-            self.location = "/user/list";
-        });
-    });
-</script>
 <body>
 <h3>MODIFY</h3>
 
@@ -30,7 +15,12 @@
         <tr>
             <td>userid</td>
             <td>
-                <input type="text" name="userId" th:field="*{userId}" readonly="readonly" />
+                <input type="text" name="userId" th:field="*{userId}" />
+            </td>
+            <td>
+                <font color="red">
+                    <span th:if="${#fields.hasErrors('userId')}" th:errors="*{userId}">userId의 에러 메시지</span>
+                </font>
             </td>
         </tr>
         <tr>
@@ -38,46 +28,35 @@
             <td>
                 <input type="text" name="userName" th:field="*{userName}" />
             </td>
+            <td>
+                <font color="red">
+                    <span th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}">userName의 에러 메시지</span>
+                </font>
+            </td>
         </tr>
         <tr>
             <td>auth - 1</td>
             <td>
-                <select th:field="*{authList[0].auth}">
+                <select th:field="*{auth}">
                     <option value="">===선택해 주세요===</option>
                     <option value="ROLE_USER">사용자</option>
                     <option value="ROLE_MEMBER">회원</option>
                     <option value="ROLE_ADMIN">관리자</option>
                 </select>
             </td>
-        </tr>
-        <tr>
-            <td>auth - 2</td>
             <td>
-                <select th:field="*{authList[1].auth}">
-                    <option value="">===선택해 주세요===</option>
-                    <option value="ROLE_USER">사용자</option>
-                    <option value="ROLE_MEMBER">회원</option>
-                    <option value="ROLE_ADMIN">관리자</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>auth - 3</td>
-            <td>
-                <select th:field="*{authList[2].auth}">
-                    <option value="">===선택해 주세요===</option>
-                    <option value="ROLE_USER">사용자</option>
-                    <option value="ROLE_MEMBER">회원</option>
-                    <option value="ROLE_ADMIN">관리자</option>
-                </select>
+                <font color="red">
+                    <span th:if="${#fields.hasErrors('auth')}" th:errors="*{auth}">auth의 에러 메시지</span>
+                </font>
             </td>
         </tr>
     </table>
-</form>
 
-<div>
-    <button type="submit" id="btnModify">Modify</button>
-    <button type="submit" id="btnList">List</button>
-</div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+
+    <a href="list.html" th:href="@{list}">List</a>
+</form>
 </body>
 </html>

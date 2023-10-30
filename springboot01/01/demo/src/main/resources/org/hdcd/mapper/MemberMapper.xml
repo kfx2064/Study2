@@ -5,22 +5,6 @@
 
 <mapper namespace="org.hdcd.mapper.MemberMapper">
 
-    <resultMap id="memberMap" type="org.hdcd.domain.Member">
-        <id property="userNo" column="user_no" />
-        <result property="userNo" column="user_no" />
-        <result property="userId" column="user_id" />
-        <result property="userPw" column="user_pw" />
-        <result property="userName" column="user_name" />
-        <result property="regDate" column="reg_date" />
-        <result property="updDate" column="upd_date" />
-        <collection property="authList" resultMap="authMap"></collection>
-    </resultMap>
-
-    <resultMap id="authMap" type="org.hdcd.domain.MemberAuth">
-        <result property="userNo" column="user_no" />
-        <result property="auth" column="auth" />
-    </resultMap>
-
     <insert id="create" useGeneratedKeys="true" keyProperty="userNo">
         INSERT INTO member
         (
@@ -36,17 +20,17 @@
         )
     </insert>
 
-    <select id="read" resultMap="memberMap">
-        SELECT  mem.user_no
-                , mem.user_id
-                , user_pw
-                , user_name
-                , reg_date
-                , upd_date
+    <select id="read" resultType="org.hdcd.domain.Member">
+        SELECT  mem.user_no         AS userNo
+                , mem.user_id       AS userId
+                , user_pw           AS userPw
+                , user_name         AS userName
+                , reg_date          AS regDate
+                , upd_date          AS updDate
                 , auth
-        FROM    member  mem
-        LEFT OUTER JOIN member_auth auth
-        ON mem.user_no = auth.user_no
+        FROM    member      mem
+        LEFT OUTER JOIN member_auth     auth
+        ON  mem.user_no = auth.user_no
         WHERE   mem.user_no = #{userNo}
     </select>
 

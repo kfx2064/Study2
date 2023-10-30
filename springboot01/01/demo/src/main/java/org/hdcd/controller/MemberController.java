@@ -40,8 +40,6 @@ public class MemberController {
 
         List<Member> list = service.list();
 
-        System.out.println("list : " + list.toString());
-
         model.addAttribute("list", list);
     }
 

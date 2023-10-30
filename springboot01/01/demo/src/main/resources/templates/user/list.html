@@ -13,8 +13,8 @@
     <tr>
         <th align="center" width="60">NO</th>
         <th align="center" width="80">USERID</th>
-        <th align="center" width="50">USERPW</th>
-        <th align="center" width="50">USERNAME</th>
+        <th align="center" width="300">USERPW</th>
+        <th align="center" width="100">USERNAME</th>
         <th align="center" width="180">REGDATE</th>
     </tr>
 
@@ -27,7 +27,7 @@
     <tr th:each="member : ${list}">
         <td align="center" th:text="${member.userNo}">${member.userNo}</td>
         <td align="center">
-            <a href="read.html" th:href="@{|read?userNo=${member.userNo}|}" th:text="${member.userId}">${member.userId}</a>
+            <a href="read.html" th:href="@{|/user/read?userNo=${member.userNo}|}" th:text="${member.userId}">${member.userId}</a>
         </td>
         <td align="left" th:text="${member.userPw}">${member.userPw}</td>
         <td align="right" th:text="${member.userName}">${member.userName}</td>

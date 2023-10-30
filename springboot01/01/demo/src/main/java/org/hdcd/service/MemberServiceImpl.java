@@ -42,25 +42,18 @@ public class MemberServiceImpl implements MemberService {
 
         mapper.deleteAuth(userNo);
 
-        List<MemberAuth> authList = member.getAuthList();
+        String auth = member.getAuth();
 
-        for (int i = 0; i < authList.size(); i++) {
-            MemberAuth memberAuth = authList.get(i);
+        MemberAuth memberAuth = new MemberAuth();
+        memberAuth.setUserNo(userNo);
 
-            String auth = memberAuth.getAuth();
-
-            if (auth == null) {
-                continue;
-            }
-
-            if (auth.trim().length() == 0) {
-                continue;
-            }
-
-            memberAuth.setUserNo(userNo);
-
-            mapper.createAuth(memberAuth);
+        if (auth != null) {
+            memberAuth.setAuth(auth);
+        } else {
+            memberAuth.setAuth("ROLE_USER");
         }
+
+        mapper.createAuth(memberAuth);
     }
 
     @Transactional

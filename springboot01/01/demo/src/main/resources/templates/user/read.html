@@ -47,31 +47,9 @@
             </td>
         </tr>
         <tr>
-            <td>auth - 1</td>
+            <td>auth</td>
             <td>
-                <select th:field="*{authList[0].auth}">
-                    <option value="">===선택해 주세요===</option>
-                    <option value="ROLE_USER">사용자</option>
-                    <option value="ROLE_MEMBER">회원</option>
-                    <option value="ROLE_ADMIN">관리자</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>auth - 2</td>
-            <td>
-                <select th:field="*{authList[1].auth}">
-                    <option value="">===선택해 주세요===</option>
-                    <option value="ROLE_USER">사용자</option>
-                    <option value="ROLE_MEMBER">회원</option>
-                    <option value="ROLE_ADMIN">관리자</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>auth - 3</td>
-            <td>
-                <select th:field="*{authList[2].auth}">
+                <select th:field="*{auth}" disabled="disabled">
                     <option value="">===선택해 주세요===</option>
                     <option value="ROLE_USER">사용자</option>
                     <option value="ROLE_MEMBER">회원</option>

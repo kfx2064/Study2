@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -29,7 +30,7 @@ public class BoardController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String register(Board board, Model model) throws Exception {
+    public String register(@Validated Board board, Model model) throws Exception {
         logger.info("register");
 
         service.register(board);

@@ -1,6 +1,7 @@
 package org.hdcd.service;
 
 import org.hdcd.domain.Board;
+import org.hdcd.exception.BoardRecordNotFoundException;
 import org.hdcd.mapper.BoardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -22,7 +23,14 @@ public class BoardServiceImpl implements BoardService {
 
     @Override
     public Board read(Integer boardNo) throws Exception {
-        return mapper.read(boardNo);
+
+        Board board = mapper.read(boardNo);
+
+        if (board == null) {
+            throw new BoardRecordNotFoundException("Not Found boardNo = " + boardNo);
+        }
+
+        return board;
     }
 
     @Override

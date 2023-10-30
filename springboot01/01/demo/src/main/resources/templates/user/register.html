@@ -5,21 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <script src="/js/jQuery-3.7.1.min.js"></script>
-<script>
-    $(document).ready(function () {
-        var formObj = $("#member");
-
-        $("#btnRegister").on("click", function () {
-            formObj.attr("action", "/user/register");
-            formObj.attr("method", "post");
-            formObj.submit();
-        });
-
-        $("#btnList").on("click", function () {
-            self.location = "/user/list";
-        });
-    });
-</script>
 <body>
 <h3>REGISTER</h3>
 
@@ -57,11 +42,13 @@
             </td>
         </tr>
     </table>
-</form>
 
-<div>
-    <button type="submit" id="btnRegister">Register</button>
-    <button type="submit" id="btnList">List</button>
-</div>
+    <div>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+    </div>
+
+    <a href="list.html" th:href="@{list}">List</a>
+</form>
 </body>
 </html>
