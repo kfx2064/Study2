@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,8 +41,12 @@ public class BoardController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String register(@Validated Board board, Model model) throws Exception {
+    public String register(@Validated Board board, BindingResult result, Model model) throws Exception {
         logger.info("register");
+
+        if (result.hasErrors()) {
+            return "board/register";
+        }
 
         service.register(board);
 
