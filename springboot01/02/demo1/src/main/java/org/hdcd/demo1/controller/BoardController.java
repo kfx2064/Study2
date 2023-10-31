@@ -20,4 +20,5 @@ public class BoardController {
     public void registerForm() {
         logger.info("registerForm : access to member");
     }
+
 }

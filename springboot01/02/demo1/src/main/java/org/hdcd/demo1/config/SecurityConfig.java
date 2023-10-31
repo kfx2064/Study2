@@ -2,7 +2,6 @@ package org.hdcd.demo1.config;
 
 import org.hdcd.demo1.common.security.CustomAccessDeniedHandler;
 import org.hdcd.demo1.common.security.CustomLoginSuccessHandler;
-import org.hdcd.demo1.common.security.CustomNoOpPasswordEncoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
@@ -28,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        logger.info("security config ...");
+        logger.info("security config...");
 
         http.authorizeRequests()
                 .antMatchers("/board/list")
@@ -60,9 +59,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        String query1 = "SELECT user_id, user_pw, enabled FROM member WHERE user_id = ?";
+        String query2 = "SELECT b.user_id, a.auth FROM member_auth a, member b WHERE a.user_no = b.user_no " +
+                "AND b.user_id = ?";
+
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
+                .usersByUsernameQuery(query1)
+                .authoritiesByUsernameQuery(query2)
                 .passwordEncoder(createPasswordEncoder());
+
     }
 
     @Bean
@@ -77,7 +83,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder createPasswordEncoder() {
-        return new CustomNoOpPasswordEncoder();
+        return new BCryptPasswordEncoder();
     }
-
 }
