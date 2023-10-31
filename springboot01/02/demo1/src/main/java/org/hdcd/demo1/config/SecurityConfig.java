@@ -2,6 +2,7 @@ package org.hdcd.demo1.config;
 
 import org.hdcd.demo1.common.security.CustomAccessDeniedHandler;
 import org.hdcd.demo1.common.security.CustomLoginSuccessHandler;
+import org.hdcd.demo1.common.security.CustomUserDetailsService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.AccessDeniedHandler;
@@ -59,21 +61,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        String query1 = "SELECT user_id, user_pw, enabled FROM member WHERE user_id = ?";
-        String query2 = "SELECT b.user_id, a.auth FROM member_auth a, member b WHERE a.user_no = b.user_no " +
-                "AND b.user_id = ?";
-
-        auth.jdbcAuthentication()
-                .dataSource(dataSource)
-                .usersByUsernameQuery(query1)
-                .authoritiesByUsernameQuery(query2)
+        auth.userDetailsService(createUserDetailsService())
                 .passwordEncoder(createPasswordEncoder());
-
     }
 
     @Bean
-    public AccessDeniedHandler createAccessDeniedHandler() {
-        return new CustomAccessDeniedHandler();
+    public UserDetailsService createUserDetailsService() {
+        return new CustomUserDetailsService();
+    }
+
+    @Bean
+    public PasswordEncoder createPasswordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     @Bean
@@ -82,7 +81,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public PasswordEncoder createPasswordEncoder() {
-        return new BCryptPasswordEncoder();
+    public AccessDeniedHandler createAccessDeniedHandler() {
+        return new CustomAccessDeniedHandler();
     }
 }

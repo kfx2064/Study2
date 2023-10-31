@@ -1,5 +1,6 @@
 package org.hdcd.demo1.common.security;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
@@ -18,5 +19,4 @@ public class CommonController {
 
         model.addAttribute("msg", "Access Denied");
     }
-
 }
