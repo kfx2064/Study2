@@ -1,4 +1,5 @@
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <title>BOARD</title>
@@ -6,5 +7,15 @@
 <script src="/js/jQuery-3.7.1.min.js"></script>
 <body>
 <h3>BOARD REGISTER : access to member</h3>
+
+<p>principal : <span sec:authentication="principal"></span></p>
+<p>Member : <span sec:authentication="principal.member"></span></p>
+<p>사용자이름 : <span sec:authentication="principal.member.userName"></span></p>
+<p>사용자아이디 : <span sec:authentication="principal.username"></span></p>
+<p>사용자 권한 리스트 : <span sec:authentication="principal.member.authList"></span></p>
+
+<div>
+    <a href="/">home</a>
+</div>
 </body>
 </html>
