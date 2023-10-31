@@ -11,7 +11,6 @@ public class Board implements Serializable {
 
     private int boardNo;
 
-    @NotBlank
     private String title;
 
     private String content;
