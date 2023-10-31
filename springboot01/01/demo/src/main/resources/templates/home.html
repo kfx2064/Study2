@@ -8,9 +8,6 @@
     Hello world!
 </h1>
 
-<p th:text="|The time on the server is ${serverTime}.|">The time on the server is ${serverTime}.</p>
-
-<div th:text="${session.userInfo.userId}" th:unless="${session == null}">${userInfo.userId}</div>
-<div th:text="${session.userInfo.userName}" th:unless="${session == null}">${userInfo.userName}</div>
+<p th:text="${serverTime}">시간 표시</p>
 </body>
 </html>

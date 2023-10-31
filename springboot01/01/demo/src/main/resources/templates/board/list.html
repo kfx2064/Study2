@@ -5,30 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h2>List</h2>
-<a href="register.html" th:href="@{register}">New</a>
-<table border="1">
-    <tr>
-        <td align="center" width="80">NO</td>
-        <td align="center" width="320">TITLE</td>
-        <td align="center" width="100">WRITER</td>
-        <td align="center" width="180">REGDATE</td>
-    </tr>
-
-    <tr th:if="${#lists.isEmpty(list)}">
-        <td colspan="4">
-            List is empty.
-        </td>
-    </tr>
-
-    <tr th:each="board : ${list}">
-        <td align="center" th:text="${board.boardNo}">${board.boardNo}</td>
-        <td align="left">
-            <a href="read.html" th:href="@{|/board/read?boardNo=${board.boardNo}|}" th:text="${board.title}">${board.title}</a>
-        </td>
-        <td align="right" th:text="${board.writer}">${board.writer}</td>
-        <td align="center" th:text="${#dates.format(board.regDate, 'yyyy-MM-dd HH:mm:ss')}">${board.regDate}</td>
-    </tr>
-</table>
+<h3>BOARD LIST : access to all</h3>
 </body>
 </html>
