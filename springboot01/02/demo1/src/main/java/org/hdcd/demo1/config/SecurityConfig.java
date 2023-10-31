@@ -16,6 +16,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
 import javax.sql.DataSource;
 
@@ -53,16 +55,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.logout()
                 .logoutUrl("/logout")
-                .invalidateHttpSession(true);
+                .invalidateHttpSession(true)
+                .deleteCookies("remember-me", "JSESSION_ID");
 
         http.exceptionHandling()
                 .accessDeniedHandler(createAccessDeniedHandler());
-    }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(createUserDetailsService())
-                .passwordEncoder(createPasswordEncoder());
+        http.rememberMe()
+                .key("root")
+                .tokenRepository(createJDBCRepository())
+                .tokenValiditySeconds(60 * 60 * 24);
     }
 
     @Bean
@@ -83,5 +85,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public AccessDeniedHandler createAccessDeniedHandler() {
         return new CustomAccessDeniedHandler();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(createUserDetailsService())
+                .passwordEncoder(createPasswordEncoder());
+    }
+
+    private PersistentTokenRepository createJDBCRepository() {
+        JdbcTokenRepositoryImpl repo = new JdbcTokenRepositoryImpl();
+        repo.setDataSource(dataSource);
+
+        return repo;
     }
 }
