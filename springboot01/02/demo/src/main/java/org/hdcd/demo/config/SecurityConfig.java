@@ -1,6 +1,7 @@
 package org.hdcd.demo.config;
 
 import org.hdcd.demo.common.security.CustomAccessDeniedHandler;
+import org.hdcd.demo.common.security.CustomLoginSuccessHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
@@ -9,6 +10,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -35,7 +37,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/notice/register")
                 .hasRole("ADMIN");
 
-        http.formLogin().loginPage("/login");
+        http.formLogin().loginPage("/login").successHandler(createAuthenticationSuccessHandler());
+
+        http.logout().logoutUrl("/logout").invalidateHttpSession(true);
 
         http.exceptionHandling()
                 .accessDeniedHandler(createAccessDeniedHandler());
@@ -57,5 +61,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public AccessDeniedHandler createAccessDeniedHandler() {
         return new CustomAccessDeniedHandler();
+    }
+
+    @Bean
+    public AuthenticationSuccessHandler createAuthenticationSuccessHandler() {
+        return new CustomLoginSuccessHandler();
     }
 }
