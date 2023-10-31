@@ -35,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/notice/register")
                 .hasRole("ADMIN");
 
-        http.formLogin();
+        http.formLogin().loginPage("/login");
 
         http.exceptionHandling()
                 .accessDeniedHandler(createAccessDeniedHandler());
