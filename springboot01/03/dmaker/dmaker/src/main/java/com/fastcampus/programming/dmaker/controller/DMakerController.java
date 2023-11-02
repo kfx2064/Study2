@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @Slf4j
@@ -28,14 +29,12 @@ public class DMakerController {
     }
 
     @PostMapping("/create-developer")
-    public List<String> createDevelopers(
+    public CreateDeveloper.Response createDevelopers(
             @Valid @RequestBody CreateDeveloper.Request request
             ) {
 
         log.info("request : {}", request);
 
-        dMakerService.createDeveloper(request);
-
-        return List.of("Olaf");
+        return dMakerService.createDeveloper(request);
     }
 }
