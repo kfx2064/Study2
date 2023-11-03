@@ -1,10 +1,7 @@
 package com.fastcampus.programming.dmaker.service;
 
 import com.fastcampus.programming.dmaker.code.StatusCode;
-import com.fastcampus.programming.dmaker.dto.CreateDeveloper;
-import com.fastcampus.programming.dmaker.dto.DeveloperDetailDto;
-import com.fastcampus.programming.dmaker.dto.DeveloperDto;
-import com.fastcampus.programming.dmaker.dto.EditDeveloper;
+import com.fastcampus.programming.dmaker.dto.*;
 import com.fastcampus.programming.dmaker.entity.Developer;
 import com.fastcampus.programming.dmaker.entity.RetiredDeveloper;
 import com.fastcampus.programming.dmaker.exception.DMakerException;
@@ -12,23 +9,26 @@ import com.fastcampus.programming.dmaker.repository.DeveloperRepository;
 import com.fastcampus.programming.dmaker.repository.RetiredDeveloperRepository;
 import com.fastcampus.programming.dmaker.type.DeveloperLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
 import static com.fastcampus.programming.dmaker.exception.DMakerErrorCode.*;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class DMakerService {
     private final DeveloperRepository developerRepository;
-
     private final RetiredDeveloperRepository retiredDeveloperRepository;
 
     @Transactional
     public CreateDeveloper.Response createDeveloper(CreateDeveloper.Request request) {
+
         validateCreateDeveloperRequest(request);
 
         Developer developer = Developer.builder()
@@ -45,15 +45,18 @@ public class DMakerService {
         return CreateDeveloper.Response.fromEntity(developer);
     }
 
-    private void validateCreateDeveloperRequest(CreateDeveloper.Request request) {
+    public void validateCreateDeveloperRequest(CreateDeveloper.Request request) {
+
         // business validation
-        validateDeveloperLevel(request.getDeveloperLevel(), request.getExperienceYears());
+        validateDeveloperLevel(
+                request.getDeveloperLevel()
+                , request.getExperienceYears()
+        );
 
         developerRepository.findByMemberId(request.getMemberId())
                 .ifPresent((developer -> {
                     throw new DMakerException(DUPLICATED_MEMBER_ID);
                 }));
-
     }
 
     public List<DeveloperDto> getAllEmployedDevelopers() {
