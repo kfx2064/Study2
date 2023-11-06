@@ -1,8 +1,6 @@
-package com.fastcampus.javaoop;
+package com.fastcampus.javapractice;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
 
