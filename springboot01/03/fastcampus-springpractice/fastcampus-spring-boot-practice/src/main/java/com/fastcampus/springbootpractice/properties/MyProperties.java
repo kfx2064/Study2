@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties("my")
 public class MyProperties {
 
+    /* 제 키예요. */
     private final Integer height;
 
     public MyProperties(Integer height) {
@@ -17,4 +18,5 @@ public class MyProperties {
     public Integer getHeight() {
         return height;
     }
+
 }
