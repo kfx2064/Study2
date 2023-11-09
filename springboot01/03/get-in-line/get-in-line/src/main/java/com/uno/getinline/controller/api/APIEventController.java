@@ -17,26 +17,26 @@ public class APIEventController {
     @GetMapping("/events")
     public List<String> getEvents() throws Exception {
 
-        throw new HttpRequestMethodNotSupportedException("스프링 에러 테스트");
+//        throw new HttpRequestMethodNotSupportedException("스프링 에러 테스트");
 
-//        return List.of("event1", "event2");
+        return List.of("event1", "event2");
     }
 
     @PostMapping("/events")
     public Boolean createEvent() {
 
 
-        throw new GeneralException("장군님");
+//        throw new GeneralException("장군님");
 
-//        return true;
+        return true;
     }
 
     @GetMapping("/events/{eventId}")
     public String getEvent(@PathVariable Integer eventId) {
 
-        throw new RuntimeException("런타임 에러");
+//        throw new RuntimeException("런타임 에러");
 
-//        return "event" + eventId;
+        return "event" + eventId;
     }
 
     @PutMapping("/events/{eventId}")
