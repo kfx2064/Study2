@@ -5,6 +5,7 @@ import com.uno.getinline.dto.APIErrorResponse;
 import com.uno.getinline.exception.GeneralException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,9 +15,9 @@ import java.util.List;
 public class APIEventController {
 
     @GetMapping("/events")
-    public List<String> getEvents() {
+    public List<String> getEvents() throws Exception {
 
-        throw new GeneralException("테스트 메시지");
+        throw new HttpRequestMethodNotSupportedException("스프링 에러 테스트");
 
 //        return List.of("event1", "event2");
     }
@@ -25,14 +26,17 @@ public class APIEventController {
     public Boolean createEvent() {
 
 
-        throw new RuntimeException("runtime 에러 메시지");
+        throw new GeneralException("장군님");
 
 //        return true;
     }
 
     @GetMapping("/events/{eventId}")
     public String getEvent(@PathVariable Integer eventId) {
-        return "event" + eventId;
+
+        throw new RuntimeException("런타임 에러");
+
+//        return "event" + eventId;
     }
 
     @PutMapping("/events/{eventId}")
