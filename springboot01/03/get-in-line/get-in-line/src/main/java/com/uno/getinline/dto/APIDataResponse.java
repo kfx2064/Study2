@@ -3,7 +3,6 @@ package com.uno.getinline.dto;
 import com.uno.getinline.constant.ErrorCode;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
 @Getter
@@ -20,6 +19,10 @@ public class APIDataResponse<T> extends APIErrorResponse {
 
     public static <T> APIDataResponse<T> of(T data) {
         return new APIDataResponse<T>(data);
+    }
+
+    public static <T> APIDataResponse<T> empty() {
+        return new APIDataResponse<T>(null);
     }
 
 }
