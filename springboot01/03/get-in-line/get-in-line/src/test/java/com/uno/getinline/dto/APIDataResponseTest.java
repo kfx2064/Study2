@@ -15,7 +15,7 @@ class APIDataResponseTest {
         String data = "test data";
 
         // when
-        APIDataResponse<String> response = APIDataResponse.of(data);
+        ApiDataResponse<String> response = ApiDataResponse.of(data);
 
         // then
         assertThat(response).hasFieldOrPropertyWithValue("success", true)
@@ -30,7 +30,7 @@ class APIDataResponseTest {
         // given
 
         // when
-        APIDataResponse<String> response = APIDataResponse.empty();
+        ApiDataResponse<String> response = ApiDataResponse.empty();
 
         // then
         assertThat(response).hasFieldOrPropertyWithValue("success", true)

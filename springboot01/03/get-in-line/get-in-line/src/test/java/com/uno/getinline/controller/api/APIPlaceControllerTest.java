@@ -22,16 +22,16 @@ class APIPlaceControllerTest {
         this.mvc = mvc;
     }
 
-    @DisplayName("[API][GET] 장소 리스트 조회")
+    @DisplayName("[API][GET] 장소 리스트 조회 - 장소 리스트 데이터를 담은 표준 API 출력")
     @Test
-    void givenNothing_whenRequestingPlaces_thenReturnsListOfPlacesInStandardResponse() throws Exception {
+    void givenNothing_whenRequestingPlaces_thenReturnsPlacesStandardResponse() throws Exception {
         // given
 
 
         // when & then
         mvc.perform(get("/api/places"))
                 .andExpect(status().isOk())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.data").isArray())
                 .andExpect(jsonPath("$.data[0].placeType").value(PlaceType.COMMON.name()))
                 .andExpect(jsonPath("$.data[0].placeName").value("랄라베드민턴점"))
@@ -42,6 +42,7 @@ class APIPlaceControllerTest {
                 .andExpect(jsonPath("$.success").value(true))
                 .andExpect(jsonPath("$.errorCode").value(ErrorCode.OK.getCode()))
                 .andExpect(jsonPath("$.message").value(ErrorCode.OK.getMessage()));
+
     }
 
     @DisplayName("[API][GET] 단일 장소 조회 - 장소 있는 경우")

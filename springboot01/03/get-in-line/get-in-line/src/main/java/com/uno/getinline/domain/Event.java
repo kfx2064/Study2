@@ -10,6 +10,7 @@ public class Event {
 
     private Long id;
 
+    private Place place;
     private Long placeId;
     private String eventName;
     private EventStatus eventStatus;
@@ -21,4 +22,49 @@ public class Event {
 
     private LocalDateTime createdAt;
     private LocalDateTime modifiedAt;
+
+    protected Event() {}
+
+    protected Event(
+        Place place
+        , String eventName
+        , EventStatus eventStatus
+        , LocalDateTime eventStartDatetime
+        , LocalDateTime eventEndDatetime
+        , Integer currentNumberOfPeople
+        , Integer capacity
+        , String memo
+    ) {
+        this.place = place;
+        this.eventName = eventName;
+        this.eventStatus = eventStatus;
+        this.eventStartDatetime = eventStartDatetime;
+        this.eventEndDatetime = eventEndDatetime;
+        this.currentNumberOfPeople = currentNumberOfPeople;
+        this.capacity = capacity;
+        this.memo = memo;
+    }
+
+    public static Event of(
+            Place place
+            , String eventName
+            , EventStatus eventStatus
+            , LocalDateTime eventStartDatetime
+            , LocalDateTime eventEndDatetime
+            , Integer currentNumberOfPeople
+            , Integer capacity
+            , String memo
+    ) {
+        return new Event(
+                place
+                , eventName
+                , eventStatus
+                , eventStartDatetime
+                , eventEndDatetime
+                , currentNumberOfPeople
+                , capacity
+                , memo
+        );
+    }
+
 }
