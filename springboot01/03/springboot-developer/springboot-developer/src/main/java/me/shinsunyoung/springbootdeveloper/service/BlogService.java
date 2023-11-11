@@ -35,10 +35,18 @@ public class BlogService {
 
     @Transactional
     public Article update(long id, UpdateArticleRequest request) {
-        Article article = blogRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("not found: " + id));
 
-        article.update(request.getTitle(), request.getContent());
+        Article article = null;
+
+        try {
+            article = blogRepository.findById(id)
+                    .orElseThrow(() -> new IllegalArgumentException("not found: " + id));
+
+            article.update(request.getTitle(), request.getContent());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return article;
     }
