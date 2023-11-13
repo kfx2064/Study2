@@ -8,6 +8,7 @@ import org.hdcd.spring.service.CodeDetailServiceImpl;
 import org.hdcd.spring.service.CodeService;
 import org.hdcd.spring.service.CodeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/codedetail")
+@PreAuthorize("hasRole('ROLE_ADMIN')")
 public class CodeDetailController {
 
     @Autowired
