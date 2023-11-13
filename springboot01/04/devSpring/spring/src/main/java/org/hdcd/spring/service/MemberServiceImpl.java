@@ -15,6 +15,22 @@ public class MemberServiceImpl implements MemberService {
     @Autowired
     private MemberMapper mapper;
 
+    @Override
+    public int countAll() throws Exception {
+        return mapper.countAll();
+    }
+
+    @Override
+    public void setupAdmin(Member member) throws Exception {
+        mapper.create(member);
+
+        MemberAuth memberAuth = new MemberAuth();
+        memberAuth.setUserNo(member.getUserNo());
+        memberAuth.setAuth("ROLE_ADMIN");
+
+        mapper.createAuth(memberAuth);
+    }
+
     @Transactional
     @Override
     public void register(Member member) throws Exception {

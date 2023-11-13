@@ -1,5 +1,6 @@
 package org.hdcd.spring.controller;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.hdcd.spring.common.domain.CodeLabelValue;
 import org.hdcd.spring.domain.Member;
 import org.hdcd.spring.service.CodeService;
@@ -105,6 +106,32 @@ public class MemberController {
         rttr.addFlashAttribute("msg", "SUCCESS");
 
         return "redirect:/user/list";
+    }
+
+    @RequestMapping(value = "/setup", method = RequestMethod.POST)
+    public String setupAdmin(Member member, RedirectAttributes rttr) throws Exception {
+        if (service.countAll() == 0) {
+            String inputPassword = member.getUserPw();
+            member.setUserPw(passwordEncoder.encode(inputPassword));
+
+            member.setJob("00");
+
+            service.setupAdmin(member);
+
+            rttr.addFlashAttribute("userName", member.getUserName());
+            return "redirect:/user/registerSuccess";
+        }
+
+        return "redirect:/user/setupFailure";
+    }
+
+    @RequestMapping(value = "/setup", method = RequestMethod.GET)
+    public String setupAdminForm(Member member, Model model) throws Exception {
+        if (service.countAll() == 0) {
+            return "user/setup";
+        }
+
+        return "user/setupFailure";
     }
 
 }
