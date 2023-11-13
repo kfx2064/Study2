@@ -1,5 +1,7 @@
 package org.hdcd.spring.domain;
 
+import org.hdcd.spring.common.domain.PageRequest;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,6 +14,8 @@ public class Board implements Serializable {
     private String content;
     private String writer;
     private Date regDate;
+
+    /*private PageRequest pageRequest;*/
 
     public int getBoardNo() {
         return boardNo;
@@ -52,6 +56,22 @@ public class Board implements Serializable {
     public void setRegDate(Date regDate) {
         this.regDate = regDate;
     }
+
+    /*public int getPage() {
+        return pageRequest.getPage();
+    }
+
+    public int getSizePerPage() {
+        return pageRequest.getSizePerPage();
+    }
+
+    public PageRequest getPageRequest() {
+        return pageRequest;
+    }
+
+    public void setPageRequest(PageRequest pageRequest) {
+        this.pageRequest = pageRequest;
+    }*/
 
     @Override
     public String toString() {

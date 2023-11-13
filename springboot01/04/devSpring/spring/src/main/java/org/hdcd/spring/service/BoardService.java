@@ -1,5 +1,6 @@
 package org.hdcd.spring.service;
 
+import org.hdcd.spring.common.domain.PageRequest;
 import org.hdcd.spring.domain.Board;
 
 import java.util.List;
@@ -14,5 +15,7 @@ public interface BoardService {
 
     public void remove(Integer boardNo) throws Exception;
 
-    public List<Board> list() throws Exception;
+    public List<Board> list(PageRequest pageRequest) throws Exception;
+
+    public int count(PageRequest pageRequest) throws Exception;
 }

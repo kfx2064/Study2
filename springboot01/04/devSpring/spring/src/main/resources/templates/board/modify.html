@@ -15,6 +15,11 @@
           th:object="${board}" method="POST">
         <input type="hidden" name="boardNo" th:field="*{boardNo}" />
 
+        <input type="hidden" name="page" th:value="${pgrq.page}" />
+        <input type="hidden" name="sizePerPage" th:value="${pgrq.sizePerPage}" />
+        <input type="hidden" name="searchType" th:value="${pgrq.searchType}" />
+        <input type="hidden" name="keyword" th:value="${pgrq.keyword}" />
+
         <table>
             <tr>
                 <td th:text="#{board.title}">제목</td>
@@ -75,7 +80,7 @@
             });
 
             $("#btnList").on("click", function () {
-                self.location = "list";
+                self.location = "list[(${pgrq.toUriString()})]";
             });
         });
     </script>

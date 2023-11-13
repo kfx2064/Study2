@@ -11,6 +11,17 @@
 <div layout:fragment="content">
     <h2 th:text="#{board.header.list}">회원게시판 목록</h2>
 
+    <form id="pgrq" action="list.html" th:action="@{|/board/list${pgrq.toUriStringByPage(1)}|}"
+          th:object="${pgrq}" method="GET">
+        <select th:field="*{searchType}">
+            <option th:each="element : ${searchTypeCodeValueList}" th:value="${element.label}"
+                    th:text="${element.value}">제목</option>
+        </select>
+
+        <input type="text" name="keyword" th:field="*{keyword}" />
+        <button id="searchBtn" th:text="#{action.search}">검색</button>
+    </form>
+
     <th:block sec:authorize="hasRole('ROLE_MEMBER')">
         <a href="register.html" th:href="@{/board/register}" th:text="#{action.new}">새로만들기</a>
     </th:block>
@@ -32,13 +43,28 @@
         <tr th:each="board : ${list}">
             <td align="center" th:text="${board.boardNo}">${board.bardNo}</td>
             <td align="left">
-                <a href="read.html" th:href="@{|/board/read?boardNo=${board.boardNo}|}"
+                <a href="read.html"
+                   th:href="@{|/board/read${pgrq.toUriString(pgrq.page)}&boardNo=${board.boardNo}|}"
                    th:text="${board.title}">${board.title}</a>
             </td>
             <td align="right" th:text="${board.writer}">${board.writer}</td>
             <td align="center" th:text="${#dates.format(board.regDate, 'yyyy-MM-dd HH:mm')}"></td>
         </tr>
     </table>
+
+    <div>
+        <th:block th:if="${pagination.prev}">
+            <a href="list.html" th:href="${pagination.startPage - 1}">&laquo;</a>
+        </th:block>
+
+        <th:block th:each="idx: ${#numbers.sequence(pagination.startPage, pagination.endPage)}">
+            <a href="list.html" th:href="@{|/board/list${pagination.makeQuery(idx)}|}" th:text="${idx}">${idx}</a>
+        </th:block>
+
+        <th:block th:if="${pagination.next && pagination.endPage > 0}">
+            <a href="list.html" th:href="${pagination.endPage + 1}">&raquo;</a>
+        </th:block>
+    </div>
 
     <script th:inline="javascript">
         var result = [[${msg}]];

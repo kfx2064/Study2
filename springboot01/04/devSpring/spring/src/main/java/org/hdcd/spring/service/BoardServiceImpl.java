@@ -1,5 +1,6 @@
 package org.hdcd.spring.service;
 
+import org.hdcd.spring.common.domain.PageRequest;
 import org.hdcd.spring.domain.Board;
 import org.hdcd.spring.mapper.BoardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,12 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public List<Board> list() throws Exception {
-        return mapper.list();
+    public List<Board> list(PageRequest pageRequest) throws Exception {
+        return mapper.list(pageRequest);
+    }
+
+    @Override
+    public int count(PageRequest pageRequest) throws Exception {
+        return mapper.count(pageRequest);
     }
 }
