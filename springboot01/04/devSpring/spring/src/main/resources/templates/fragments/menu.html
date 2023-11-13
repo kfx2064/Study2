@@ -7,7 +7,10 @@
             <td width="80"><a href="../home.html" th:href="@{/}" th:text="#{header.home}">홈</a></td>
 
             <th:block sec:authorize="!isAuthenticated()">
-
+                <td width="120">
+                    <a href="../board/list.html" th:href="@{/board/list}"
+                       th:text="#{menu.board.member}">회원게시판</a>
+                </td>
             </th:block>
 
             <th:block sec:authorize="isAuthenticated()">
@@ -18,10 +21,15 @@
                                        th:text="#{menu.codedetail.list}">코드관리</a></td>
                     <td width="120"><a href="../user/list.html" th:href="@{/user/list}"
                                        th:text="#{menu.user.admin}">회원관리</a></td>
+                    <td width="120"><a href="../board/list.html" th:href="@{/board/list}"
+                                        th:text="#{menu.board.member}">회원게시판</a></td>
                 </th:block>
 
                 <th:block sec:authorize="hasRole('ROLE_MEMBER')">
-
+                    <td width="120">
+                        <a href="../board/list.html" th:href="@{/board/list}"
+                           th:text="#{menu.board.member}">회원 게시판</a>
+                    </td>
                 </th:block>
 
             </th:block>
