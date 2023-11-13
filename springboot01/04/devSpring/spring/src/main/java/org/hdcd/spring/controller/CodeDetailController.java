@@ -67,6 +67,8 @@ public class CodeDetailController {
 
     @RequestMapping(value = "/modify", method = RequestMethod.GET)
     public void modifyForm(CodeDetail codeDetail, Model model) throws Exception {
+        System.out.println(codeDetail);
+        System.out.println(codeDetail.toString());
         model.addAttribute(codeDetailService.read(codeDetail));
 
         List<CodeLabelValue> classCodeList = codeService.getCodeClassList();

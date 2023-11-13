@@ -70,4 +70,17 @@ public class CodeDetail implements Serializable {
     public void setUpdDate(Date updDate) {
         this.updDate = updDate;
     }
+
+    @Override
+    public String toString() {
+        return "CodeDetail{" +
+                "classCode='" + classCode + '\'' +
+                ", codeValue='" + codeValue + '\'' +
+                ", codeName='" + codeName + '\'' +
+                ", sortSeq=" + sortSeq +
+                ", useYn='" + useYn + '\'' +
+                ", regDate=" + regDate +
+                ", updDate=" + updDate +
+                '}';
+    }
 }

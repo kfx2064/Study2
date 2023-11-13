@@ -55,12 +55,12 @@
                 , use_yn
                 , reg_date
         FROM    code_detail
-        ORDERY BY   class_code  ASC
+        ORDER BY    class_code  ASC
                     , sort_seq ASC
     </select>
 
     <select id="getMaxSortSeq" resultType="int">
-        SELECT  MAX(sort_seq)
+        SELECT  IFNULL(MAX(sort_seq), 0)
         FROM    code_detail
         WHERE   class_code = #{classCode}
     </select>
