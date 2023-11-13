@@ -45,7 +45,7 @@
                 , reg_date
         FROM    code_class
         ORDER BY    class_code DESC
-                    reg_date DESC
+                    , reg_date DESC
     </select>
 
 </mapper>

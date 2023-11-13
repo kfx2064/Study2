@@ -23,7 +23,7 @@
             </td>
         </tr>
 
-        <tr th:eac="codeClass : ${list}">
+        <tr th:each="codeClass : ${list}">
             <td align="center" th:text="${codeClass.classCode}">${codeClass.classCode}</td>
             <td align="left">
                 <a href="read.html" th:href="|/codeclass/read?classCode=${codeClass.classCode}|"
