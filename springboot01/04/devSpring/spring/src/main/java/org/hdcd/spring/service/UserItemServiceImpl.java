@@ -5,6 +5,7 @@ import org.hdcd.spring.domain.Item;
 import org.hdcd.spring.domain.Member;
 import org.hdcd.spring.domain.PayCoin;
 import org.hdcd.spring.domain.UserItem;
+import org.hdcd.spring.exception.NotEnoughCoinException;
 import org.hdcd.spring.mapper.CoinMapper;
 import org.hdcd.spring.mapper.UserItemMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,12 +28,18 @@ public class UserItemServiceImpl implements UserItemService {
     public void register(Member member, Item item) throws Exception {
         int userNo = member.getUserNo();
 
+        int coin = member.getCoin();
+
         int itemId = item.getItemId();
         int price = item.getPrice();
 
         UserItem userItem = new UserItem();
         userItem.setUserNo(userNo);
         userItem.setItemId(itemId);
+
+        if (coin < price) {
+            throw new NotEnoughCoinException("There is Not Enough Coin.");
+        }
 
         PayCoin payCoin = new PayCoin();
         payCoin.setUserNo(userNo);

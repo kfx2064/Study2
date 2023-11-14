@@ -40,7 +40,11 @@
 
     <script>
         $(document).ready(function () {
-            self.location = "list";
+
+            $("#btnList").on("click", function () {
+                self.location = "list";
+            });
+
         });
     </script>
 
