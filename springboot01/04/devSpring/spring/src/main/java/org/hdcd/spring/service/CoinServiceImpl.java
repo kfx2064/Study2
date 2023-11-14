@@ -1,6 +1,7 @@
 package org.hdcd.spring.service;
 
 import org.hdcd.spring.domain.ChargeCoin;
+import org.hdcd.spring.domain.PayCoin;
 import org.hdcd.spring.mapper.CoinMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,5 +25,10 @@ public class CoinServiceImpl implements CoinService {
     @Override
     public List<ChargeCoin> list(int userNo) throws Exception {
         return mapper.list(userNo);
+    }
+
+    @Override
+    public List<PayCoin> listPayHistory(int userNo) throws Exception {
+        return mapper.listPayHistory(userNo);
     }
 }
