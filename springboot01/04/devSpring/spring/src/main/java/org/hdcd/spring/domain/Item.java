@@ -20,7 +20,7 @@ public class Item implements Serializable {
 
     private String pictureUrl;
 
-    private MultipartFile preivew;
+    private MultipartFile preview;
 
     private String previewUrl;
 
@@ -72,12 +72,12 @@ public class Item implements Serializable {
         this.pictureUrl = pictureUrl;
     }
 
-    public MultipartFile getPreivew() {
-        return preivew;
+    public MultipartFile getPreview() {
+        return preview;
     }
 
-    public void setPreivew(MultipartFile preivew) {
-        this.preivew = preivew;
+    public void setPreview(MultipartFile preview) {
+        this.preview = preview;
     }
 
     public String getPreviewUrl() {
@@ -86,5 +86,19 @@ public class Item implements Serializable {
 
     public void setPreviewUrl(String previewUrl) {
         this.previewUrl = previewUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "itemId=" + itemId +
+                ", itemName='" + itemName + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", picture=" + picture +
+                ", pictureUrl='" + pictureUrl + '\'' +
+                ", preview=" + preview +
+                ", previewUrl='" + previewUrl + '\'' +
+                '}';
     }
 }

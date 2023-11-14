@@ -41,7 +41,7 @@
                 , price = #{price}
                 , description = #{description}
                 , picture_url = #{pictureUrl}
-                , previewUrl = #{previewUrl}
+                , preview_url = #{previewUrl}
         WHERE   item_id = #{itemId}
     </update>
 

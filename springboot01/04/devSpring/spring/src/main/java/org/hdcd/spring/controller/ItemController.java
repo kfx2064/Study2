@@ -54,9 +54,11 @@ public class ItemController {
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String register(Item item, RedirectAttributes rttr) throws Exception {
+        System.out.println(item.toString());
+
         MultipartFile pictureFile = item.getPicture();
 
-        MultipartFile previewFile = item.getPreivew();
+        MultipartFile previewFile = item.getPreview();
 
         String createdPictureFilename =
                 uploadFile(pictureFile.getOriginalFilename(), pictureFile.getBytes());
@@ -94,7 +96,7 @@ public class ItemController {
             item.setPictureUrl(createFilename);
         }
 
-        MultipartFile previewFile = item.getPreivew();
+        MultipartFile previewFile = item.getPreview();
 
         if (previewFile != null && previewFile.getSize() > 0) {
             String createdFilename =
