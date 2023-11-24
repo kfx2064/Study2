@@ -47,6 +47,7 @@ public class ProductRepositoryTest {
         productRepository.findByName("펜", getSort());
 
         Page<Product> productPage = productRepository.findByName("펜", PageRequest.of(0, 2));
+        System.out.println(productPage.getContent());
     }
 
     private Sort getSort() {
