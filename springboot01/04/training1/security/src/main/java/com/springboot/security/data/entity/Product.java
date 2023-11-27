@@ -1,10 +1,10 @@
 package com.springboot.security.data.entity;
 
-import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode
 @Table(name = "product")
 public class Product {
 
