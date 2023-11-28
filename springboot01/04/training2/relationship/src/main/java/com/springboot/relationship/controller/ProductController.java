@@ -1,9 +1,9 @@
 package com.springboot.relationship.controller;
 
-import com.springboot.advanced_jpa.data.dto.ChangeProductNameDto;
-import com.springboot.advanced_jpa.data.dto.ProductDto;
-import com.springboot.advanced_jpa.data.dto.ProductResponseDto;
-import com.springboot.advanced_jpa.service.ProductService;
+import com.springboot.relationship.data.dto.ChangeProductNameDto;
+import com.springboot.relationship.data.dto.ProductDto;
+import com.springboot.relationship.data.dto.ProductResponseDto;
+import com.springboot.relationship.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

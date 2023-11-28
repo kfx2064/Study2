@@ -1,9 +1,9 @@
 package com.springboot.relationship.service.impl;
 
-import com.springboot.advanced_jpa.data.dto.ProductDto;
-import com.springboot.advanced_jpa.data.dto.ProductResponseDto;
-import com.springboot.advanced_jpa.data.repository.ProductRepository;
-import com.springboot.advanced_jpa.service.ProductService;
+import com.springboot.relationship.data.dto.ProductDto;
+import com.springboot.relationship.data.dto.ProductResponseDto;
+import com.springboot.relationship.data.repository.ProductRepository;
+import com.springboot.relationship.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

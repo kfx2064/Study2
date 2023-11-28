@@ -1,6 +1,6 @@
 package com.springboot.relationship.data.repository;
 
-import com.springboot.advanced_jpa.data.entity.Product;
+import com.springboot.relationship.data.entity.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
