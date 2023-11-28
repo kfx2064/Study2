@@ -1,9 +1,6 @@
 package com.springboot.advanced_jpa.data.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -13,8 +10,10 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
+@EqualsAndHashCode
 @Table(name = "product")
-public class Product {
+public class Product extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,9 +27,5 @@ public class Product {
 
     @Column(nullable = false)
     private Integer stock;
-
-    private LocalDateTime createdAt;
-
-    private LocalDateTime updatedAt;
 
 }
