@@ -4,6 +4,8 @@ import com.springboot.advanced_jpa.data.entity.Product;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 
 import java.time.LocalDateTime;
@@ -44,5 +46,17 @@ public class ProductRepositoryTest {
         productRepository.findByName("펜", Sort.by(Sort.Order.asc("price")));
         productRepository.findByName("펜", Sort.by(Sort.Order.asc("price"),
                 Sort.Order.desc("stock")));
+
+        System.out.println(productRepository.findByName("펜", getSort()));
+
+        Page<Product> productPage = productRepository.findByName("펜", PageRequest.of(0, 2));
+        System.out.println(productPage.getContent());
+    }
+
+    private Sort getSort() {
+        return Sort.by(
+                Sort.Order.asc("price"),
+                Sort.Order.desc("stock")
+        );
     }
 }
