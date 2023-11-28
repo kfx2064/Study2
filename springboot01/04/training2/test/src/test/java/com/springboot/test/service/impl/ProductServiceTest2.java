@@ -8,13 +8,13 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@ExtendWith((SpringExtension.class))
-@Import({ProductServiceImpl.class})
+//@ExtendWith((SpringExtension.class))
+//@Import({ProductServiceImpl.class})
 public class ProductServiceTest2 {
 
     @MockBean
     ProductRepository productRepository;
 
-    @Autowired
+//    @Autowired
     ProductService productService;
 }
