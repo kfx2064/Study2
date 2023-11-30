@@ -5,4 +5,10 @@ spring:
       hibernate:
         format_sql: true
 
+  datasource:
     defer-datasource-initialization: true
+    url: jdbc:h2:mem:testdb
+
+  h2:
+    console:
+      enabled: true
