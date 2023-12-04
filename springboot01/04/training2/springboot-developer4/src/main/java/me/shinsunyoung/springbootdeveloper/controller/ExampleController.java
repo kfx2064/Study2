@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Controller
@@ -23,6 +22,8 @@ public class ExampleController {
 
         model.addAttribute("person", examplePerson);
         model.addAttribute("today", LocalDate.now());
+
+        return "example";
     }
 
     @Setter
