@@ -1,0 +1,305 @@
+[2023-11-17 15:08:24.823] [INFO ] [main] com.springboot.jpa.JpaApplication Starting JpaApplication using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 29884 (C:\dev\github\Study2\springboot01\04\training\jpa\target\classes started by jth45 in C:\dev\github\Study2\springboot01\04\training\jpa)
+[2023-11-17 15:08:24.829] [INFO ] [main] com.springboot.jpa.JpaApplication No active profile set, falling back to default profiles: default
+[2023-11-17 15:08:26.117] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 15:08:26.249] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interfaces.
+[2023-11-17 15:08:26.889] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+[2023-11-17 15:08:26.899] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+[2023-11-17 15:08:26.900] [INFO ] [main] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2023-11-17 15:08:26.900] [INFO ] [main] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.48]
+[2023-11-17 15:08:27.092] [INFO ] [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2023-11-17 15:08:27.092] [INFO ] [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 2184 ms
+[2023-11-17 15:08:27.297] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-17 15:08:27.354] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-17 15:08:27.485] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-17 15:08:27.635] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-11-17 15:08:27.772] [INFO ] [main] log4jdbc.log4j2 1. Connection opened. {executed in 110ms} 
+[2023-11-17 15:08:27.773] [INFO ] [main] log4jdbc.log4j2 1. Connection.new Connection returned 
+[2023-11-17 15:08:27.774] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-17 15:08:27.774] [INFO ] [main] log4jdbc.log4j2 1. Connection.isReadOnly() returned false
+[2023-11-17 15:08:27.775] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:27.775] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(1) returned true
+[2023-11-17 15:08:27.775] [INFO ] [main] log4jdbc.log4j2 1. Connection.getTransactionIsolation() returned 4
+[2023-11-17 15:08:27.778] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-11-17 15:08:27.781] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@58636b50
+[2023-11-17 15:08:27.783] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@59f3426f
+[2023-11-17 15:08:27.797] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-17 15:08:27.835] [INFO ] [main] log4jdbc.log4j2 1. Connection.getCatalog() returned springboot
+[2023-11-17 15:08:27.863] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@2c56eba5
+[2023-11-17 15:08:27.865] [INFO ] [main] log4jdbc.log4j2 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@58ebee9
+[2023-11-17 15:08:27.871] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:08:27.888] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection opened. {executed in 5ms} 
+[2023-11-17 15:08:27.889] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.new Connection returned 
+[2023-11-17 15:08:27.890] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.isReadOnly() returned false
+[2023-11-17 15:08:27.890] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:27.940] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection opened. {executed in 50ms} 
+[2023-11-17 15:08:27.940] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.new Connection returned 
+[2023-11-17 15:08:27.942] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.isReadOnly() returned false
+[2023-11-17 15:08:27.942] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:27.959] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection opened. {executed in 16ms} 
+[2023-11-17 15:08:27.959] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.new Connection returned 
+[2023-11-17 15:08:27.959] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.isReadOnly() returned false
+[2023-11-17 15:08:27.960] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:27.964] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection opened. {executed in 4ms} 
+[2023-11-17 15:08:27.965] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.new Connection returned 
+[2023-11-17 15:08:27.965] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.isReadOnly() returned false
+[2023-11-17 15:08:27.965] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:27.970] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection opened. {executed in 4ms} 
+[2023-11-17 15:08:27.970] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.new Connection returned 
+[2023-11-17 15:08:27.971] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.isReadOnly() returned false
+[2023-11-17 15:08:27.971] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:27.976] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection opened. {executed in 4ms} 
+[2023-11-17 15:08:27.977] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.new Connection returned 
+[2023-11-17 15:08:27.977] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.isReadOnly() returned false
+[2023-11-17 15:08:27.977] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:27.982] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection opened. {executed in 4ms} 
+[2023-11-17 15:08:27.982] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.new Connection returned 
+[2023-11-17 15:08:27.983] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.isReadOnly() returned false
+[2023-11-17 15:08:27.983] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:27.990] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection opened. {executed in 7ms} 
+[2023-11-17 15:08:27.990] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.new Connection returned 
+[2023-11-17 15:08:27.991] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.isReadOnly() returned false
+[2023-11-17 15:08:27.991] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:27.996] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection opened. {executed in 5ms} 
+[2023-11-17 15:08:27.996] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.new Connection returned 
+[2023-11-17 15:08:27.997] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.isReadOnly() returned false
+[2023-11-17 15:08:27.997] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:28.507] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-17 15:08:28.507] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:28.508] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 15:08:28.509] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@2e7517aa
+[2023-11-17 15:08:28.516] [INFO ] [main] log4jdbc.log4j2 1. drop table if exists product  {executed in 5 ms}
+[2023-11-17 15:08:28.516] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-17 15:08:28.527] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned java.sql.SQLWarning: Unknown table 'springboot.product'
+[2023-11-17 15:08:28.527] [INFO ] [main] log4jdbc.log4j2 1. Statement.clearWarnings() returned 
+[2023-11-17 15:08:28.527] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 15:08:28.528] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:08:28.530] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 15:08:28.530] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 15:08:28.530] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@438c0aaf
+[2023-11-17 15:08:28.585] [INFO ] [main] log4jdbc.log4j2 1. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 55 ms}
+[2023-11-17 15:08:28.585] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-17 15:08:28.585] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 15:08:28.587] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 15:08:28.587] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:08:28.587] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-17 15:08:28.597] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 15:08:29.086] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-11-17 15:08:29.232] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-11-17 15:08:29.489] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+[2023-11-17 15:08:29.506] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+[2023-11-17 15:08:29.507] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-11-17 15:08:29.520] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-11-17 15:08:29.548] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-11-17 15:08:29.745] [INFO ] [main] com.springboot.jpa.JpaApplication Started JpaApplication in 5.545 seconds (JVM running for 7.004)
+[2023-11-17 15:08:45.449] [INFO ] [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-11-17 15:08:45.449] [INFO ] [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2023-11-17 15:08:45.452] [INFO ] [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet Completed initialization in 2 ms
+[2023-11-17 15:09:19.365] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-17 15:09:19.365] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 15:09:19.365] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. Connection.setAutoCommit(false) returned 
+[2023-11-17 15:09:19.400] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. PreparedStatement.new PreparedStatement returned 
+[2023-11-17 15:09:19.401] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. Connection.prepareStatement(insert into product (created_at, name, price, stock, updated_at) values (?, ?, ?, ?, ?), 1) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3302eceb
+[2023-11-17 15:09:19.406] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. PreparedStatement.setTimestamp(1, 2023-11-17 15:09:19.3543334) returned 
+[2023-11-17 15:09:19.407] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. PreparedStatement.setString(2, "연필") returned 
+[2023-11-17 15:09:19.408] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. PreparedStatement.setInt(3, 1000) returned 
+[2023-11-17 15:09:19.408] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. PreparedStatement.setInt(4, 100) returned 
+[2023-11-17 15:09:19.408] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. PreparedStatement.setTimestamp(5, 2023-11-17 15:09:19.3543334) returned 
+[2023-11-17 15:09:19.418] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. insert into product (created_at, name, price, stock, updated_at) values ('11/17/2023 15:09:19.354', 
+'연필', 1000, 100, '11/17/2023 15:09:19.354')  {executed in 9 ms}
+[2023-11-17 15:09:19.418] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. PreparedStatement.executeUpdate() returned 1
+[2023-11-17 15:09:19.419] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. getGeneratedKeys on query: insert into product (created_at, name, price, stock, updated_at) 
+values ('11/17/2023 15:09:19.354', '연필', 1000, 100, '11/17/2023 15:09:19.354')  {executed in 0 ms}
+[2023-11-17 15:09:19.424] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. ResultSet.new ResultSet returned 
+[2023-11-17 15:09:19.424] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. PreparedStatement.getGeneratedKeys() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@68a7a89e
+[2023-11-17 15:09:19.425] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. ResultSet.next() returned true
+[2023-11-17 15:09:19.427] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@584ab22a - Field level information: 
+	com.mysql.cj.result.Field@6e0f0601[dbName=null,tableName=,originalTableName=null,columnName=GENERATED_KEY,originalColumnName=null,mysqlType=-1(FIELD_TYPE_BIGINT UNSIGNED),sqlType=-5,flags= UNSIGNED, charsetIndex=0, charsetName=US-ASCII]
+[2023-11-17 15:09:19.427] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. ResultSet.getLong(1) returned 1
+[2023-11-17 15:09:19.430] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 
+|--------------|
+|generated_key |
+|--------------|
+|1             |
+|--------------|
+
+[2023-11-17 15:09:19.430] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. ResultSet.close() returned void
+[2023-11-17 15:09:19.430] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. PreparedStatement.getMaxRows() returned 0
+[2023-11-17 15:09:19.430] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. PreparedStatement.getQueryTimeout() returned 0
+[2023-11-17 15:09:19.430] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. PreparedStatement.close() returned 
+[2023-11-17 15:09:19.444] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. Connection.commit() returned 
+[2023-11-17 15:09:19.445] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. Connection.setAutoCommit(true) returned 
+[2023-11-17 15:09:19.450] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:09:19.450] [INFO ] [http-nio-8080-exec-7] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:10:20.309] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-17 15:10:20.319] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. Connection.setReadOnly(true) returned 
+[2023-11-17 15:10:20.319] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 15:10:20.320] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. Connection.setAutoCommit(false) returned 
+[2023-11-17 15:10:20.329] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. Connection.commit() returned 
+[2023-11-17 15:10:20.331] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. Connection.setAutoCommit(true) returned 
+[2023-11-17 15:10:20.334] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. Connection.setReadOnly(false) returned 
+[2023-11-17 15:10:20.339] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. PreparedStatement.new PreparedStatement returned 
+[2023-11-17 15:10:20.339] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. Connection.prepareStatement(select product0_.number as number1_0_0_, product0_.created_at as created_2_0_0_, product0_.name as name3_0_0_, product0_.price as price4_0_0_, product0_.stock as stock5_0_0_, product0_.updated_at as updated_6_0_0_ from product product0_ where product0_.number=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@2505d43b
+[2023-11-17 15:10:20.340] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. PreparedStatement.setLong(1, 1) returned 
+[2023-11-17 15:10:20.341] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. select product0_.number as number1_0_0_, product0_.created_at as created_2_0_0_, product0_.name 
+as name3_0_0_, product0_.price as price4_0_0_, product0_.stock as stock5_0_0_, product0_.updated_at 
+as updated_6_0_0_ from product product0_ where product0_.number=1  {executed in 0 ms}
+[2023-11-17 15:10:20.341] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.new ResultSet returned 
+[2023-11-17 15:10:20.341] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5bef8b33
+[2023-11-17 15:10:20.343] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.next() returned true
+[2023-11-17 15:10:20.346] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.getTimestamp(created_2_0_0_) returned 2023-11-17 15:09:19.354333
+[2023-11-17 15:10:20.346] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:10:20.347] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.getString(name3_0_0_) returned 연필
+[2023-11-17 15:10:20.347] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:10:20.347] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.getInt(price4_0_0_) returned 1000
+[2023-11-17 15:10:20.347] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:10:20.347] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.getInt(stock5_0_0_) returned 100
+[2023-11-17 15:10:20.347] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:10:20.347] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.getTimestamp(updated_6_0_0_) returned 2023-11-17 15:09:19.354333
+[2023-11-17 15:10:20.347] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:10:20.353] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 
+|---------|---------------------------|-----|------|------|---------------------------|
+|number   |created_at                 |name |price |stock |updated_at                 |
+|---------|---------------------------|-----|------|------|---------------------------|
+|[unread] |2023-11-17 15:09:19.354333 |연필   |1000  |100   |2023-11-17 15:09:19.354333 |
+|---------|---------------------------|-----|------|------|---------------------------|
+
+[2023-11-17 15:10:20.353] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.next() returned false
+[2023-11-17 15:10:20.356] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. ResultSet.close() returned void
+[2023-11-17 15:10:20.356] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. PreparedStatement.getMaxRows() returned 0
+[2023-11-17 15:10:20.356] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. PreparedStatement.getQueryTimeout() returned 0
+[2023-11-17 15:10:20.356] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. PreparedStatement.close() returned 
+[2023-11-17 15:10:20.358] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:10:20.358] [INFO ] [http-nio-8080-exec-10] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:11:35.227] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-17 15:11:35.227] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.setReadOnly(true) returned 
+[2023-11-17 15:11:35.228] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 15:11:35.228] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.setAutoCommit(false) returned 
+[2023-11-17 15:11:35.231] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.new PreparedStatement returned 
+[2023-11-17 15:11:35.231] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.prepareStatement(select product0_.number as number1_0_0_, product0_.created_at as created_2_0_0_, product0_.name as name3_0_0_, product0_.price as price4_0_0_, product0_.stock as stock5_0_0_, product0_.updated_at as updated_6_0_0_ from product product0_ where product0_.number=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@17519610
+[2023-11-17 15:11:35.231] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.setLong(1, 1) returned 
+[2023-11-17 15:11:35.232] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. select product0_.number as number1_0_0_, product0_.created_at as created_2_0_0_, product0_.name 
+as name3_0_0_, product0_.price as price4_0_0_, product0_.stock as stock5_0_0_, product0_.updated_at 
+as updated_6_0_0_ from product product0_ where product0_.number=1  {executed in 1 ms}
+[2023-11-17 15:11:35.232] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.new ResultSet returned 
+[2023-11-17 15:11:35.232] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@7bc710ea
+[2023-11-17 15:11:35.232] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.next() returned true
+[2023-11-17 15:11:35.232] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.getTimestamp(created_2_0_0_) returned 2023-11-17 15:09:19.354333
+[2023-11-17 15:11:35.233] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:11:35.233] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.getString(name3_0_0_) returned 연필
+[2023-11-17 15:11:35.233] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:11:35.233] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.getInt(price4_0_0_) returned 1000
+[2023-11-17 15:11:35.233] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:11:35.233] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.getInt(stock5_0_0_) returned 100
+[2023-11-17 15:11:35.233] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:11:35.233] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.getTimestamp(updated_6_0_0_) returned 2023-11-17 15:09:19.354333
+[2023-11-17 15:11:35.233] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:11:35.234] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 
+|---------|---------------------------|-----|------|------|---------------------------|
+|number   |created_at                 |name |price |stock |updated_at                 |
+|---------|---------------------------|-----|------|------|---------------------------|
+|[unread] |2023-11-17 15:09:19.354333 |연필   |1000  |100   |2023-11-17 15:09:19.354333 |
+|---------|---------------------------|-----|------|------|---------------------------|
+
+[2023-11-17 15:11:35.234] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.next() returned false
+[2023-11-17 15:11:35.234] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. ResultSet.close() returned void
+[2023-11-17 15:11:35.234] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.getMaxRows() returned 0
+[2023-11-17 15:11:35.234] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.getQueryTimeout() returned 0
+[2023-11-17 15:11:35.234] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.close() returned 
+[2023-11-17 15:11:35.235] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.commit() returned 
+[2023-11-17 15:11:35.235] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.setAutoCommit(true) returned 
+[2023-11-17 15:11:35.235] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.setReadOnly(false) returned 
+[2023-11-17 15:11:35.235] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 15:11:35.235] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.setAutoCommit(false) returned 
+[2023-11-17 15:11:35.243] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.new PreparedStatement returned 
+[2023-11-17 15:11:35.243] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.prepareStatement(update product set created_at=?, name=?, price=?, stock=?, updated_at=? where number=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@4a604caa
+[2023-11-17 15:11:35.243] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.setTimestamp(1, 2023-11-17 15:09:19.354333) returned 
+[2023-11-17 15:11:35.243] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.setString(2, "지우개") returned 
+[2023-11-17 15:11:35.244] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.setInt(3, 1000) returned 
+[2023-11-17 15:11:35.244] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.setInt(4, 100) returned 
+[2023-11-17 15:11:35.244] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.setTimestamp(5, 2023-11-17 15:11:35.2357584) returned 
+[2023-11-17 15:11:35.244] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.setLong(6, 1) returned 
+[2023-11-17 15:11:35.249] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. update product set created_at='11/17/2023 15:09:19.354', name='지우개', price=1000, stock=100, 
+updated_at='11/17/2023 15:11:35.235' where number=1  {executed in 5 ms}
+[2023-11-17 15:11:35.249] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.executeUpdate() returned 1
+[2023-11-17 15:11:35.249] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.getMaxRows() returned 0
+[2023-11-17 15:11:35.249] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.getQueryTimeout() returned 0
+[2023-11-17 15:11:35.249] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. PreparedStatement.close() returned 
+[2023-11-17 15:11:35.251] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.commit() returned 
+[2023-11-17 15:11:35.252] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.setAutoCommit(true) returned 
+[2023-11-17 15:11:35.253] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:11:35.253] [INFO ] [http-nio-8080-exec-2] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:12:23.646] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-17 15:12:23.646] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. Connection.setReadOnly(true) returned 
+[2023-11-17 15:12:23.646] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 15:12:23.647] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. Connection.setAutoCommit(false) returned 
+[2023-11-17 15:12:23.647] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. Connection.commit() returned 
+[2023-11-17 15:12:23.648] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. Connection.setAutoCommit(true) returned 
+[2023-11-17 15:12:23.648] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. Connection.setReadOnly(false) returned 
+[2023-11-17 15:12:23.648] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. PreparedStatement.new PreparedStatement returned 
+[2023-11-17 15:12:23.648] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. Connection.prepareStatement(select product0_.number as number1_0_0_, product0_.created_at as created_2_0_0_, product0_.name as name3_0_0_, product0_.price as price4_0_0_, product0_.stock as stock5_0_0_, product0_.updated_at as updated_6_0_0_ from product product0_ where product0_.number=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5705a917
+[2023-11-17 15:12:23.648] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. PreparedStatement.setLong(1, 1) returned 
+[2023-11-17 15:12:23.649] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. select product0_.number as number1_0_0_, product0_.created_at as created_2_0_0_, product0_.name 
+as name3_0_0_, product0_.price as price4_0_0_, product0_.stock as stock5_0_0_, product0_.updated_at 
+as updated_6_0_0_ from product product0_ where product0_.number=1  {executed in 1 ms}
+[2023-11-17 15:12:23.649] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.new ResultSet returned 
+[2023-11-17 15:12:23.649] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@2242a2e2
+[2023-11-17 15:12:23.650] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.next() returned true
+[2023-11-17 15:12:23.650] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.getTimestamp(created_2_0_0_) returned 2023-11-17 15:09:19.354333
+[2023-11-17 15:12:23.650] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:12:23.650] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.getString(name3_0_0_) returned 지우개
+[2023-11-17 15:12:23.650] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:12:23.650] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.getInt(price4_0_0_) returned 1000
+[2023-11-17 15:12:23.651] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:12:23.651] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.getInt(stock5_0_0_) returned 100
+[2023-11-17 15:12:23.651] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:12:23.651] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.getTimestamp(updated_6_0_0_) returned 2023-11-17 15:11:35.235758
+[2023-11-17 15:12:23.651] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.wasNull() returned false
+[2023-11-17 15:12:23.654] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 
+|---------|---------------------------|-----|------|------|---------------------------|
+|number   |created_at                 |name |price |stock |updated_at                 |
+|---------|---------------------------|-----|------|------|---------------------------|
+|[unread] |2023-11-17 15:09:19.354333 |지우개  |1000  |100   |2023-11-17 15:11:35.235758 |
+|---------|---------------------------|-----|------|------|---------------------------|
+
+[2023-11-17 15:12:23.654] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.next() returned false
+[2023-11-17 15:12:23.655] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. ResultSet.close() returned void
+[2023-11-17 15:12:23.655] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. PreparedStatement.getMaxRows() returned 0
+[2023-11-17 15:12:23.655] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. PreparedStatement.getQueryTimeout() returned 0
+[2023-11-17 15:12:23.656] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. PreparedStatement.close() returned 
+[2023-11-17 15:12:23.659] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:12:23.659] [INFO ] [http-nio-8080-exec-3] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:13:05.126] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 15:13:05.128] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-11-17 15:13:05.133] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection closed. {executed in 3ms} 
+[2023-11-17 15:13:05.133] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection.close() returned 
+[2023-11-17 15:13:05.134] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection closed. {executed in 1ms} 
+[2023-11-17 15:13:05.134] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection.close() returned 
+[2023-11-17 15:13:05.135] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection closed. {executed in 0ms} 
+[2023-11-17 15:13:05.135] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection.close() returned 
+[2023-11-17 15:13:05.135] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection closed. {executed in 0ms} 
+[2023-11-17 15:13:05.135] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection.close() returned 
+[2023-11-17 15:13:05.136] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection closed. {executed in 1ms} 
+[2023-11-17 15:13:05.136] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection.close() returned 
+[2023-11-17 15:13:05.136] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection closed. {executed in 0ms} 
+[2023-11-17 15:13:05.136] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection.close() returned 
+[2023-11-17 15:13:05.137] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection closed. {executed in 1ms} 
+[2023-11-17 15:13:05.137] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection.close() returned 
+[2023-11-17 15:13:05.137] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection closed. {executed in 0ms} 
+[2023-11-17 15:13:05.137] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection.close() returned 
+[2023-11-17 15:13:05.138] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection closed. {executed in 1ms} 
+[2023-11-17 15:13:05.138] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection.close() returned 
+[2023-11-17 15:13:05.139] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection closed. {executed in 1ms} 
+[2023-11-17 15:13:05.139] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection.close() returned 
+[2023-11-17 15:13:05.139] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
