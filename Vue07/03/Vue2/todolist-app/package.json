@@ -1,5 +1,5 @@
 {
-  "name": "test-vue-app",
+  "name": "todolist-app",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.3.2",
     "mitt": "^3.0.1",
     "vue": "^3.3.10"
   },
