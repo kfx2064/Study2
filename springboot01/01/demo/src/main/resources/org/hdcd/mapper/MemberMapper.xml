@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.hdcd.mapper.MemberMapper">
+
+    <insert id="create" useGeneratedKeys="true" keyProperty="userNo">
+        INSERT INTO member
+        (
+            user_id
+            , user_pw
+            , user_name
+        )
+        VALUES
+        (
+            #{userId}
+            , #{userPw}
+            , #{userName}
+        )
+    </insert>
+
+    <select id="read" resultType="org.hdcd.domain.Member">
+        SELECT  mem.user_no         AS userNo
+                , mem.user_id       AS userId
+                , user_pw           AS userPw
+                , user_name         AS userName
+                , reg_date          AS regDate
+                , upd_date          AS updDate
+                , auth
+        FROM    member      mem
+        LEFT OUTER JOIN member_auth     auth
+        ON  mem.user_no = auth.user_no
+        WHERE   mem.user_no = #{userNo}
+    </select>
+
+    <update id="update">
+        UPDATE  member
+        SET     user_name = #{userName}
+        WHERE   user_no = #{userNo}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM member
+        WHERE   user_no = #{userNo}
+    </delete>
+
+    <select id="list" resultType="org.hdcd.domain.Member">
+        SELECT  user_no         AS userNo
+                , user_id       AS userId
+                , user_pw       AS userPw
+                , user_name     AS userName
+                , reg_date      AS regDate
+        FROM    member
+        ORDER BY    reg_date DESC
+    </select>
+
+    <insert id="createAuth">
+        INSERT INTO member_auth
+        (
+            user_no
+            , auth
+        )
+        VALUES
+        (
+            #{userNo}
+            , #{auth}
+        )
+    </insert>
+
+    <delete id="deleteAuth">
+        DELETE FROM member_auth
+        WHERE   user_no = #{userNo}
+    </delete>
+
+</mapper>

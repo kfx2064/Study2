@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>04-11</title>
+    </head>
+    <body>
+        <div id="app">
+            이름 : <input type="text" v-model.trim="name" placeholder="영문 두글자 이상을 입력하세요" /><br/>
+            <ul>
+                <li v-for="c in contacts">{{c.name}} : {{c.tel}}</li>
+            </ul>
+        </div>
+    </body>
+</html>

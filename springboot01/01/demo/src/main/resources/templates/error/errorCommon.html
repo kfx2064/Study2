@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>HOME</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<script src="/js/jQuery-3.7.1.min.js"></script>
+<body>
+<h4 th:text="${exception.getMessage()}">${exception.getMessage()}</h4>
+
+<ul>
+    <li th:each="stack : ${exception.getStackTrace()}" th:text="${stack.toString()}"></li>
+</ul>
+</body>
+</html>

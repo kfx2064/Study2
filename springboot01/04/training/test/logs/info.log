@@ -1,0 +1,1311 @@
+[2023-11-17 15:41:39.552] [INFO ] [main] com.springboot.test.TestApplication Starting TestApplication using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 32852 (C:\dev\github\Study2\springboot01\04\training\test\target\classes started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 15:41:39.555] [INFO ] [main] com.springboot.test.TestApplication No active profile set, falling back to default profiles: default
+[2023-11-17 15:41:40.431] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 15:41:40.501] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interfaces.
+[2023-11-17 15:41:40.934] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+[2023-11-17 15:41:40.941] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+[2023-11-17 15:41:40.942] [INFO ] [main] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2023-11-17 15:41:40.942] [INFO ] [main] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.48]
+[2023-11-17 15:41:41.122] [INFO ] [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2023-11-17 15:41:41.123] [INFO ] [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1523 ms
+[2023-11-17 15:41:41.297] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-17 15:41:41.331] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-17 15:41:41.428] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-17 15:41:41.526] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-11-17 15:41:41.634] [INFO ] [main] log4jdbc.log4j2 1. Connection opened. {executed in 93ms} 
+[2023-11-17 15:41:41.636] [INFO ] [main] log4jdbc.log4j2 1. Connection.new Connection returned 
+[2023-11-17 15:41:41.637] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-17 15:41:41.637] [INFO ] [main] log4jdbc.log4j2 1. Connection.isReadOnly() returned false
+[2023-11-17 15:41:41.637] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:41.638] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(1) returned true
+[2023-11-17 15:41:41.638] [INFO ] [main] log4jdbc.log4j2 1. Connection.getTransactionIsolation() returned 4
+[2023-11-17 15:41:41.643] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-11-17 15:41:41.648] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@144e36ae
+[2023-11-17 15:41:41.652] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@7d90644f
+[2023-11-17 15:41:41.665] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-17 15:41:41.700] [INFO ] [main] log4jdbc.log4j2 1. Connection.getCatalog() returned springboot
+[2023-11-17 15:41:41.721] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@246df37b
+[2023-11-17 15:41:41.723] [INFO ] [main] log4jdbc.log4j2 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@75c33608
+[2023-11-17 15:41:41.726] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:41:41.756] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection opened. {executed in 3ms} 
+[2023-11-17 15:41:41.756] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.new Connection returned 
+[2023-11-17 15:41:41.757] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.isReadOnly() returned false
+[2023-11-17 15:41:41.757] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:41.761] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection opened. {executed in 3ms} 
+[2023-11-17 15:41:41.761] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.new Connection returned 
+[2023-11-17 15:41:41.761] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.isReadOnly() returned false
+[2023-11-17 15:41:41.761] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:41.764] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection opened. {executed in 3ms} 
+[2023-11-17 15:41:41.764] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.new Connection returned 
+[2023-11-17 15:41:41.765] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.isReadOnly() returned false
+[2023-11-17 15:41:41.765] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:41.769] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection opened. {executed in 4ms} 
+[2023-11-17 15:41:41.769] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.new Connection returned 
+[2023-11-17 15:41:41.769] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.isReadOnly() returned false
+[2023-11-17 15:41:41.770] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:41.773] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection opened. {executed in 3ms} 
+[2023-11-17 15:41:41.773] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.new Connection returned 
+[2023-11-17 15:41:41.774] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.isReadOnly() returned false
+[2023-11-17 15:41:41.774] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:41.777] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection opened. {executed in 2ms} 
+[2023-11-17 15:41:41.777] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.new Connection returned 
+[2023-11-17 15:41:41.777] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.isReadOnly() returned false
+[2023-11-17 15:41:41.777] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:41.781] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection opened. {executed in 4ms} 
+[2023-11-17 15:41:41.781] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.new Connection returned 
+[2023-11-17 15:41:41.781] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.isReadOnly() returned false
+[2023-11-17 15:41:41.781] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:41.784] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection opened. {executed in 2ms} 
+[2023-11-17 15:41:41.785] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.new Connection returned 
+[2023-11-17 15:41:41.785] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.isReadOnly() returned false
+[2023-11-17 15:41:41.785] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:41.789] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection opened. {executed in 4ms} 
+[2023-11-17 15:41:41.789] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.new Connection returned 
+[2023-11-17 15:41:41.790] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.isReadOnly() returned false
+[2023-11-17 15:41:41.790] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:42.172] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:42.173] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 15:41:42.173] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@344a065a
+[2023-11-17 15:41:42.198] [INFO ] [main] log4jdbc.log4j2 1. drop table if exists product  {executed in 23 ms}
+[2023-11-17 15:41:42.198] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-17 15:41:42.199] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 15:41:42.199] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 15:41:42.199] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:41:42.201] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 15:41:42.201] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 15:41:42.201] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@6ee1ddcf
+[2023-11-17 15:41:42.223] [INFO ] [main] log4jdbc.log4j2 1. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 22 ms}
+[2023-11-17 15:41:42.223] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-17 15:41:42.224] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 15:41:42.225] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 15:41:42.225] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 15:41:42.225] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-17 15:41:42.234] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 15:41:42.630] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-11-17 15:41:42.737] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-11-17 15:41:43.000] [INFO ] [main] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+[2023-11-17 15:41:43.021] [INFO ] [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+[2023-11-17 15:41:43.022] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-11-17 15:41:43.037] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-11-17 15:41:43.068] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-11-17 15:41:43.085] [INFO ] [main] com.springboot.test.TestApplication Started TestApplication in 4.055 seconds (JVM running for 5.44)
+[2023-11-17 15:41:46.871] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 15:41:46.873] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-11-17 15:41:46.880] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection closed. {executed in 5ms} 
+[2023-11-17 15:41:46.880] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection.close() returned 
+[2023-11-17 15:41:46.881] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection closed. {executed in 1ms} 
+[2023-11-17 15:41:46.881] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection.close() returned 
+[2023-11-17 15:41:46.881] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection closed. {executed in 0ms} 
+[2023-11-17 15:41:46.882] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection.close() returned 
+[2023-11-17 15:41:46.882] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection closed. {executed in 0ms} 
+[2023-11-17 15:41:46.883] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection.close() returned 
+[2023-11-17 15:41:46.883] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection closed. {executed in 0ms} 
+[2023-11-17 15:41:46.883] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection.close() returned 
+[2023-11-17 15:41:46.884] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection closed. {executed in 0ms} 
+[2023-11-17 15:41:46.884] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection.close() returned 
+[2023-11-17 15:41:46.885] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection closed. {executed in 1ms} 
+[2023-11-17 15:41:46.886] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection.close() returned 
+[2023-11-17 15:41:46.887] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection closed. {executed in 1ms} 
+[2023-11-17 15:41:46.887] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection.close() returned 
+[2023-11-17 15:41:46.888] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection closed. {executed in 0ms} 
+[2023-11-17 15:41:46.888] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection.close() returned 
+[2023-11-17 15:41:46.889] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection closed. {executed in 1ms} 
+[2023-11-17 15:41:46.889] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection.close() returned 
+[2023-11-17 15:41:46.889] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-11-17 16:06:02.130] [INFO ] [main] com.springboot.test.TestApplicationTests Starting TestApplicationTests using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 33424 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:06:02.159] [INFO ] [main] com.springboot.test.TestApplicationTests No active profile set, falling back to default profiles: default
+[2023-11-17 16:06:04.014] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 16:06:04.134] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interfaces.
+[2023-11-17 16:06:05.209] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-17 16:06:05.302] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-17 16:06:05.547] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-17 16:06:06.365] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-11-17 16:06:06.570] [INFO ] [main] log4jdbc.log4j2 1. Connection opened. {executed in 175ms} 
+[2023-11-17 16:06:06.572] [INFO ] [main] log4jdbc.log4j2 1. Connection.new Connection returned 
+[2023-11-17 16:06:06.573] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-17 16:06:06.574] [INFO ] [main] log4jdbc.log4j2 1. Connection.isReadOnly() returned false
+[2023-11-17 16:06:06.574] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:06.575] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(1) returned true
+[2023-11-17 16:06:06.576] [INFO ] [main] log4jdbc.log4j2 1. Connection.getTransactionIsolation() returned 4
+[2023-11-17 16:06:06.579] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-11-17 16:06:06.587] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@534d0e20
+[2023-11-17 16:06:06.592] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@351d93bd
+[2023-11-17 16:06:06.630] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-17 16:06:06.678] [INFO ] [main] log4jdbc.log4j2 1. Connection.getCatalog() returned springboot
+[2023-11-17 16:06:06.697] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection opened. {executed in 5ms} 
+[2023-11-17 16:06:06.698] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.new Connection returned 
+[2023-11-17 16:06:06.699] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.isReadOnly() returned false
+[2023-11-17 16:06:06.699] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:06.705] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection opened. {executed in 4ms} 
+[2023-11-17 16:06:06.705] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.new Connection returned 
+[2023-11-17 16:06:06.705] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.isReadOnly() returned false
+[2023-11-17 16:06:06.706] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:06.716] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection opened. {executed in 10ms} 
+[2023-11-17 16:06:06.716] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.new Connection returned 
+[2023-11-17 16:06:06.717] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.isReadOnly() returned false
+[2023-11-17 16:06:06.717] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:06.716] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@31082efa
+[2023-11-17 16:06:06.721] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection opened. {executed in 4ms} 
+[2023-11-17 16:06:06.722] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.new Connection returned 
+[2023-11-17 16:06:06.722] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.isReadOnly() returned false
+[2023-11-17 16:06:06.722] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:06.725] [INFO ] [main] log4jdbc.log4j2 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@7dddfc35
+[2023-11-17 16:06:06.727] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection opened. {executed in 4ms} 
+[2023-11-17 16:06:06.727] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.new Connection returned 
+[2023-11-17 16:06:06.728] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.isReadOnly() returned false
+[2023-11-17 16:06:06.728] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:06.738] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:06:06.740] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection opened. {executed in 12ms} 
+[2023-11-17 16:06:06.740] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.new Connection returned 
+[2023-11-17 16:06:06.741] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.isReadOnly() returned false
+[2023-11-17 16:06:06.741] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:06.746] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection opened. {executed in 5ms} 
+[2023-11-17 16:06:06.746] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.new Connection returned 
+[2023-11-17 16:06:06.747] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.isReadOnly() returned false
+[2023-11-17 16:06:06.747] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:06.752] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection opened. {executed in 5ms} 
+[2023-11-17 16:06:06.752] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.new Connection returned 
+[2023-11-17 16:06:06.753] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.isReadOnly() returned false
+[2023-11-17 16:06:06.754] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:06.758] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection opened. {executed in 4ms} 
+[2023-11-17 16:06:06.758] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.new Connection returned 
+[2023-11-17 16:06:06.759] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.isReadOnly() returned false
+[2023-11-17 16:06:06.759] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:07.724] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-17 16:06:07.725] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:07.726] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:06:07.727] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@5fd31df7
+[2023-11-17 16:06:07.745] [INFO ] [main] log4jdbc.log4j2 1. drop table if exists product  {executed in 17 ms}
+[2023-11-17 16:06:07.746] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-17 16:06:07.746] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:06:07.746] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:06:07.747] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:06:07.750] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:06:07.750] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:06:07.750] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@364c93e6
+[2023-11-17 16:06:07.769] [INFO ] [main] log4jdbc.log4j2 1. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 19 ms}
+[2023-11-17 16:06:07.769] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-17 16:06:07.769] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:06:07.772] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:06:07.772] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:06:07.772] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-17 16:06:07.785] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:06:08.950] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-11-17 16:06:09.563] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-11-17 16:06:10.523] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-11-17 16:06:10.605] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-11-17 16:06:10.677] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-11-17 16:06:10.711] [INFO ] [main] com.springboot.test.TestApplicationTests Started TestApplicationTests in 9.307 seconds (JVM running for 11.093)
+[2023-11-17 16:06:11.146] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:06:11.152] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-11-17 16:06:11.170] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection closed. {executed in 11ms} 
+[2023-11-17 16:06:11.171] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection.close() returned 
+[2023-11-17 16:06:11.174] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection closed. {executed in 3ms} 
+[2023-11-17 16:06:11.174] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection.close() returned 
+[2023-11-17 16:06:11.179] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection closed. {executed in 4ms} 
+[2023-11-17 16:06:11.179] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection.close() returned 
+[2023-11-17 16:06:11.180] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection closed. {executed in 1ms} 
+[2023-11-17 16:06:11.180] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection.close() returned 
+[2023-11-17 16:06:11.181] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection closed. {executed in 1ms} 
+[2023-11-17 16:06:11.181] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection.close() returned 
+[2023-11-17 16:06:11.182] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection closed. {executed in 0ms} 
+[2023-11-17 16:06:11.183] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection.close() returned 
+[2023-11-17 16:06:11.184] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection closed. {executed in 1ms} 
+[2023-11-17 16:06:11.184] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection.close() returned 
+[2023-11-17 16:06:11.185] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection closed. {executed in 1ms} 
+[2023-11-17 16:06:11.185] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection.close() returned 
+[2023-11-17 16:06:11.186] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection closed. {executed in 0ms} 
+[2023-11-17 16:06:11.187] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection.close() returned 
+[2023-11-17 16:06:11.189] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection closed. {executed in 2ms} 
+[2023-11-17 16:06:11.189] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection.close() returned 
+[2023-11-17 16:06:11.190] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-11-17 16:16:20.133] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Starting ProductControllerTest using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 22492 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:16:20.136] [INFO ] [main] com.springboot.test.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-11-17 16:16:22.762] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-11-17 16:16:22.763] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-11-17 16:16:22.766] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 3 ms
+[2023-11-17 16:16:22.810] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Started ProductControllerTest in 3.439 seconds (JVM running for 4.982)
+[2023-11-17 16:16:23.213] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.springboot.test.TestApplicationTests], using SpringBootContextLoader
+[2023-11-17 16:16:23.215] [INFO ] [main] org.springframework.test.context.support.AbstractContextLoader Could not detect default resource locations for test class [com.springboot.test.TestApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2023-11-17 16:16:23.215] [INFO ] [main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils Could not detect default configuration classes for test class [com.springboot.test.TestApplicationTests]: TestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2023-11-17 16:16:23.254] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Found @SpringBootConfiguration com.springboot.test.TestApplication for test class com.springboot.test.TestApplicationTests
+[2023-11-17 16:16:23.270] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2023-11-17 16:16:23.271] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@43588265, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6f8667bb, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@100d0218, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2774dcf4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@20b829d5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7c5f29c6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4baf997, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5280688, org.springframework.test.context.event.EventPublishingTestExecutionListener@643f6179, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@61ab6521, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@328e4ec2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7757025d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@68fc9167, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@52c46334, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@12fccff0]
+[2023-11-17 16:16:23.403] [INFO ] [main] com.springboot.test.TestApplicationTests Starting TestApplicationTests using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 22492 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:16:23.404] [INFO ] [main] com.springboot.test.TestApplicationTests No active profile set, falling back to default profiles: default
+[2023-11-17 16:16:24.622] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 16:16:24.736] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 100 ms. Found 1 JPA repository interfaces.
+[2023-11-17 16:16:25.362] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-17 16:16:25.479] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-17 16:16:25.570] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-17 16:16:26.457] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-11-17 16:16:26.740] [INFO ] [main] log4jdbc.log4j2 1. Connection opened. {executed in 251ms} 
+[2023-11-17 16:16:26.741] [INFO ] [main] log4jdbc.log4j2 1. Connection.new Connection returned 
+[2023-11-17 16:16:26.742] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-17 16:16:26.743] [INFO ] [main] log4jdbc.log4j2 1. Connection.isReadOnly() returned false
+[2023-11-17 16:16:26.743] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:26.744] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(1) returned true
+[2023-11-17 16:16:26.745] [INFO ] [main] log4jdbc.log4j2 1. Connection.getTransactionIsolation() returned 4
+[2023-11-17 16:16:26.748] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-11-17 16:16:26.754] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@40199d5e
+[2023-11-17 16:16:26.760] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@59d29065
+[2023-11-17 16:16:26.807] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-17 16:16:26.865] [INFO ] [main] log4jdbc.log4j2 1. Connection.getCatalog() returned springboot
+[2023-11-17 16:16:26.882] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection opened. {executed in 14ms} 
+[2023-11-17 16:16:26.884] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.new Connection returned 
+[2023-11-17 16:16:26.885] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.isReadOnly() returned false
+[2023-11-17 16:16:26.886] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:26.893] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection opened. {executed in 7ms} 
+[2023-11-17 16:16:26.893] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.new Connection returned 
+[2023-11-17 16:16:26.894] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.isReadOnly() returned false
+[2023-11-17 16:16:26.894] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:26.903] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection opened. {executed in 9ms} 
+[2023-11-17 16:16:26.904] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.new Connection returned 
+[2023-11-17 16:16:26.904] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.isReadOnly() returned false
+[2023-11-17 16:16:26.904] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:26.909] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection opened. {executed in 4ms} 
+[2023-11-17 16:16:26.909] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.new Connection returned 
+[2023-11-17 16:16:26.910] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.isReadOnly() returned false
+[2023-11-17 16:16:26.910] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:26.915] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection opened. {executed in 5ms} 
+[2023-11-17 16:16:26.915] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.new Connection returned 
+[2023-11-17 16:16:26.915] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.isReadOnly() returned false
+[2023-11-17 16:16:26.916] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:26.920] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection opened. {executed in 4ms} 
+[2023-11-17 16:16:26.920] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.new Connection returned 
+[2023-11-17 16:16:26.921] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.isReadOnly() returned false
+[2023-11-17 16:16:26.921] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:26.926] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection opened. {executed in 4ms} 
+[2023-11-17 16:16:26.927] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.new Connection returned 
+[2023-11-17 16:16:26.927] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.isReadOnly() returned false
+[2023-11-17 16:16:26.928] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:26.931] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection opened. {executed in 3ms} 
+[2023-11-17 16:16:26.932] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.new Connection returned 
+[2023-11-17 16:16:26.933] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.isReadOnly() returned false
+[2023-11-17 16:16:26.933] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:26.937] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection opened. {executed in 3ms} 
+[2023-11-17 16:16:26.937] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.new Connection returned 
+[2023-11-17 16:16:26.938] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.isReadOnly() returned false
+[2023-11-17 16:16:26.939] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:26.949] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@10280879
+[2023-11-17 16:16:26.953] [INFO ] [main] log4jdbc.log4j2 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@74d776fb
+[2023-11-17 16:16:26.982] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:16:27.584] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-17 16:16:27.584] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:27.586] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:16:27.586] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@25b87e1b
+[2023-11-17 16:16:27.602] [INFO ] [main] log4jdbc.log4j2 1. drop table if exists product  {executed in 14 ms}
+[2023-11-17 16:16:27.602] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-17 16:16:27.603] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:16:27.603] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:16:27.603] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:16:27.607] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:16:27.607] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:16:27.608] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@6fc3f1a7
+[2023-11-17 16:16:27.628] [INFO ] [main] log4jdbc.log4j2 1. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 20 ms}
+[2023-11-17 16:16:27.628] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-17 16:16:27.629] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:16:27.632] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:16:27.632] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:16:27.632] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-17 16:16:27.643] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:16:29.149] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-11-17 16:16:29.648] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-11-17 16:16:30.485] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-11-17 16:16:30.520] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-11-17 16:16:30.566] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-11-17 16:16:30.593] [INFO ] [main] com.springboot.test.TestApplicationTests Started TestApplicationTests in 7.312 seconds (JVM running for 12.765)
+[2023-11-17 16:16:30.772] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:16:30.781] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-11-17 16:16:30.806] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection closed. {executed in 14ms} 
+[2023-11-17 16:16:30.807] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection.close() returned 
+[2023-11-17 16:16:30.808] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection closed. {executed in 1ms} 
+[2023-11-17 16:16:30.809] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection.close() returned 
+[2023-11-17 16:16:30.810] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection closed. {executed in 1ms} 
+[2023-11-17 16:16:30.810] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection.close() returned 
+[2023-11-17 16:16:30.811] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection closed. {executed in 1ms} 
+[2023-11-17 16:16:30.812] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection.close() returned 
+[2023-11-17 16:16:30.814] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection closed. {executed in 1ms} 
+[2023-11-17 16:16:30.815] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection.close() returned 
+[2023-11-17 16:16:30.817] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection closed. {executed in 1ms} 
+[2023-11-17 16:16:30.818] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection.close() returned 
+[2023-11-17 16:16:30.820] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection closed. {executed in 2ms} 
+[2023-11-17 16:16:30.821] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection.close() returned 
+[2023-11-17 16:16:30.822] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection closed. {executed in 1ms} 
+[2023-11-17 16:16:30.823] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection.close() returned 
+[2023-11-17 16:16:30.825] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection closed. {executed in 2ms} 
+[2023-11-17 16:16:30.826] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection.close() returned 
+[2023-11-17 16:16:30.828] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection closed. {executed in 1ms} 
+[2023-11-17 16:16:30.828] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection.close() returned 
+[2023-11-17 16:16:30.830] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-11-17 16:16:41.196] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Starting ProductControllerTest using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 8412 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:16:41.204] [INFO ] [main] com.springboot.test.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-11-17 16:16:43.679] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-11-17 16:16:43.680] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-11-17 16:16:43.681] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 1 ms
+[2023-11-17 16:16:43.725] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Started ProductControllerTest in 3.194 seconds (JVM running for 4.786)
+[2023-11-17 16:23:08.277] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Starting ProductControllerTest using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 32600 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:23:08.282] [INFO ] [main] com.springboot.test.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-11-17 16:23:11.711] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-11-17 16:23:11.711] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-11-17 16:23:11.713] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 2 ms
+[2023-11-17 16:23:11.756] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Started ProductControllerTest in 4.205 seconds (JVM running for 5.901)
+[2023-11-17 16:23:12.306] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.springboot.test.TestApplicationTests], using SpringBootContextLoader
+[2023-11-17 16:23:12.309] [INFO ] [main] org.springframework.test.context.support.AbstractContextLoader Could not detect default resource locations for test class [com.springboot.test.TestApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2023-11-17 16:23:12.309] [INFO ] [main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils Could not detect default configuration classes for test class [com.springboot.test.TestApplicationTests]: TestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2023-11-17 16:23:12.408] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Found @SpringBootConfiguration com.springboot.test.TestApplication for test class com.springboot.test.TestApplicationTests
+[2023-11-17 16:23:12.415] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2023-11-17 16:23:12.416] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d4cc7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7d28cdcd, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@255ed8e4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@406ad6d5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2a7bc16b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1186374c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@42cc5460, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5486ee92, org.springframework.test.context.event.EventPublishingTestExecutionListener@20820df0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@9e62fb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@205159dc, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@43c0c13a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@731db93f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@67941d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2ad2b274]
+[2023-11-17 16:23:12.569] [INFO ] [main] com.springboot.test.TestApplicationTests Starting TestApplicationTests using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 32600 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:23:12.583] [INFO ] [main] com.springboot.test.TestApplicationTests No active profile set, falling back to default profiles: default
+[2023-11-17 16:23:13.816] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 16:23:13.952] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 125 ms. Found 1 JPA repository interfaces.
+[2023-11-17 16:23:14.791] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-17 16:23:14.902] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-17 16:23:14.986] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-17 16:23:16.009] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-11-17 16:23:16.229] [INFO ] [main] log4jdbc.log4j2 1. Connection opened. {executed in 195ms} 
+[2023-11-17 16:23:16.230] [INFO ] [main] log4jdbc.log4j2 1. Connection.new Connection returned 
+[2023-11-17 16:23:16.230] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-17 16:23:16.231] [INFO ] [main] log4jdbc.log4j2 1. Connection.isReadOnly() returned false
+[2023-11-17 16:23:16.231] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:16.232] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(1) returned true
+[2023-11-17 16:23:16.232] [INFO ] [main] log4jdbc.log4j2 1. Connection.getTransactionIsolation() returned 4
+[2023-11-17 16:23:16.235] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-11-17 16:23:16.238] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@48cd8e71
+[2023-11-17 16:23:16.242] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@410f1452
+[2023-11-17 16:23:16.272] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-17 16:23:16.332] [INFO ] [main] log4jdbc.log4j2 1. Connection.getCatalog() returned springboot
+[2023-11-17 16:23:16.353] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection opened. {executed in 4ms} 
+[2023-11-17 16:23:16.355] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.new Connection returned 
+[2023-11-17 16:23:16.356] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.isReadOnly() returned false
+[2023-11-17 16:23:16.356] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:16.360] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection opened. {executed in 4ms} 
+[2023-11-17 16:23:16.360] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.new Connection returned 
+[2023-11-17 16:23:16.361] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.isReadOnly() returned false
+[2023-11-17 16:23:16.361] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:16.365] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection opened. {executed in 4ms} 
+[2023-11-17 16:23:16.365] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.new Connection returned 
+[2023-11-17 16:23:16.366] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.isReadOnly() returned false
+[2023-11-17 16:23:16.366] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:16.369] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection opened. {executed in 3ms} 
+[2023-11-17 16:23:16.370] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.new Connection returned 
+[2023-11-17 16:23:16.370] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.isReadOnly() returned false
+[2023-11-17 16:23:16.370] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:16.370] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@2cfd9b0a
+[2023-11-17 16:23:16.374] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection opened. {executed in 3ms} 
+[2023-11-17 16:23:16.375] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.new Connection returned 
+[2023-11-17 16:23:16.375] [INFO ] [main] log4jdbc.log4j2 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@48a38a12
+[2023-11-17 16:23:16.375] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.isReadOnly() returned false
+[2023-11-17 16:23:16.375] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:16.380] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection opened. {executed in 4ms} 
+[2023-11-17 16:23:16.380] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.new Connection returned 
+[2023-11-17 16:23:16.381] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.isReadOnly() returned false
+[2023-11-17 16:23:16.381] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:16.387] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection opened. {executed in 6ms} 
+[2023-11-17 16:23:16.387] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.new Connection returned 
+[2023-11-17 16:23:16.387] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.isReadOnly() returned false
+[2023-11-17 16:23:16.387] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:16.391] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection opened. {executed in 3ms} 
+[2023-11-17 16:23:16.392] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.new Connection returned 
+[2023-11-17 16:23:16.392] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.isReadOnly() returned false
+[2023-11-17 16:23:16.393] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:16.397] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection opened. {executed in 4ms} 
+[2023-11-17 16:23:16.397] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.new Connection returned 
+[2023-11-17 16:23:16.398] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.isReadOnly() returned false
+[2023-11-17 16:23:16.398] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:16.401] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:23:17.050] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-17 16:23:17.050] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:17.052] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:23:17.052] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@20a7ce0
+[2023-11-17 16:23:17.068] [INFO ] [main] log4jdbc.log4j2 1. drop table if exists product  {executed in 13 ms}
+[2023-11-17 16:23:17.068] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-17 16:23:17.069] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:23:17.069] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:23:17.069] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:23:17.073] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:23:17.073] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:23:17.074] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@420068a
+[2023-11-17 16:23:17.093] [INFO ] [main] log4jdbc.log4j2 1. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 19 ms}
+[2023-11-17 16:23:17.093] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-17 16:23:17.094] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:23:17.096] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:23:17.096] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:23:17.096] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-17 16:23:17.111] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:23:18.079] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-11-17 16:23:18.585] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-11-17 16:23:19.328] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-11-17 16:23:19.366] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-11-17 16:23:19.416] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-11-17 16:23:19.443] [INFO ] [main] com.springboot.test.TestApplicationTests Started TestApplicationTests in 7.023 seconds (JVM running for 13.587)
+[2023-11-17 16:23:19.585] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:23:19.636] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-11-17 16:23:19.663] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection closed. {executed in 10ms} 
+[2023-11-17 16:23:19.664] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection.close() returned 
+[2023-11-17 16:23:19.667] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection closed. {executed in 3ms} 
+[2023-11-17 16:23:19.667] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection.close() returned 
+[2023-11-17 16:23:19.668] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection closed. {executed in 0ms} 
+[2023-11-17 16:23:19.669] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection.close() returned 
+[2023-11-17 16:23:19.670] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection closed. {executed in 1ms} 
+[2023-11-17 16:23:19.670] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection.close() returned 
+[2023-11-17 16:23:19.672] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection closed. {executed in 2ms} 
+[2023-11-17 16:23:19.673] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection.close() returned 
+[2023-11-17 16:23:19.674] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection closed. {executed in 1ms} 
+[2023-11-17 16:23:19.675] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection.close() returned 
+[2023-11-17 16:23:19.676] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection closed. {executed in 1ms} 
+[2023-11-17 16:23:19.677] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection.close() returned 
+[2023-11-17 16:23:19.682] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection closed. {executed in 5ms} 
+[2023-11-17 16:23:19.683] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection.close() returned 
+[2023-11-17 16:23:19.685] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection closed. {executed in 1ms} 
+[2023-11-17 16:23:19.685] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection.close() returned 
+[2023-11-17 16:23:19.692] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection closed. {executed in 7ms} 
+[2023-11-17 16:23:19.693] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection.close() returned 
+[2023-11-17 16:23:19.694] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-11-17 16:23:31.237] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Starting ProductControllerTest using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 23632 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:23:31.247] [INFO ] [main] com.springboot.test.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-11-17 16:23:33.932] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-11-17 16:23:33.932] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-11-17 16:23:33.936] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 4 ms
+[2023-11-17 16:23:33.979] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Started ProductControllerTest in 3.537 seconds (JVM running for 5.61)
+[2023-11-17 16:28:25.967] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Starting ProductControllerTest using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 33112 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:28:25.972] [INFO ] [main] com.springboot.test.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-11-17 16:28:28.830] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-11-17 16:28:28.831] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-11-17 16:28:28.833] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 2 ms
+[2023-11-17 16:28:28.872] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Started ProductControllerTest in 3.731 seconds (JVM running for 5.319)
+[2023-11-17 16:28:29.481] [INFO ] [main] com.springboot.test.service.impl.ProductServiceImpl [getProduct] input number : 123
+[2023-11-17 16:28:29.483] [INFO ] [main] com.springboot.test.service.impl.ProductServiceImpl [getProduct] product number : 123, name : Ææ
+[2023-11-17 16:28:29.492] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.springboot.test.TestApplicationTests], using SpringBootContextLoader
+[2023-11-17 16:28:29.493] [INFO ] [main] org.springframework.test.context.support.AbstractContextLoader Could not detect default resource locations for test class [com.springboot.test.TestApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2023-11-17 16:28:29.494] [INFO ] [main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils Could not detect default configuration classes for test class [com.springboot.test.TestApplicationTests]: TestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2023-11-17 16:28:29.511] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Found @SpringBootConfiguration com.springboot.test.TestApplication for test class com.springboot.test.TestApplicationTests
+[2023-11-17 16:28:29.532] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2023-11-17 16:28:29.533] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@464400b3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@58182b96, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@37d6dddc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@8f6b4ab, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6e517c9e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@770cae59, org.springframework.test.context.transaction.TransactionalTestExecutionListener@76b5a559, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4bdb04c8, org.springframework.test.context.event.EventPublishingTestExecutionListener@2e8b24a1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3ce7394f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6723cce7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@74cd798f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@314f59b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@63c99f7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7f012923]
+[2023-11-17 16:28:29.602] [INFO ] [main] com.springboot.test.TestApplicationTests Starting TestApplicationTests using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 33112 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:28:29.604] [INFO ] [main] com.springboot.test.TestApplicationTests No active profile set, falling back to default profiles: default
+[2023-11-17 16:28:30.729] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 16:28:30.841] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interfaces.
+[2023-11-17 16:28:31.645] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-17 16:28:31.783] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-17 16:28:31.866] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-17 16:28:32.782] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-11-17 16:28:33.052] [INFO ] [main] log4jdbc.log4j2 1. Connection opened. {executed in 239ms} 
+[2023-11-17 16:28:33.054] [INFO ] [main] log4jdbc.log4j2 1. Connection.new Connection returned 
+[2023-11-17 16:28:33.055] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-17 16:28:33.056] [INFO ] [main] log4jdbc.log4j2 1. Connection.isReadOnly() returned false
+[2023-11-17 16:28:33.056] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.057] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(1) returned true
+[2023-11-17 16:28:33.058] [INFO ] [main] log4jdbc.log4j2 1. Connection.getTransactionIsolation() returned 4
+[2023-11-17 16:28:33.061] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-11-17 16:28:33.067] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@68c47cf9
+[2023-11-17 16:28:33.073] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@3bac86a3
+[2023-11-17 16:28:33.114] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-17 16:28:33.172] [INFO ] [main] log4jdbc.log4j2 1. Connection.getCatalog() returned springboot
+[2023-11-17 16:28:33.183] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection opened. {executed in 4ms} 
+[2023-11-17 16:28:33.185] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.new Connection returned 
+[2023-11-17 16:28:33.186] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.isReadOnly() returned false
+[2023-11-17 16:28:33.186] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.190] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection opened. {executed in 4ms} 
+[2023-11-17 16:28:33.190] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.new Connection returned 
+[2023-11-17 16:28:33.190] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.isReadOnly() returned false
+[2023-11-17 16:28:33.191] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.223] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection opened. {executed in 32ms} 
+[2023-11-17 16:28:33.223] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.new Connection returned 
+[2023-11-17 16:28:33.224] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.isReadOnly() returned false
+[2023-11-17 16:28:33.224] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.228] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection opened. {executed in 4ms} 
+[2023-11-17 16:28:33.229] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.new Connection returned 
+[2023-11-17 16:28:33.229] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.isReadOnly() returned false
+[2023-11-17 16:28:33.229] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.234] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection opened. {executed in 4ms} 
+[2023-11-17 16:28:33.235] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.new Connection returned 
+[2023-11-17 16:28:33.235] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.isReadOnly() returned false
+[2023-11-17 16:28:33.235] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.239] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection opened. {executed in 3ms} 
+[2023-11-17 16:28:33.240] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.new Connection returned 
+[2023-11-17 16:28:33.240] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.isReadOnly() returned false
+[2023-11-17 16:28:33.240] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.244] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@1bed61d2
+[2023-11-17 16:28:33.261] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection opened. {executed in 20ms} 
+[2023-11-17 16:28:33.261] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.new Connection returned 
+[2023-11-17 16:28:33.261] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.isReadOnly() returned false
+[2023-11-17 16:28:33.261] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.268] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection opened. {executed in 6ms} 
+[2023-11-17 16:28:33.270] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.new Connection returned 
+[2023-11-17 16:28:33.271] [INFO ] [main] log4jdbc.log4j2 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@7d5cbcc9
+[2023-11-17 16:28:33.272] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.isReadOnly() returned false
+[2023-11-17 16:28:33.291] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.298] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:28:33.304] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection opened. {executed in 12ms} 
+[2023-11-17 16:28:33.304] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.new Connection returned 
+[2023-11-17 16:28:33.305] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.isReadOnly() returned false
+[2023-11-17 16:28:33.306] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.893] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-17 16:28:33.893] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.895] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:28:33.895] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@65192f16
+[2023-11-17 16:28:33.908] [INFO ] [main] log4jdbc.log4j2 1. drop table if exists product  {executed in 11 ms}
+[2023-11-17 16:28:33.909] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-17 16:28:33.909] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:28:33.909] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:28:33.909] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:28:33.913] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:28:33.913] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:28:33.913] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@66c91224
+[2023-11-17 16:28:33.931] [INFO ] [main] log4jdbc.log4j2 1. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 18 ms}
+[2023-11-17 16:28:33.931] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-17 16:28:33.932] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:28:33.933] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:28:33.934] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:28:33.934] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-17 16:28:33.945] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:28:35.007] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-11-17 16:28:35.333] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-11-17 16:28:36.001] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-11-17 16:28:36.053] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-11-17 16:28:36.118] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-11-17 16:28:36.153] [INFO ] [main] com.springboot.test.TestApplicationTests Started TestApplicationTests in 6.618 seconds (JVM running for 12.6)
+[2023-11-17 16:28:36.473] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:28:36.476] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-11-17 16:28:36.500] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection closed. {executed in 10ms} 
+[2023-11-17 16:28:36.501] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection.close() returned 
+[2023-11-17 16:28:36.501] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection closed. {executed in 0ms} 
+[2023-11-17 16:28:36.502] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection.close() returned 
+[2023-11-17 16:28:36.503] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection closed. {executed in 0ms} 
+[2023-11-17 16:28:36.503] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection.close() returned 
+[2023-11-17 16:28:36.504] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection closed. {executed in 0ms} 
+[2023-11-17 16:28:36.504] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection.close() returned 
+[2023-11-17 16:28:36.505] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection closed. {executed in 0ms} 
+[2023-11-17 16:28:36.505] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection.close() returned 
+[2023-11-17 16:28:36.505] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection closed. {executed in 0ms} 
+[2023-11-17 16:28:36.506] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection.close() returned 
+[2023-11-17 16:28:36.507] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection closed. {executed in 1ms} 
+[2023-11-17 16:28:36.507] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection.close() returned 
+[2023-11-17 16:28:36.508] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection closed. {executed in 1ms} 
+[2023-11-17 16:28:36.508] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection.close() returned 
+[2023-11-17 16:28:36.509] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection closed. {executed in 1ms} 
+[2023-11-17 16:28:36.509] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection.close() returned 
+[2023-11-17 16:28:36.510] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection closed. {executed in 1ms} 
+[2023-11-17 16:28:36.510] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection.close() returned 
+[2023-11-17 16:28:36.511] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-11-17 16:36:48.549] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Starting ProductControllerTest using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 22504 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:36:48.553] [INFO ] [main] com.springboot.test.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-11-17 16:36:51.488] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-11-17 16:36:51.488] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-11-17 16:36:51.496] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 8 ms
+[2023-11-17 16:36:51.550] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Started ProductControllerTest in 3.781 seconds (JVM running for 5.353)
+[2023-11-17 16:36:52.213] [INFO ] [main] com.springboot.test.service.impl.ProductServiceImpl [getProduct] input number : 123
+[2023-11-17 16:36:52.215] [INFO ] [main] com.springboot.test.service.impl.ProductServiceImpl [getProduct] product number : 123, name : Ææ
+[2023-11-17 16:36:52.230] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.springboot.test.TestApplicationTests], using SpringBootContextLoader
+[2023-11-17 16:36:52.230] [INFO ] [main] org.springframework.test.context.support.AbstractContextLoader Could not detect default resource locations for test class [com.springboot.test.TestApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2023-11-17 16:36:52.230] [INFO ] [main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils Could not detect default configuration classes for test class [com.springboot.test.TestApplicationTests]: TestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2023-11-17 16:36:52.256] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Found @SpringBootConfiguration com.springboot.test.TestApplication for test class com.springboot.test.TestApplicationTests
+[2023-11-17 16:36:52.284] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2023-11-17 16:36:52.286] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@11574592, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@352e5a82, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@315b5913, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2e929182, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5423a17, org.springframework.test.context.support.DirtiesContextTestExecutionListener@42ff9a77, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2987d0fa, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@13234ac9, org.springframework.test.context.event.EventPublishingTestExecutionListener@7254838, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@39374689, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2e204155, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@27dc335a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@a95cb11, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@915d7c4, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2513155a]
+[2023-11-17 16:36:52.577] [INFO ] [main] com.springboot.test.TestApplicationTests Starting TestApplicationTests using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 22504 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:36:52.580] [INFO ] [main] com.springboot.test.TestApplicationTests No active profile set, falling back to default profiles: default
+[2023-11-17 16:36:53.684] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 16:36:53.791] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interfaces.
+[2023-11-17 16:36:54.580] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-17 16:36:54.701] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-17 16:36:54.790] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-17 16:36:55.619] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-11-17 16:36:55.946] [INFO ] [main] log4jdbc.log4j2 1. Connection opened. {executed in 280ms} 
+[2023-11-17 16:36:55.949] [INFO ] [main] log4jdbc.log4j2 1. Connection.new Connection returned 
+[2023-11-17 16:36:55.951] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-17 16:36:55.954] [INFO ] [main] log4jdbc.log4j2 1. Connection.isReadOnly() returned false
+[2023-11-17 16:36:55.956] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:55.957] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(1) returned true
+[2023-11-17 16:36:55.958] [INFO ] [main] log4jdbc.log4j2 1. Connection.getTransactionIsolation() returned 4
+[2023-11-17 16:36:55.961] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-11-17 16:36:55.967] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@37a14aa1
+[2023-11-17 16:36:55.972] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@3113595e
+[2023-11-17 16:36:56.042] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-17 16:36:56.090] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection opened. {executed in 11ms} 
+[2023-11-17 16:36:56.092] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.new Connection returned 
+[2023-11-17 16:36:56.092] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.isReadOnly() returned false
+[2023-11-17 16:36:56.093] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:56.097] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection opened. {executed in 4ms} 
+[2023-11-17 16:36:56.098] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.new Connection returned 
+[2023-11-17 16:36:56.099] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.isReadOnly() returned false
+[2023-11-17 16:36:56.099] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:56.105] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection opened. {executed in 6ms} 
+[2023-11-17 16:36:56.106] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.new Connection returned 
+[2023-11-17 16:36:56.107] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.isReadOnly() returned false
+[2023-11-17 16:36:56.107] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:56.111] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection opened. {executed in 4ms} 
+[2023-11-17 16:36:56.111] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.new Connection returned 
+[2023-11-17 16:36:56.111] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.isReadOnly() returned false
+[2023-11-17 16:36:56.112] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:56.116] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection opened. {executed in 4ms} 
+[2023-11-17 16:36:56.116] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.new Connection returned 
+[2023-11-17 16:36:56.117] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.isReadOnly() returned false
+[2023-11-17 16:36:56.117] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:56.122] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection opened. {executed in 5ms} 
+[2023-11-17 16:36:56.122] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.new Connection returned 
+[2023-11-17 16:36:56.123] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.isReadOnly() returned false
+[2023-11-17 16:36:56.123] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:56.128] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection opened. {executed in 5ms} 
+[2023-11-17 16:36:56.128] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.new Connection returned 
+[2023-11-17 16:36:56.129] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.isReadOnly() returned false
+[2023-11-17 16:36:56.129] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:56.134] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection opened. {executed in 5ms} 
+[2023-11-17 16:36:56.134] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.new Connection returned 
+[2023-11-17 16:36:56.134] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.isReadOnly() returned false
+[2023-11-17 16:36:56.135] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:56.138] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection opened. {executed in 3ms} 
+[2023-11-17 16:36:56.139] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.new Connection returned 
+[2023-11-17 16:36:56.139] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.isReadOnly() returned false
+[2023-11-17 16:36:56.139] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:56.161] [INFO ] [main] log4jdbc.log4j2 1. Connection.getCatalog() returned springboot
+[2023-11-17 16:36:56.275] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@2da0770
+[2023-11-17 16:36:56.279] [INFO ] [main] log4jdbc.log4j2 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@408b2ae2
+[2023-11-17 16:36:56.300] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:36:56.734] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:56.736] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:36:56.736] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@60ae950f
+[2023-11-17 16:36:56.752] [INFO ] [main] log4jdbc.log4j2 1. drop table if exists product  {executed in 13 ms}
+[2023-11-17 16:36:56.752] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-17 16:36:56.753] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:36:56.753] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:36:56.753] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:36:56.757] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:36:56.757] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:36:56.757] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@6980fa39
+[2023-11-17 16:36:56.776] [INFO ] [main] log4jdbc.log4j2 1. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 18 ms}
+[2023-11-17 16:36:56.776] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-17 16:36:56.776] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:36:56.778] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:36:56.778] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:36:56.778] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-17 16:36:56.791] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:36:57.874] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-11-17 16:36:58.296] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-11-17 16:36:58.961] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-11-17 16:36:58.994] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-11-17 16:36:59.045] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-11-17 16:36:59.068] [INFO ] [main] com.springboot.test.TestApplicationTests Started TestApplicationTests in 6.776 seconds (JVM running for 12.87)
+[2023-11-17 16:36:59.157] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:36:59.163] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-11-17 16:36:59.189] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection closed. {executed in 12ms} 
+[2023-11-17 16:36:59.189] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection.close() returned 
+[2023-11-17 16:36:59.192] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection closed. {executed in 3ms} 
+[2023-11-17 16:36:59.193] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection.close() returned 
+[2023-11-17 16:36:59.194] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection closed. {executed in 1ms} 
+[2023-11-17 16:36:59.194] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection.close() returned 
+[2023-11-17 16:36:59.195] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection closed. {executed in 1ms} 
+[2023-11-17 16:36:59.195] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection.close() returned 
+[2023-11-17 16:36:59.196] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection closed. {executed in 1ms} 
+[2023-11-17 16:36:59.197] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection.close() returned 
+[2023-11-17 16:36:59.198] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection closed. {executed in 1ms} 
+[2023-11-17 16:36:59.198] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection.close() returned 
+[2023-11-17 16:36:59.199] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection closed. {executed in 1ms} 
+[2023-11-17 16:36:59.200] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection.close() returned 
+[2023-11-17 16:36:59.202] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection closed. {executed in 2ms} 
+[2023-11-17 16:36:59.202] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection.close() returned 
+[2023-11-17 16:36:59.202] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection closed. {executed in 0ms} 
+[2023-11-17 16:36:59.202] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection.close() returned 
+[2023-11-17 16:36:59.204] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection closed. {executed in 1ms} 
+[2023-11-17 16:36:59.204] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection.close() returned 
+[2023-11-17 16:36:59.204] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-11-17 16:37:08.574] [INFO ] [main] com.springboot.test.data.repository.ProductRepositoryTestByH2 Starting ProductRepositoryTestByH2 using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 31756 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:37:08.577] [INFO ] [main] com.springboot.test.data.repository.ProductRepositoryTestByH2 No active profile set, falling back to default profiles: default
+[2023-11-17 16:37:09.407] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 16:37:09.533] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interfaces.
+[2023-11-17 16:37:09.625] [INFO ] [main] org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor Replacing 'dataSource' DataSource bean with embedded version
+[2023-11-17 16:37:09.933] [WARN ] [main] org.springframework.context.annotation.AnnotationConfigApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.
+[2023-11-17 16:37:09.950] [INFO ] [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2023-11-17 16:37:09.987] [ERROR] [main] org.springframework.boot.SpringApplication Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 90 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceFactory.getEmbeddedDatabase(TestDatabaseAutoConfiguration.java:191)
+	at org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceFactoryBean.afterPropertiesSet(TestDatabaseAutoConfiguration.java:150)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 101 common frames omitted
+[2023-11-17 16:37:10.053] [INFO ] [main] com.springboot.test.data.repository.ProductRepositoryTestByH2 Starting ProductRepositoryTestByH2 using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 31756 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:37:10.054] [INFO ] [main] com.springboot.test.data.repository.ProductRepositoryTestByH2 No active profile set, falling back to default profiles: default
+[2023-11-17 16:37:10.420] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 16:37:10.538] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 116 ms. Found 1 JPA repository interfaces.
+[2023-11-17 16:37:10.571] [INFO ] [main] org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor Replacing 'dataSource' DataSource bean with embedded version
+[2023-11-17 16:37:10.658] [WARN ] [main] org.springframework.context.annotation.AnnotationConfigApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.
+[2023-11-17 16:37:10.660] [INFO ] [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2023-11-17 16:37:10.662] [ERROR] [main] org.springframework.boot.SpringApplication Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.outputConditionEvaluationReport(SpringBootDependencyInjectionTestExecutionListener.java:53)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:46)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 89 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceFactory.getEmbeddedDatabase(TestDatabaseAutoConfiguration.java:191)
+	at org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceFactoryBean.afterPropertiesSet(TestDatabaseAutoConfiguration.java:150)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 100 common frames omitted
+[2023-11-17 16:37:10.664] [ERROR] [main] org.springframework.test.context.TestContextManager Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@545b995e] to prepare test instance [com.springboot.test.data.repository.ProductRepositoryTestByH2@4f9a2c08]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 70 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 90 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceFactory.getEmbeddedDatabase(TestDatabaseAutoConfiguration.java:191)
+	at org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceFactoryBean.afterPropertiesSet(TestDatabaseAutoConfiguration.java:150)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 101 common frames omitted
+[2023-11-17 16:40:11.909] [INFO ] [main] com.springboot.test.data.repository.ProductRepositoryTestByH2 Starting ProductRepositoryTestByH2 using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 32032 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:40:11.912] [INFO ] [main] com.springboot.test.data.repository.ProductRepositoryTestByH2 No active profile set, falling back to default profiles: default
+[2023-11-17 16:40:12.645] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 16:40:12.762] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interfaces.
+[2023-11-17 16:40:12.853] [INFO ] [main] org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor Replacing 'dataSource' DataSource bean with embedded version
+[2023-11-17 16:40:13.756] [INFO ] [main] org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory Starting embedded database: url='jdbc:h2:mem:bd372ad1-3d64-4db8-9002-54a53e450760;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+[2023-11-17 16:40:14.363] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-17 16:40:14.441] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-17 16:40:14.621] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-17 16:40:14.784] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2023-11-17 16:40:16.143] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-17 16:40:16.161] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:40:16.963] [INFO ] [main] com.springboot.test.data.repository.ProductRepositoryTestByH2 Started ProductRepositoryTestByH2 in 5.803 seconds (JVM running for 7.579)
+[2023-11-17 16:40:16.999] [INFO ] [main] org.springframework.test.context.transaction.TransactionContext Began transaction (1) for test context [DefaultTestContext@13330ac6 testClass = ProductRepositoryTestByH2, testInstance = com.springboot.test.data.repository.ProductRepositoryTestByH2@5443d039, testMethod = saveTest@ProductRepositoryTestByH2, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@539d019 testClass = ProductRepositoryTestByH2, locations = '{}', classes = '{class com.springboot.test.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@39a2bb97 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@72ef8d15, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@51a9ad5e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@352ff4da, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@295cf707, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@dcc268e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@797b0699, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@3ccfac29]; rollback [true]
+[2023-11-17 16:40:17.209] [INFO ] [main] org.springframework.test.context.transaction.TransactionContext Rolled back transaction for test: [DefaultTestContext@13330ac6 testClass = ProductRepositoryTestByH2, testInstance = com.springboot.test.data.repository.ProductRepositoryTestByH2@5443d039, testMethod = saveTest@ProductRepositoryTestByH2, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@539d019 testClass = ProductRepositoryTestByH2, locations = '{}', classes = '{class com.springboot.test.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@39a2bb97 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@72ef8d15, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@51a9ad5e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@352ff4da, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@295cf707, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@dcc268e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@797b0699, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+[2023-11-17 16:40:17.236] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:43:09.444] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Starting ProductControllerTest using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 27128 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:43:09.449] [INFO ] [main] com.springboot.test.controller.ProductControllerTest No active profile set, falling back to default profiles: default
+[2023-11-17 16:43:12.646] [INFO ] [main] org.springframework.boot.test.mock.web.SpringBootMockServletContext Initializing Spring TestDispatcherServlet ''
+[2023-11-17 16:43:12.646] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Initializing Servlet ''
+[2023-11-17 16:43:12.648] [INFO ] [main] org.springframework.test.web.servlet.TestDispatcherServlet Completed initialization in 2 ms
+[2023-11-17 16:43:12.708] [INFO ] [main] com.springboot.test.controller.ProductControllerTest Started ProductControllerTest in 4.291 seconds (JVM running for 5.996)
+[2023-11-17 16:43:13.684] [INFO ] [main] com.springboot.test.service.impl.ProductServiceImpl [getProduct] input number : 123
+[2023-11-17 16:43:13.688] [INFO ] [main] com.springboot.test.service.impl.ProductServiceImpl [getProduct] product number : 123, name : Ææ
+[2023-11-17 16:43:13.706] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.springboot.test.TestApplicationTests], using SpringBootContextLoader
+[2023-11-17 16:43:13.708] [INFO ] [main] org.springframework.test.context.support.AbstractContextLoader Could not detect default resource locations for test class [com.springboot.test.TestApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2023-11-17 16:43:13.709] [INFO ] [main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils Could not detect default configuration classes for test class [com.springboot.test.TestApplicationTests]: TestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2023-11-17 16:43:13.756] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Found @SpringBootConfiguration com.springboot.test.TestApplication for test class com.springboot.test.TestApplicationTests
+[2023-11-17 16:43:13.763] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2023-11-17 16:43:13.766] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2e929182, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5423a17, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@42ff9a77, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2987d0fa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@13234ac9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7254838, org.springframework.test.context.transaction.TransactionalTestExecutionListener@39374689, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2e204155, org.springframework.test.context.event.EventPublishingTestExecutionListener@27dc335a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@a95cb11, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@915d7c4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2513155a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6313b441, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@47fa3671, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@60f662bd]
+[2023-11-17 16:43:13.876] [INFO ] [main] com.springboot.test.TestApplicationTests Starting TestApplicationTests using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 27128 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:43:13.878] [INFO ] [main] com.springboot.test.TestApplicationTests No active profile set, falling back to default profiles: default
+[2023-11-17 16:43:15.289] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 16:43:15.557] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 239 ms. Found 1 JPA repository interfaces.
+[2023-11-17 16:43:16.514] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-17 16:43:16.636] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-17 16:43:16.737] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-17 16:43:17.990] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-11-17 16:43:18.271] [INFO ] [main] log4jdbc.log4j2 1. Connection opened. {executed in 237ms} 
+[2023-11-17 16:43:18.272] [INFO ] [main] log4jdbc.log4j2 1. Connection.new Connection returned 
+[2023-11-17 16:43:18.274] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-17 16:43:18.275] [INFO ] [main] log4jdbc.log4j2 1. Connection.isReadOnly() returned false
+[2023-11-17 16:43:18.275] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:18.276] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(1) returned true
+[2023-11-17 16:43:18.276] [INFO ] [main] log4jdbc.log4j2 1. Connection.getTransactionIsolation() returned 4
+[2023-11-17 16:43:18.280] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-11-17 16:43:18.286] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@362fd4e9
+[2023-11-17 16:43:18.292] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@3f2a7ca0
+[2023-11-17 16:43:18.347] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-17 16:43:18.389] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection opened. {executed in 5ms} 
+[2023-11-17 16:43:18.390] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.new Connection returned 
+[2023-11-17 16:43:18.391] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.isReadOnly() returned false
+[2023-11-17 16:43:18.391] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:18.396] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection opened. {executed in 4ms} 
+[2023-11-17 16:43:18.396] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.new Connection returned 
+[2023-11-17 16:43:18.398] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.isReadOnly() returned false
+[2023-11-17 16:43:18.398] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:18.402] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection opened. {executed in 4ms} 
+[2023-11-17 16:43:18.402] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.new Connection returned 
+[2023-11-17 16:43:18.405] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.isReadOnly() returned false
+[2023-11-17 16:43:18.405] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:18.412] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection opened. {executed in 7ms} 
+[2023-11-17 16:43:18.413] [INFO ] [main] log4jdbc.log4j2 1. Connection.getCatalog() returned springboot
+[2023-11-17 16:43:18.413] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.new Connection returned 
+[2023-11-17 16:43:18.414] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.isReadOnly() returned false
+[2023-11-17 16:43:18.415] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:18.428] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection opened. {executed in 13ms} 
+[2023-11-17 16:43:18.429] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.new Connection returned 
+[2023-11-17 16:43:18.429] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.isReadOnly() returned false
+[2023-11-17 16:43:18.430] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:18.434] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection opened. {executed in 4ms} 
+[2023-11-17 16:43:18.435] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.new Connection returned 
+[2023-11-17 16:43:18.435] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.isReadOnly() returned false
+[2023-11-17 16:43:18.435] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:18.467] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection opened. {executed in 31ms} 
+[2023-11-17 16:43:18.467] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.new Connection returned 
+[2023-11-17 16:43:18.468] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.isReadOnly() returned false
+[2023-11-17 16:43:18.468] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:18.472] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection opened. {executed in 3ms} 
+[2023-11-17 16:43:18.472] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.new Connection returned 
+[2023-11-17 16:43:18.472] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.isReadOnly() returned false
+[2023-11-17 16:43:18.473] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:18.500] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection opened. {executed in 27ms} 
+[2023-11-17 16:43:18.500] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.new Connection returned 
+[2023-11-17 16:43:18.501] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.isReadOnly() returned false
+[2023-11-17 16:43:18.501] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:18.508] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@1360ef8d
+[2023-11-17 16:43:18.515] [INFO ] [main] log4jdbc.log4j2 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@4c5c0306
+[2023-11-17 16:43:18.533] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:43:19.149] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-17 16:43:19.150] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:19.154] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:43:19.155] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@3f908a10
+[2023-11-17 16:43:19.175] [INFO ] [main] log4jdbc.log4j2 1. drop table if exists product  {executed in 18 ms}
+[2023-11-17 16:43:19.175] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-17 16:43:19.176] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:43:19.176] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:43:19.176] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:43:19.180] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-17 16:43:19.181] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-17 16:43:19.181] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@5352bc0e
+[2023-11-17 16:43:19.201] [INFO ] [main] log4jdbc.log4j2 1. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 20 ms}
+[2023-11-17 16:43:19.202] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-17 16:43:19.202] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-17 16:43:19.204] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-17 16:43:19.204] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-17 16:43:19.204] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-17 16:43:19.215] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:43:20.297] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-11-17 16:43:20.822] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-11-17 16:43:21.544] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-11-17 16:43:21.584] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-11-17 16:43:21.641] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-11-17 16:43:21.669] [INFO ] [main] com.springboot.test.TestApplicationTests Started TestApplicationTests in 7.899 seconds (JVM running for 14.957)
+[2023-11-17 16:43:21.736] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:43:21.745] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-11-17 16:43:21.789] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection closed. {executed in 34ms} 
+[2023-11-17 16:43:21.791] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection.close() returned 
+[2023-11-17 16:43:21.802] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection closed. {executed in 4ms} 
+[2023-11-17 16:43:21.802] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection.close() returned 
+[2023-11-17 16:43:21.804] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection closed. {executed in 1ms} 
+[2023-11-17 16:43:21.807] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection.close() returned 
+[2023-11-17 16:43:21.809] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection closed. {executed in 1ms} 
+[2023-11-17 16:43:21.809] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection.close() returned 
+[2023-11-17 16:43:21.810] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection closed. {executed in 1ms} 
+[2023-11-17 16:43:21.810] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection.close() returned 
+[2023-11-17 16:43:21.812] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection closed. {executed in 1ms} 
+[2023-11-17 16:43:21.812] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection.close() returned 
+[2023-11-17 16:43:21.814] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection closed. {executed in 2ms} 
+[2023-11-17 16:43:21.826] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection.close() returned 
+[2023-11-17 16:43:21.828] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection closed. {executed in 1ms} 
+[2023-11-17 16:43:21.829] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection.close() returned 
+[2023-11-17 16:43:21.832] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection closed. {executed in 3ms} 
+[2023-11-17 16:43:21.833] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection.close() returned 
+[2023-11-17 16:43:21.835] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection closed. {executed in 2ms} 
+[2023-11-17 16:43:21.836] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection.close() returned 
+[2023-11-17 16:43:21.836] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-11-17 16:43:31.476] [INFO ] [main] com.springboot.test.data.repository.ProductRepositoryTestByH2 Starting ProductRepositoryTestByH2 using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 30900 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\test)
+[2023-11-17 16:43:31.481] [INFO ] [main] com.springboot.test.data.repository.ProductRepositoryTestByH2 No active profile set, falling back to default profiles: default
+[2023-11-17 16:43:32.292] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-17 16:43:32.414] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interfaces.
+[2023-11-17 16:43:32.519] [INFO ] [main] org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor Replacing 'dataSource' DataSource bean with embedded version
+[2023-11-17 16:43:33.476] [INFO ] [main] org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory Starting embedded database: url='jdbc:h2:mem:e1fcdaf4-b43c-4f4d-a16e-4a91f7fe8244;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+[2023-11-17 16:43:34.095] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-17 16:43:34.184] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-17 16:43:34.396] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-17 16:43:34.602] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2023-11-17 16:43:35.645] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-17 16:43:35.665] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-17 16:43:36.373] [INFO ] [main] com.springboot.test.data.repository.ProductRepositoryTestByH2 Started ProductRepositoryTestByH2 in 5.752 seconds (JVM running for 7.212)
+[2023-11-17 16:43:36.433] [INFO ] [main] org.springframework.test.context.transaction.TransactionContext Began transaction (1) for test context [DefaultTestContext@13330ac6 testClass = ProductRepositoryTestByH2, testInstance = com.springboot.test.data.repository.ProductRepositoryTestByH2@5443d039, testMethod = selectTest@ProductRepositoryTestByH2, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@539d019 testClass = ProductRepositoryTestByH2, locations = '{}', classes = '{class com.springboot.test.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@39a2bb97 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@72ef8d15, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@51a9ad5e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@352ff4da, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@295cf707, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@dcc268e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@797b0699, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@bb50de6]; rollback [true]
+[2023-11-17 16:43:36.725] [INFO ] [main] org.springframework.test.context.transaction.TransactionContext Rolled back transaction for test: [DefaultTestContext@13330ac6 testClass = ProductRepositoryTestByH2, testInstance = com.springboot.test.data.repository.ProductRepositoryTestByH2@5443d039, testMethod = selectTest@ProductRepositoryTestByH2, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@539d019 testClass = ProductRepositoryTestByH2, locations = '{}', classes = '{class com.springboot.test.TestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@39a2bb97 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@72ef8d15, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@51a9ad5e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@352ff4da, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@295cf707, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@dcc268e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@797b0699, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+[2023-11-17 16:43:36.805] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'

@@ -1,0 +1,1267 @@
+[2023-11-22 18:50:51.859] [INFO ] [main] com.springboot.advanced_jpa.AdvancedJpaApplicationTests Starting AdvancedJpaApplicationTests using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 11776 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\advanced_jpa)
+[2023-11-22 18:50:51.875] [INFO ] [main] com.springboot.advanced_jpa.AdvancedJpaApplicationTests No active profile set, falling back to default profiles: default
+[2023-11-22 18:50:53.881] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-22 18:50:54.034] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 138 ms. Found 1 JPA repository interfaces.
+[2023-11-22 18:50:55.320] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-22 18:50:55.420] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-22 18:50:55.658] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-22 18:50:56.499] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-11-22 18:50:56.838] [INFO ] [main] log4jdbc.log4j2 1. Connection opened. {executed in 305ms} 
+[2023-11-22 18:50:56.840] [INFO ] [main] log4jdbc.log4j2 1. Connection.new Connection returned 
+[2023-11-22 18:50:56.841] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-22 18:50:56.842] [INFO ] [main] log4jdbc.log4j2 1. Connection.isReadOnly() returned false
+[2023-11-22 18:50:56.842] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:56.842] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(1) returned true
+[2023-11-22 18:50:56.843] [INFO ] [main] log4jdbc.log4j2 1. Connection.getTransactionIsolation() returned 4
+[2023-11-22 18:50:56.847] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-11-22 18:50:56.853] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@2e0652ab
+[2023-11-22 18:50:56.859] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@17df689e
+[2023-11-22 18:50:56.899] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-22 18:50:56.958] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection opened. {executed in 6ms} 
+[2023-11-22 18:50:56.959] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.new Connection returned 
+[2023-11-22 18:50:56.960] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.isReadOnly() returned false
+[2023-11-22 18:50:56.960] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:56.965] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection opened. {executed in 4ms} 
+[2023-11-22 18:50:56.965] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.new Connection returned 
+[2023-11-22 18:50:56.966] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.isReadOnly() returned false
+[2023-11-22 18:50:56.966] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:56.974] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection opened. {executed in 7ms} 
+[2023-11-22 18:50:56.975] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.new Connection returned 
+[2023-11-22 18:50:56.975] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.isReadOnly() returned false
+[2023-11-22 18:50:56.976] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:56.982] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection opened. {executed in 6ms} 
+[2023-11-22 18:50:56.983] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.new Connection returned 
+[2023-11-22 18:50:56.983] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.isReadOnly() returned false
+[2023-11-22 18:50:56.984] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:56.986] [INFO ] [main] log4jdbc.log4j2 1. Connection.getCatalog() returned springboot
+[2023-11-22 18:50:56.994] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection opened. {executed in 10ms} 
+[2023-11-22 18:50:56.994] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.new Connection returned 
+[2023-11-22 18:50:56.994] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.isReadOnly() returned false
+[2023-11-22 18:50:56.994] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:57.002] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection opened. {executed in 7ms} 
+[2023-11-22 18:50:57.002] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.new Connection returned 
+[2023-11-22 18:50:57.002] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.isReadOnly() returned false
+[2023-11-22 18:50:57.002] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:57.014] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection opened. {executed in 11ms} 
+[2023-11-22 18:50:57.014] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.new Connection returned 
+[2023-11-22 18:50:57.015] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.isReadOnly() returned false
+[2023-11-22 18:50:57.015] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:57.022] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection opened. {executed in 7ms} 
+[2023-11-22 18:50:57.024] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.new Connection returned 
+[2023-11-22 18:50:57.025] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.isReadOnly() returned false
+[2023-11-22 18:50:57.026] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:57.037] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection opened. {executed in 11ms} 
+[2023-11-22 18:50:57.037] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.new Connection returned 
+[2023-11-22 18:50:57.038] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.isReadOnly() returned false
+[2023-11-22 18:50:57.038] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:57.048] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@584136c1
+[2023-11-22 18:50:57.059] [INFO ] [main] log4jdbc.log4j2 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@795faad
+[2023-11-22 18:50:57.105] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:50:57.978] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-22 18:50:57.979] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:57.981] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-22 18:50:57.981] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@293ecff6
+[2023-11-22 18:50:58.081] [INFO ] [main] log4jdbc.log4j2 1. drop table if exists product  {executed in 97 ms}
+[2023-11-22 18:50:58.081] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-22 18:50:58.082] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-22 18:50:58.083] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-22 18:50:58.083] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:50:58.089] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-22 18:50:58.089] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-22 18:50:58.089] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@4745bcc6
+[2023-11-22 18:50:58.117] [INFO ] [main] log4jdbc.log4j2 1. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 27 ms}
+[2023-11-22 18:50:58.117] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-22 18:50:58.118] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-22 18:50:58.124] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-22 18:50:58.125] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:50:58.125] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-22 18:50:58.139] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-22 18:50:59.383] [WARN ] [main] org.springframework.web.context.support.GenericWebApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\service\impl\ProductServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+[2023-11-22 18:50:59.384] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-22 18:50:59.386] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-11-22 18:50:59.397] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection closed. {executed in 9ms} 
+[2023-11-22 18:50:59.398] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection.close() returned 
+[2023-11-22 18:50:59.399] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection closed. {executed in 1ms} 
+[2023-11-22 18:50:59.399] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection.close() returned 
+[2023-11-22 18:50:59.400] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection closed. {executed in 1ms} 
+[2023-11-22 18:50:59.400] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection.close() returned 
+[2023-11-22 18:50:59.401] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection closed. {executed in 1ms} 
+[2023-11-22 18:50:59.402] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection.close() returned 
+[2023-11-22 18:50:59.403] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection closed. {executed in 1ms} 
+[2023-11-22 18:50:59.403] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection.close() returned 
+[2023-11-22 18:50:59.404] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection closed. {executed in 1ms} 
+[2023-11-22 18:50:59.404] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection.close() returned 
+[2023-11-22 18:50:59.405] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection closed. {executed in 1ms} 
+[2023-11-22 18:50:59.405] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection.close() returned 
+[2023-11-22 18:50:59.406] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection closed. {executed in 1ms} 
+[2023-11-22 18:50:59.406] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection.close() returned 
+[2023-11-22 18:50:59.408] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection closed. {executed in 1ms} 
+[2023-11-22 18:50:59.408] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection.close() returned 
+[2023-11-22 18:50:59.409] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection closed. {executed in 1ms} 
+[2023-11-22 18:50:59.410] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection.close() returned 
+[2023-11-22 18:50:59.410] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-11-22 18:50:59.419] [INFO ] [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2023-11-22 18:50:59.448] [ERROR] [main] org.springframework.boot.SpringApplication Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\service\impl\ProductServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\service\impl\ProductServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 85 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 99 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:106)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:94)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:96)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:86)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:86)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:360)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 110 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:218)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:102)
+	... 132 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property namecontains found for type Product!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:437)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:413)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:366)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:348)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:331)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:249)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:250)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:383)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:384)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:95)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 136 common frames omitted
+[2023-11-22 18:50:59.455] [ERROR] [main] org.springframework.test.context.TestContextManager Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5a411614] to prepare test instance [com.springboot.advanced_jpa.AdvancedJpaApplicationTests@73c6ae15]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\service\impl\ProductServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 67 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\service\impl\ProductServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 85 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 99 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:106)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:94)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:96)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:86)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:86)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:360)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 110 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:218)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:102)
+	... 132 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property namecontains found for type Product!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:437)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:413)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:366)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:348)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:331)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:249)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:250)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:383)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:384)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:95)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 136 common frames omitted
+[2023-11-22 18:50:59.502] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.springboot.advanced_jpa.data.repository.ProductRepositoryTest], using SpringBootContextLoader
+[2023-11-22 18:50:59.504] [INFO ] [main] org.springframework.test.context.support.AbstractContextLoader Could not detect default resource locations for test class [com.springboot.advanced_jpa.data.repository.ProductRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2023-11-22 18:50:59.504] [INFO ] [main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils Could not detect default configuration classes for test class [com.springboot.advanced_jpa.data.repository.ProductRepositoryTest]: ProductRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2023-11-22 18:50:59.827] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Found @SpringBootConfiguration com.springboot.advanced_jpa.AdvancedJpaApplication for test class com.springboot.advanced_jpa.data.repository.ProductRepositoryTest
+[2023-11-22 18:50:59.833] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2023-11-22 18:50:59.850] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7940b729, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@527d1fe1, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@24fb752f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@68dbe225, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@145ef9e8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2e667e95, org.springframework.test.context.transaction.TransactionalTestExecutionListener@514b247b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@66b62ebd, org.springframework.test.context.event.EventPublishingTestExecutionListener@5440a3a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@18cb4ed1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@10abd94f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@47bfde21, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@628f0936, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@20706e70, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6e5fba90]
+[2023-11-22 18:51:00.468] [INFO ] [main] com.springboot.advanced_jpa.data.repository.ProductRepositoryTest Starting ProductRepositoryTest using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 11776 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\advanced_jpa)
+[2023-11-22 18:51:00.608] [INFO ] [main] com.springboot.advanced_jpa.data.repository.ProductRepositoryTest No active profile set, falling back to default profiles: default
+[2023-11-22 18:51:01.403] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-22 18:51:01.463] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
+[2023-11-22 18:51:01.739] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-22 18:51:01.761] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Starting...
+[2023-11-22 18:51:01.768] [INFO ] [main] log4jdbc.log4j2 11. Connection opened. {executed in 7ms} 
+[2023-11-22 18:51:01.768] [INFO ] [main] log4jdbc.log4j2 11. Connection.new Connection returned 
+[2023-11-22 18:51:01.768] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-2 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-22 18:51:01.771] [INFO ] [main] log4jdbc.log4j2 11. Connection.isReadOnly() returned false
+[2023-11-22 18:51:01.771] [INFO ] [main] log4jdbc.log4j2 11. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:01.772] [INFO ] [main] log4jdbc.log4j2 11. Connection.isValid(1) returned true
+[2023-11-22 18:51:01.774] [INFO ] [main] log4jdbc.log4j2 11. Connection.getTransactionIsolation() returned 4
+[2023-11-22 18:51:01.774] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Start completed.
+[2023-11-22 18:51:01.774] [INFO ] [main] log4jdbc.log4j2 11. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@495598c5
+[2023-11-22 18:51:01.775] [INFO ] [main] log4jdbc.log4j2 11. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@6e4ac3f5
+[2023-11-22 18:51:01.775] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-22 18:51:01.776] [INFO ] [main] log4jdbc.log4j2 11. Connection.getCatalog() returned springboot
+[2023-11-22 18:51:01.780] [INFO ] [main] log4jdbc.log4j2 11. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@5e783f78
+[2023-11-22 18:51:01.781] [INFO ] [main] log4jdbc.log4j2 11. Connection.createClob() returned com.mysql.cj.jdbc.Clob@5bdef8ee
+[2023-11-22 18:51:01.781] [INFO ] [main] log4jdbc.log4j2 11. Connection.clearWarnings() returned 
+[2023-11-22 18:51:01.817] [INFO ] [main] log4jdbc.log4j2 11. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:01.817] [INFO ] [main] log4jdbc.log4j2 11. Statement.new Statement returned 
+[2023-11-22 18:51:01.817] [INFO ] [main] log4jdbc.log4j2 11. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@23d0f6be
+[2023-11-22 18:51:01.858] [INFO ] [main] log4jdbc.log4j2 11. drop table if exists product  {executed in 41 ms}
+[2023-11-22 18:51:01.859] [INFO ] [main] log4jdbc.log4j2 11. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-22 18:51:01.859] [INFO ] [main] log4jdbc.log4j2 11. Statement.getWarnings() returned null
+[2023-11-22 18:51:01.859] [INFO ] [main] log4jdbc.log4j2 11. Statement.close() returned 
+[2023-11-22 18:51:01.859] [INFO ] [main] log4jdbc.log4j2 11. Connection.clearWarnings() returned 
+[2023-11-22 18:51:01.860] [INFO ] [main] log4jdbc.log4j2 11. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:01.860] [INFO ] [main] log4jdbc.log4j2 11. Statement.new Statement returned 
+[2023-11-22 18:51:01.860] [INFO ] [main] log4jdbc.log4j2 11. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@45c10678
+[2023-11-22 18:51:01.880] [INFO ] [main] log4jdbc.log4j2 11. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 20 ms}
+[2023-11-22 18:51:01.880] [INFO ] [main] log4jdbc.log4j2 11. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-22 18:51:01.881] [INFO ] [main] log4jdbc.log4j2 11. Statement.getWarnings() returned null
+[2023-11-22 18:51:01.882] [INFO ] [main] log4jdbc.log4j2 11. Statement.close() returned 
+[2023-11-22 18:51:01.882] [INFO ] [main] log4jdbc.log4j2 11. Connection.clearWarnings() returned 
+[2023-11-22 18:51:01.882] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-22 18:51:01.883] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-22 18:51:01.928] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 12. Connection opened. {executed in 10ms} 
+[2023-11-22 18:51:01.929] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 12. Connection.new Connection returned 
+[2023-11-22 18:51:01.930] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 12. Connection.isReadOnly() returned false
+[2023-11-22 18:51:01.930] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 12. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:01.937] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 13. Connection opened. {executed in 6ms} 
+[2023-11-22 18:51:01.938] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 13. Connection.new Connection returned 
+[2023-11-22 18:51:01.938] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 13. Connection.isReadOnly() returned false
+[2023-11-22 18:51:01.938] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 13. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:02.065] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 14. Connection opened. {executed in 126ms} 
+[2023-11-22 18:51:02.065] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 14. Connection.new Connection returned 
+[2023-11-22 18:51:02.066] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 14. Connection.isReadOnly() returned false
+[2023-11-22 18:51:02.066] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 14. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:02.082] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 15. Connection opened. {executed in 16ms} 
+[2023-11-22 18:51:02.083] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 15. Connection.new Connection returned 
+[2023-11-22 18:51:02.083] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 15. Connection.isReadOnly() returned false
+[2023-11-22 18:51:02.083] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 15. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:02.089] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 16. Connection opened. {executed in 5ms} 
+[2023-11-22 18:51:02.089] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 16. Connection.new Connection returned 
+[2023-11-22 18:51:02.090] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 16. Connection.isReadOnly() returned false
+[2023-11-22 18:51:02.090] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 16. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:02.094] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 17. Connection opened. {executed in 4ms} 
+[2023-11-22 18:51:02.094] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 17. Connection.new Connection returned 
+[2023-11-22 18:51:02.094] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 17. Connection.isReadOnly() returned false
+[2023-11-22 18:51:02.095] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 17. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:02.098] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 18. Connection opened. {executed in 3ms} 
+[2023-11-22 18:51:02.098] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 18. Connection.new Connection returned 
+[2023-11-22 18:51:02.099] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 18. Connection.isReadOnly() returned false
+[2023-11-22 18:51:02.099] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 18. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:02.103] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 19. Connection opened. {executed in 4ms} 
+[2023-11-22 18:51:02.103] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 19. Connection.new Connection returned 
+[2023-11-22 18:51:02.103] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 19. Connection.isReadOnly() returned false
+[2023-11-22 18:51:02.104] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 19. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:02.108] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 20. Connection opened. {executed in 4ms} 
+[2023-11-22 18:51:02.109] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 20. Connection.new Connection returned 
+[2023-11-22 18:51:02.109] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 20. Connection.isReadOnly() returned false
+[2023-11-22 18:51:02.109] [INFO ] [HikariPool-2 connection adder] log4jdbc.log4j2 20. Connection.getAutoCommit() returned true
+[2023-11-22 18:51:02.584] [WARN ] [main] org.springframework.web.context.support.GenericWebApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\service\impl\ProductServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+[2023-11-22 18:51:02.592] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-22 18:51:02.593] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown initiated...
+[2023-11-22 18:51:02.659] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 11. Connection closed. {executed in 4ms} 
+[2023-11-22 18:51:02.660] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 11. Connection.close() returned 
+[2023-11-22 18:51:02.667] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 12. Connection closed. {executed in 6ms} 
+[2023-11-22 18:51:02.672] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 12. Connection.close() returned 
+[2023-11-22 18:51:02.674] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 13. Connection closed. {executed in 1ms} 
+[2023-11-22 18:51:02.674] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 13. Connection.close() returned 
+[2023-11-22 18:51:02.676] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 14. Connection closed. {executed in 1ms} 
+[2023-11-22 18:51:02.676] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 14. Connection.close() returned 
+[2023-11-22 18:51:02.677] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 15. Connection closed. {executed in 1ms} 
+[2023-11-22 18:51:02.677] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 15. Connection.close() returned 
+[2023-11-22 18:51:02.678] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 16. Connection closed. {executed in 1ms} 
+[2023-11-22 18:51:02.678] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 16. Connection.close() returned 
+[2023-11-22 18:51:02.680] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 17. Connection closed. {executed in 1ms} 
+[2023-11-22 18:51:02.680] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 17. Connection.close() returned 
+[2023-11-22 18:51:02.684] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 18. Connection closed. {executed in 4ms} 
+[2023-11-22 18:51:02.684] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 18. Connection.close() returned 
+[2023-11-22 18:51:02.685] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 19. Connection closed. {executed in 1ms} 
+[2023-11-22 18:51:02.686] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 19. Connection.close() returned 
+[2023-11-22 18:51:02.690] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 20. Connection closed. {executed in 4ms} 
+[2023-11-22 18:51:02.690] [INFO ] [HikariPool-2 connection closer] log4jdbc.log4j2 20. Connection.close() returned 
+[2023-11-22 18:51:02.691] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-2 - Shutdown completed.
+[2023-11-22 18:51:02.695] [INFO ] [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2023-11-22 18:51:02.699] [ERROR] [main] org.springframework.boot.SpringApplication Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\service\impl\ProductServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\service\impl\ProductServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 85 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 99 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:106)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:94)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:96)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:86)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:86)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:360)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 110 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:218)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:102)
+	... 132 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property namecontains found for type Product!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:437)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:413)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:366)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:348)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:331)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:249)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:250)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:383)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:384)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:95)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 136 common frames omitted
+[2023-11-22 18:51:02.712] [ERROR] [main] org.springframework.test.context.TestContextManager Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7940b729] to prepare test instance [com.springboot.advanced_jpa.data.repository.ProductRepositoryTest@672549f3]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\service\impl\ProductServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 67 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productServiceImpl' defined in file [C:\dev\github\Study2\springboot01\04\training\advanced_jpa\target\classes\com\springboot\advanced_jpa\service\impl\ProductServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 85 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in com.springboot.advanced_jpa.data.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 99 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! Reason: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:106)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:94)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:96)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:86)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:86)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:360)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 110 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.springboot.advanced_jpa.data.repository.ProductRepository.findByNamecontains(java.lang.String)! No property namecontains found for type Product!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:218)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:102)
+	... 132 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property namecontains found for type Product!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:437)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:413)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:366)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:348)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:331)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:249)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:250)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:383)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:384)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:95)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 136 common frames omitted
+[2023-11-22 18:52:02.770] [INFO ] [main] com.springboot.advanced_jpa.AdvancedJpaApplicationTests Starting AdvancedJpaApplicationTests using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 1324 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\advanced_jpa)
+[2023-11-22 18:52:02.779] [INFO ] [main] com.springboot.advanced_jpa.AdvancedJpaApplicationTests No active profile set, falling back to default profiles: default
+[2023-11-22 18:52:04.724] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-22 18:52:04.917] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 179 ms. Found 1 JPA repository interfaces.
+[2023-11-22 18:52:06.221] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-22 18:52:06.326] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-22 18:52:06.655] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-22 18:52:07.606] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-11-22 18:52:07.880] [INFO ] [main] log4jdbc.log4j2 1. Connection opened. {executed in 236ms} 
+[2023-11-22 18:52:07.881] [INFO ] [main] log4jdbc.log4j2 1. Connection.new Connection returned 
+[2023-11-22 18:52:07.882] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-22 18:52:07.883] [INFO ] [main] log4jdbc.log4j2 1. Connection.isReadOnly() returned false
+[2023-11-22 18:52:07.883] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:07.884] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(1) returned true
+[2023-11-22 18:52:07.885] [INFO ] [main] log4jdbc.log4j2 1. Connection.getTransactionIsolation() returned 4
+[2023-11-22 18:52:07.889] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-11-22 18:52:07.896] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@4cd5fc46
+[2023-11-22 18:52:07.901] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@ca2be53
+[2023-11-22 18:52:07.954] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-22 18:52:08.036] [INFO ] [main] log4jdbc.log4j2 1. Connection.getCatalog() returned springboot
+[2023-11-22 18:52:08.057] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection opened. {executed in 21ms} 
+[2023-11-22 18:52:08.071] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.new Connection returned 
+[2023-11-22 18:52:08.072] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.isReadOnly() returned false
+[2023-11-22 18:52:08.072] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:08.094] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection opened. {executed in 20ms} 
+[2023-11-22 18:52:08.094] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.new Connection returned 
+[2023-11-22 18:52:08.095] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.isReadOnly() returned false
+[2023-11-22 18:52:08.095] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:08.110] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@18463720
+[2023-11-22 18:52:08.122] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection opened. {executed in 26ms} 
+[2023-11-22 18:52:08.122] [INFO ] [main] log4jdbc.log4j2 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@7c9ea1d0
+[2023-11-22 18:52:08.122] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.new Connection returned 
+[2023-11-22 18:52:08.124] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.isReadOnly() returned false
+[2023-11-22 18:52:08.125] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:08.188] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection opened. {executed in 61ms} 
+[2023-11-22 18:52:08.188] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.new Connection returned 
+[2023-11-22 18:52:08.188] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.isReadOnly() returned false
+[2023-11-22 18:52:08.189] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:08.198] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection opened. {executed in 9ms} 
+[2023-11-22 18:52:08.199] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.new Connection returned 
+[2023-11-22 18:52:08.200] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.isReadOnly() returned false
+[2023-11-22 18:52:08.200] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:08.207] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection opened. {executed in 6ms} 
+[2023-11-22 18:52:08.208] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.new Connection returned 
+[2023-11-22 18:52:08.209] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.isReadOnly() returned false
+[2023-11-22 18:52:08.209] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:08.214] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection opened. {executed in 5ms} 
+[2023-11-22 18:52:08.214] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.new Connection returned 
+[2023-11-22 18:52:08.215] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.isReadOnly() returned false
+[2023-11-22 18:52:08.215] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:08.220] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection opened. {executed in 4ms} 
+[2023-11-22 18:52:08.221] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.new Connection returned 
+[2023-11-22 18:52:08.221] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.isReadOnly() returned false
+[2023-11-22 18:52:08.222] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:08.225] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:52:08.227] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection opened. {executed in 5ms} 
+[2023-11-22 18:52:08.227] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.new Connection returned 
+[2023-11-22 18:52:08.228] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.isReadOnly() returned false
+[2023-11-22 18:52:08.228] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:09.066] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-22 18:52:09.066] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:09.068] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-22 18:52:09.069] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@6b32b678
+[2023-11-22 18:52:09.088] [INFO ] [main] log4jdbc.log4j2 1. drop table if exists product  {executed in 17 ms}
+[2023-11-22 18:52:09.088] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-22 18:52:09.089] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-22 18:52:09.089] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-22 18:52:09.089] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:52:09.093] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:09.094] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-22 18:52:09.094] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@21dd9203
+[2023-11-22 18:52:09.111] [INFO ] [main] log4jdbc.log4j2 1. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 17 ms}
+[2023-11-22 18:52:09.111] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-22 18:52:09.112] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-22 18:52:09.115] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-22 18:52:09.115] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:52:09.115] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-22 18:52:09.127] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-22 18:52:11.510] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-11-22 18:52:12.215] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-11-22 18:52:13.632] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-11-22 18:52:13.685] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-11-22 18:52:13.744] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-11-22 18:52:13.787] [INFO ] [main] com.springboot.advanced_jpa.AdvancedJpaApplicationTests Started AdvancedJpaApplicationTests in 11.828 seconds (JVM running for 13.885)
+[2023-11-22 18:52:14.133] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.springboot.advanced_jpa.data.repository.ProductRepositoryTest], using SpringBootContextLoader
+[2023-11-22 18:52:14.134] [INFO ] [main] org.springframework.test.context.support.AbstractContextLoader Could not detect default resource locations for test class [com.springboot.advanced_jpa.data.repository.ProductRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2023-11-22 18:52:14.136] [INFO ] [main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils Could not detect default configuration classes for test class [com.springboot.advanced_jpa.data.repository.ProductRepositoryTest]: ProductRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2023-11-22 18:52:14.267] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Found @SpringBootConfiguration com.springboot.advanced_jpa.AdvancedJpaApplication for test class com.springboot.advanced_jpa.data.repository.ProductRepositoryTest
+[2023-11-22 18:52:14.272] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2023-11-22 18:52:14.273] [INFO ] [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1695f7cb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3095c449, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@236bb278, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7200702, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3eb29382, org.springframework.test.context.support.DirtiesContextTestExecutionListener@209baf91, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5e1d3188, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5982255e, org.springframework.test.context.event.EventPublishingTestExecutionListener@7306836f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@e9c5db9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@393aac93, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@71dac63f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@36003e90, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5a1ddc7c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@362fbd98]
+[2023-11-22 18:52:14.646] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-22 18:52:14.662] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.new PreparedStatement returned 
+[2023-11-22 18:52:14.662] [INFO ] [main] log4jdbc.log4j2 1. Connection.prepareStatement(select product0_.number as number1_0_, product0_.created_at as created_2_0_, product0_.name as name3_0_, product0_.price as price4_0_, product0_.stock as stock5_0_, product0_.updated_at as updated_6_0_ from product product0_ where product0_.name=? order by product0_.price asc) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@468dbd07
+[2023-11-22 18:52:14.668] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.setString(1, "Ææ") returned 
+[2023-11-22 18:52:14.678] [INFO ] [main] log4jdbc.log4j2 1. select product0_.number as number1_0_, product0_.created_at as created_2_0_, product0_.name 
+as name3_0_, product0_.price as price4_0_, product0_.stock as stock5_0_, product0_.updated_at 
+as updated_6_0_ from product product0_ where product0_.name='Ææ' order by product0_.price asc  {executed in 8 ms}
+[2023-11-22 18:52:14.687] [INFO ] [main] log4jdbc.log4j2 1. ResultSet.new ResultSet returned 
+[2023-11-22 18:52:14.688] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@67857a20
+[2023-11-22 18:52:14.696] [INFO ] [main] log4jdbc.log4j2 
+|-------|-----------|-----|------|------|-----------|
+|number |created_at |name |price |stock |updated_at |
+|-------|-----------|-----|------|------|-----------|
+|-------|-----------|-----|------|------|-----------|
+
+[2023-11-22 18:52:14.699] [INFO ] [main] log4jdbc.log4j2 1. ResultSet.next() returned false
+[2023-11-22 18:52:14.702] [INFO ] [main] log4jdbc.log4j2 1. ResultSet.close() returned void
+[2023-11-22 18:52:14.702] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.getMaxRows() returned 0
+[2023-11-22 18:52:14.702] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.getQueryTimeout() returned 0
+[2023-11-22 18:52:14.703] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.close() returned 
+[2023-11-22 18:52:14.707] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:52:14.708] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:52:14.774] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-22 18:52:14.779] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-11-22 18:52:14.794] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection closed. {executed in 11ms} 
+[2023-11-22 18:52:14.795] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection.close() returned 
+[2023-11-22 18:52:14.796] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:14.797] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection.close() returned 
+[2023-11-22 18:52:14.798] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:14.798] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection.close() returned 
+[2023-11-22 18:52:14.807] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection closed. {executed in 8ms} 
+[2023-11-22 18:52:14.807] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection.close() returned 
+[2023-11-22 18:52:14.810] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection closed. {executed in 3ms} 
+[2023-11-22 18:52:14.810] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection.close() returned 
+[2023-11-22 18:52:14.811] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:14.812] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection.close() returned 
+[2023-11-22 18:52:14.813] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:14.814] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection.close() returned 
+[2023-11-22 18:52:14.817] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:14.817] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection.close() returned 
+[2023-11-22 18:52:14.818] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:14.819] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection.close() returned 
+[2023-11-22 18:52:14.820] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:14.820] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection.close() returned 
+[2023-11-22 18:52:14.821] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2023-11-22 18:52:33.637] [INFO ] [main] com.springboot.advanced_jpa.data.repository.ProductRepositoryTest Starting ProductRepositoryTest using Java 11.0.7 on LAPTOP-7H7OAPAU with PID 15352 (started by jth45 in C:\dev\github\Study2\springboot01\04\training\advanced_jpa)
+[2023-11-22 18:52:33.644] [INFO ] [main] com.springboot.advanced_jpa.data.repository.ProductRepositoryTest No active profile set, falling back to default profiles: default
+[2023-11-22 18:52:36.464] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2023-11-22 18:52:36.814] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 335 ms. Found 1 JPA repository interfaces.
+[2023-11-22 18:52:38.239] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2023-11-22 18:52:38.352] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.4.32.Final
+[2023-11-22 18:52:38.677] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-11-22 18:52:39.823] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2023-11-22 18:52:40.078] [INFO ] [main] log4jdbc.log4j2 1. Connection opened. {executed in 221ms} 
+[2023-11-22 18:52:40.080] [INFO ] [main] log4jdbc.log4j2 1. Connection.new Connection returned 
+[2023-11-22 18:52:40.080] [INFO ] [main] com.zaxxer.hikari.pool.PoolBase HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy does not define or inherit an implementation of the resolved method 'abstract int getNetworkTimeout()' of interface java.sql.Connection.)
+[2023-11-22 18:52:40.081] [INFO ] [main] log4jdbc.log4j2 1. Connection.isReadOnly() returned false
+[2023-11-22 18:52:40.081] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:40.082] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(1) returned true
+[2023-11-22 18:52:40.082] [INFO ] [main] log4jdbc.log4j2 1. Connection.getTransactionIsolation() returned 4
+[2023-11-22 18:52:40.085] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2023-11-22 18:52:40.091] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@30c8c6ab
+[2023-11-22 18:52:40.095] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@39dda56f
+[2023-11-22 18:52:40.127] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2023-11-22 18:52:40.172] [INFO ] [main] log4jdbc.log4j2 1. Connection.getCatalog() returned springboot
+[2023-11-22 18:52:40.198] [INFO ] [main] log4jdbc.log4j2 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@6282f1eb
+[2023-11-22 18:52:40.198] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection opened. {executed in 4ms} 
+[2023-11-22 18:52:40.199] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.new Connection returned 
+[2023-11-22 18:52:40.200] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.isReadOnly() returned false
+[2023-11-22 18:52:40.201] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 2. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:40.205] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection opened. {executed in 4ms} 
+[2023-11-22 18:52:40.205] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.new Connection returned 
+[2023-11-22 18:52:40.206] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.isReadOnly() returned false
+[2023-11-22 18:52:40.206] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 3. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:40.206] [INFO ] [main] log4jdbc.log4j2 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@14239223
+[2023-11-22 18:52:40.210] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection opened. {executed in 4ms} 
+[2023-11-22 18:52:40.211] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.new Connection returned 
+[2023-11-22 18:52:40.212] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.isReadOnly() returned false
+[2023-11-22 18:52:40.212] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 4. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:40.216] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection opened. {executed in 4ms} 
+[2023-11-22 18:52:40.216] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.new Connection returned 
+[2023-11-22 18:52:40.217] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.isReadOnly() returned false
+[2023-11-22 18:52:40.217] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 5. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:40.221] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection opened. {executed in 4ms} 
+[2023-11-22 18:52:40.221] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.new Connection returned 
+[2023-11-22 18:52:40.221] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:52:40.222] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.isReadOnly() returned false
+[2023-11-22 18:52:40.222] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 6. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:40.229] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection opened. {executed in 7ms} 
+[2023-11-22 18:52:40.230] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.new Connection returned 
+[2023-11-22 18:52:40.230] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.isReadOnly() returned false
+[2023-11-22 18:52:40.231] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 7. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:40.235] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection opened. {executed in 4ms} 
+[2023-11-22 18:52:40.235] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.new Connection returned 
+[2023-11-22 18:52:40.236] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.isReadOnly() returned false
+[2023-11-22 18:52:40.236] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 8. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:40.240] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection opened. {executed in 4ms} 
+[2023-11-22 18:52:40.240] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.new Connection returned 
+[2023-11-22 18:52:40.241] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.isReadOnly() returned false
+[2023-11-22 18:52:40.241] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 9. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:40.244] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection opened. {executed in 3ms} 
+[2023-11-22 18:52:40.244] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.new Connection returned 
+[2023-11-22 18:52:40.244] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.isReadOnly() returned false
+[2023-11-22 18:52:40.245] [INFO ] [HikariPool-1 connection adder] log4jdbc.log4j2 10. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:41.271] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-22 18:52:41.271] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:41.272] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-22 18:52:41.273] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@587400a9
+[2023-11-22 18:52:41.287] [INFO ] [main] log4jdbc.log4j2 1. drop table if exists product  {executed in 12 ms}
+[2023-11-22 18:52:41.287] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    drop table if exists product) returned false
+[2023-11-22 18:52:41.288] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-22 18:52:41.288] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-22 18:52:41.288] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:52:41.293] [INFO ] [main] log4jdbc.log4j2 1. Connection.getAutoCommit() returned true
+[2023-11-22 18:52:41.294] [INFO ] [main] log4jdbc.log4j2 1. Statement.new Statement returned 
+[2023-11-22 18:52:41.294] [INFO ] [main] log4jdbc.log4j2 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@1abbc1d4
+[2023-11-22 18:52:41.315] [INFO ] [main] log4jdbc.log4j2 1. create table product ( number bigint not null auto_increment, created_at datetime(6), name 
+varchar(255) not null, price integer not null, stock integer not null, updated_at datetime(6), 
+primary key (number) ) engine=InnoDB  {executed in 21 ms}
+[2023-11-22 18:52:41.315] [INFO ] [main] log4jdbc.log4j2 1. Statement.execute(
+    create table product (
+       number bigint not null auto_increment,
+        created_at datetime(6),
+        name varchar(255) not null,
+        price integer not null,
+        stock integer not null,
+        updated_at datetime(6),
+        primary key (number)
+    ) engine=InnoDB) returned false
+[2023-11-22 18:52:41.316] [INFO ] [main] log4jdbc.log4j2 1. Statement.getWarnings() returned null
+[2023-11-22 18:52:41.318] [INFO ] [main] log4jdbc.log4j2 1. Statement.close() returned 
+[2023-11-22 18:52:41.318] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:52:41.319] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-11-22 18:52:41.333] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-22 18:52:43.183] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2023-11-22 18:52:43.763] [INFO ] [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2023-11-22 18:52:44.884] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Context refreshed
+[2023-11-22 18:52:44.926] [INFO ] [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2023-11-22 18:52:44.978] [INFO ] [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner Scanning for api listing references
+[2023-11-22 18:52:45.010] [INFO ] [main] com.springboot.advanced_jpa.data.repository.ProductRepositoryTest Started ProductRepositoryTest in 12.034 seconds (JVM running for 15.564)
+[2023-11-22 18:52:45.531] [INFO ] [main] log4jdbc.log4j2 1. Connection.isValid(5) returned true
+[2023-11-22 18:52:45.549] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.new PreparedStatement returned 
+[2023-11-22 18:52:45.550] [INFO ] [main] log4jdbc.log4j2 1. Connection.prepareStatement(select product0_.number as number1_0_, product0_.created_at as created_2_0_, product0_.name as name3_0_, product0_.price as price4_0_, product0_.stock as stock5_0_, product0_.updated_at as updated_6_0_ from product product0_ where product0_.name=? order by product0_.price asc) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@79122f5f
+[2023-11-22 18:52:45.555] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.setString(1, "íŽœ") returned 
+[2023-11-22 18:52:45.570] [INFO ] [main] log4jdbc.log4j2 1. select product0_.number as number1_0_, product0_.created_at as created_2_0_, product0_.name 
+as name3_0_, product0_.price as price4_0_, product0_.stock as stock5_0_, product0_.updated_at 
+as updated_6_0_ from product product0_ where product0_.name='íŽœ' order by product0_.price asc  {executed in 12 ms}
+[2023-11-22 18:52:45.575] [INFO ] [main] log4jdbc.log4j2 1. ResultSet.new ResultSet returned 
+[2023-11-22 18:52:45.575] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@64dbb343
+[2023-11-22 18:52:45.580] [INFO ] [main] log4jdbc.log4j2 
+|-------|-----------|-----|------|------|-----------|
+|number |created_at |name |price |stock |updated_at |
+|-------|-----------|-----|------|------|-----------|
+|-------|-----------|-----|------|------|-----------|
+
+[2023-11-22 18:52:45.580] [INFO ] [main] log4jdbc.log4j2 1. ResultSet.next() returned false
+[2023-11-22 18:52:45.582] [INFO ] [main] log4jdbc.log4j2 1. ResultSet.close() returned void
+[2023-11-22 18:52:45.582] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.getMaxRows() returned 0
+[2023-11-22 18:52:45.582] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.getQueryTimeout() returned 0
+[2023-11-22 18:52:45.582] [INFO ] [main] log4jdbc.log4j2 1. PreparedStatement.close() returned 
+[2023-11-22 18:52:45.585] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:52:45.585] [INFO ] [main] log4jdbc.log4j2 1. Connection.clearWarnings() returned 
+[2023-11-22 18:52:45.621] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2023-11-22 18:52:45.625] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2023-11-22 18:52:45.638] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection closed. {executed in 11ms} 
+[2023-11-22 18:52:45.638] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 1. Connection.close() returned 
+[2023-11-22 18:52:45.640] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:45.640] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 2. Connection.close() returned 
+[2023-11-22 18:52:45.641] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:45.641] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 3. Connection.close() returned 
+[2023-11-22 18:52:45.642] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:45.643] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 4. Connection.close() returned 
+[2023-11-22 18:52:45.644] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:45.652] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 5. Connection.close() returned 
+[2023-11-22 18:52:45.653] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection closed. {executed in 0ms} 
+[2023-11-22 18:52:45.655] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 6. Connection.close() returned 
+[2023-11-22 18:52:45.656] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:45.656] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 7. Connection.close() returned 
+[2023-11-22 18:52:45.657] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:45.658] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 8. Connection.close() returned 
+[2023-11-22 18:52:45.659] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:45.659] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 9. Connection.close() returned 
+[2023-11-22 18:52:45.661] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection closed. {executed in 1ms} 
+[2023-11-22 18:52:45.670] [INFO ] [HikariPool-1 connection closer] log4jdbc.log4j2 10. Connection.close() returned 
+[2023-11-22 18:52:45.671] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.

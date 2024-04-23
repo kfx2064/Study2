@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button :class="myStyle">버튼1</button>
+        <p>
+            <input type="checkbox" v-model="myStyle.bColor" value="true" />색상<br/>
+            <input type="checkbox" v-model="myStyle.bLayout" value="true" />정렬,크기<br/>
+            <input type="checkbox" v-model="myStyle.bBorder" value="true" />테두리선<br/>
+        </p>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+        var vm = Vue.createApp({
+            name : "App",
+            data() {
+                return {
+                    myStyle : { bColor : flase, bLayout : false, bBorder : false }
+                }
+            }
+        }).mount("#app")
+    </script>
+</body>
+</html>

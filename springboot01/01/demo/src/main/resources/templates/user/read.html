@@ -1,0 +1,69 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>User</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<script src="/js/jQuery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var formObj = $("#member");
+
+        console.log(formObj);
+
+        $("#btnModify").on("click", function () {
+            formObj.attr("action", "/user/modify");
+            formObj.attr("method", "get");
+            formObj.submit();
+        });
+
+        $("#btnRemove").on("click", function () {
+            formObj.attr("action", "/user/remove");
+            formObj.submit();
+        });
+
+        $("#btnList").on("click", function () {
+            self.location = "/user/list";
+        });
+    });
+</script>
+<body>
+<h3>READ</h3>
+
+<form id="member" th:object="${member}" method="POST">
+    <input type="hidden" name="userNo" th:field="*{userNo}" />
+
+    <table>
+        <tr>
+            <td>userid</td>
+            <td>
+                <input type="text" name="userId" th:field="*{userId}" readonly="readonly">
+            </td>
+        </tr>
+        <tr>
+            <td>username</td>
+            <td>
+                <input type="text" name="userName" th:field="*{userName}" readonly="readonly">
+            </td>
+        </tr>
+        <tr>
+            <td>auth</td>
+            <td>
+                <select th:field="*{auth}" disabled="disabled">
+                    <option value="">===선택해 주세요===</option>
+                    <option value="ROLE_USER">사용자</option>
+                    <option value="ROLE_MEMBER">회원</option>
+                    <option value="ROLE_ADMIN">관리자</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<div>
+    <button type="submit" id="btnModify">Modify</button>
+    <button type="submit" id="btnRemove">Remove</button>
+    <button type="submit" id="btnList">List</button>
+</div>
+</body>
+</html>

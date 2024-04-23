@@ -1,0 +1,11 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+<th:block th:each="hobby : ${member.hobbyList}">
+    <p th:text="${hobby}">hobby</p>
+</th:block>
+</body>
+</html>

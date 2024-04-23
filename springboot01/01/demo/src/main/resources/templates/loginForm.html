@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Insert title here</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<script src="/js/jQuery-3.7.1.min.js"></script>
+<body>
+<h1>Login Page</h1>
+
+<form method="post" action="login.html" th:action="@{/login}">
+    <div>
+        <input type="text" name="userId" value="admin">
+    </div>
+
+    <div>
+        <input type="password" name="userPw" value="1234">
+    </div>
+
+    <div>
+        <input type="submit">
+    </div>
+</form>
+</body>
+</html>
