@@ -1,10 +1,28 @@
+<script>
+export default {
+    data() {
+        return {
+            inputMsg: '',
+        };
+    },
+    methods: {
+        addTodo() {
+            console.log(this.inputMsg);
+            this.inputMsg = "";
+        }
+    }
+}
+</script>
+
 <template>
     <div class="todo__input">
         <input
-        type="text"
-        class="todo__input-text"
-        placeholder="할 일을 입력하세요."
+            v-model="inputMsg"
+            type="text"
+            class="todo__input-text"
+            placeholder="할 일을 입력하세요."
+            @keydown.enter="addTodo"
         />
-        <button class="todo__input-btn">등록</button>
+        <button class="todo__input-btn" @click="addTodo">등록</button>
     </div>
 </template>
