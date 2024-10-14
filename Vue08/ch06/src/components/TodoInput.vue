@@ -5,12 +5,14 @@ export default {
             inputMsg: '',
         };
     },
+    emits: ["addTodo"],
     methods: {
         addTodo() {
             console.log(this.inputMsg);
+            this.$emit('add-todo', this.inputMsg);
             this.inputMsg = "";
-        }
-    }
+        },
+    },
 }
 </script>
 

@@ -8,14 +8,33 @@ export default {
     TodoList,
     TodoInput,
   },
+  data() {
+    return {
+      todo: [],
+      current: 'all',
+    };
+  },
+  methods: {
+    addTodo(inputMsg) {
+      const item = {
+        id: Math.random(),
+        msg: inputMsg,
+        completed: false,
+      };
+      this.todo.push(item);
+    },
+    updateTab(tab) {
+      this.current = tab;
+    }
+  },
 }
 </script>
 
 <template>
   <div class="todo">
-    <TodoHeader />
+    <TodoHeader :current="current" @update-tab="updateTab" />
     <TodoList />
-    <TodoInput />    
+    <TodoInput @add-todo="addTodo" />    
   </div>
 </template>
 
