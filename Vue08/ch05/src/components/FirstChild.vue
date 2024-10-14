@@ -1,30 +1,26 @@
 <script>
+import { message, reversedMessage } from '@/keys.js';
 export default {
     data() {
         return {
-            num: 5,
-        };
+            childNum: 0,
+        }
     },
     computed: {
-        doubleNum() {
-            return this.num * 2;
+        childNumOddAdd() {
+            return this.childNum % 2 === 0 ? '짝수' : '홀수';
         },
     },
     methods: {
-        increment() {
-            this.num++;
+        getChildNum() {
+            return this.childNum;
         },
     },
 }
 </script>
 <template>
-    <h1>{{ num }}</h1>
+    <h1>FirstChild</h1>
 </template>
 <style>
-    h1 {
-        color: blue;
-    }
-    p {
-        color: green;
-    }
+    
 </style>

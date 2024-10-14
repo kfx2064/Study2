@@ -1,19 +1,19 @@
 <script>
-import UserProfile from '@/components/UserProfile.vue';
+import FirstChild from '@/components/FirstChild.vue';
 export default {
   components: {
-    UserProfile,
+    FirstChild,
   },
-  methods: {
-    printHello(name, age) {
-      alert(`안녕하세요! 저는 ${name}이고, 나이는 ${age}살입니다.`);
-    },
-  },
+  mounted() {
+    console.log(this.$refs.childRef.childNum);
+    console.log(this.$refs.childRef.childNumOddAdd);
+    console.log(this.$refs.childRef.getChildNum());
+  }
 }
 </script>
 
 <template>
-  <UserProfile @print-hello="({ name, age }) => printHello(name, age)" />
+  <FirstChild ref="childRef" />
 </template>
 
 <style scoped>
