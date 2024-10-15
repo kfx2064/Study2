@@ -25,7 +25,24 @@ export default {
     },
     updateTab(tab) {
       this.current = tab;
-    }
+    },
+    deleteTodo(id) {
+      this.todo = this.todo.filter((v) => v.id !== id);
+    },
+    updateTodo(id) {
+      this.todo = this.todo.map((v) => 
+        v.id === id ? { ...v, completed: !v.completed } : v
+      );
+    },
+  },
+  computed: {
+    computedTodo() {
+      if (this.current === 'all') {
+        return this.todo;
+      } else {
+        return this.todo.filter((v) => v.completed);
+      }
+    },
   },
 }
 </script>
@@ -33,7 +50,11 @@ export default {
 <template>
   <div class="todo">
     <TodoHeader :current="current" @update-tab="updateTab" />
-    <TodoList />
+    <TodoList 
+      :computed-todo="computedTodo" 
+      @delete-todo="deleteTodo"
+      @update-todo="updateTodo"
+      />
     <TodoInput @add-todo="addTodo" />    
   </div>
 </template>
