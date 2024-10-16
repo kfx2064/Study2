@@ -1,9 +1,9 @@
 <script setup>
-import computedEx4 from './components/computedEx4.vue';
+import WatchPostEffectEx1 from './components/WatchPostEffectEx1.vue';
 </script>
 
 <template>
-  <computedEx4 />
+  <WatchPostEffectEx1 />
 </template>
 
 <style>
