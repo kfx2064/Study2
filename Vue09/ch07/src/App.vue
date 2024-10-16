@@ -1,9 +1,15 @@
 <script setup>
-import WatchPostEffectEx1 from './components/WatchPostEffectEx1.vue';
+import Inject from '@/components/Inject.vue';
+import { computed, provide, reactive, } from 'vue';
+const fruits = reactive(['apples', 'bananas', 'oranges']);
+const fruitsTxt = computed(() => `I like ${fruits[0]}`);
+provide('fruitsArr', fruits);
+provide('fruitsText', fruitsTxt);
+provide('userObj', { name: 'sucoding', age: 20 });
 </script>
 
 <template>
-  <WatchPostEffectEx1 />
+  <Inject />
 </template>
 
 <style>
