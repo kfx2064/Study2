@@ -1,0 +1,20 @@
+package ex02;
+
+interface Calculate3 {
+	int cal(int a, int b);
+}
+
+public class TwoParamAndReturn3 {
+
+	public static void main(String[] args) {
+		
+		Calculate3 c;
+		c = (a, b) -> { return a + b; };
+		System.out.println(c.cal(4, 3));
+		
+		c = (a, b) -> a + b;
+		System.out.println(c.cal(4, 3));
+		
+	}
+	
+}
