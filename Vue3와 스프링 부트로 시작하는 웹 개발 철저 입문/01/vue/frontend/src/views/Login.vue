@@ -2,6 +2,7 @@
 import {reactive} from "vue";
 import {login} from "@/services/accountService";
 import {useRouter} from "vue-router";
+import {useAccountStore} from "@/stores/account.js";
 
 // 반응형 상태
 const state = reactive({ // ①
@@ -14,6 +15,9 @@ const state = reactive({ // ①
 // 라우터 객체
 const router = useRouter(); // ②
 
+// 계정 스토어
+const accountStore = useAccountStore();
+
 // 로그인 데이터 제출
 const submit = async () => { // ③
   console.log("로그인");
@@ -21,6 +25,7 @@ const submit = async () => { // ③
 
   switch (res.status) {
     case 200:
+      accountStore.setAccessToken(res.data);
       await router.push("/");
       break;
 
