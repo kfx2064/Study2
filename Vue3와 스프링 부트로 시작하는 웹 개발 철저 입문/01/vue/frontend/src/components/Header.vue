@@ -28,7 +28,7 @@ const logoutAccount = async () => {
               <strong>Gallery</strong>
             </router-link>
           <div class="menus d-flex gap-3">
-            <template v-if="true">
+            <template v-if="!accountStore.loggedIn">
               <router-link to="/login">로그인</router-link>
               <router-link to="/join">회원가입</router-link>
             </template>
