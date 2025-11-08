@@ -19,3 +19,4 @@ export const check= () => {
 export const logout = () => {
     return axios.post("/v1/api/account/logout").catch(e => e.response);
 }
+
