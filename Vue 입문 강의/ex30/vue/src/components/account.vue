@@ -1,5 +1,6 @@
 <script>
 export default {
+  emits: ['add-amount'],
   methods: {
     parentAddAmount() {
       this.$emit('add-amount');
