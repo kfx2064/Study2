@@ -1,0 +1,9 @@
+import './assets/main.css'
+
+import { createApp } from 'vue'
+import App from './App.vue'
+import First from './components/First.vue';
+
+const app = createApp(App);
+app.component('First', First);
+app.mount('#app');
