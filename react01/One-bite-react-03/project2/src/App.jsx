@@ -1,4 +1,4 @@
-import { useReducer, useRef } from "react";
+import React, { useMemo, useCallback, useReducer, useRef } from "react";
 import './App.css';
 import Header from "./component/Header";
 import TodoEditor from "./component/TodoEditor";
@@ -41,10 +41,18 @@ function reducer(state, action) {
           : it
       );
     }
+    case "DELETE": {
+      return state.filter((it) => it.id !== action.targetId);
+    }
     default:
       return state;
   }  
 }
+
+export const TodoContext = React.createContext();
+
+export const TodoStateContext = React.createContext();
+export const TodoDispatchContext = React.createContext();
 
 function App() {
 
@@ -67,22 +75,33 @@ function App() {
     idRef.current += 1;
   };
 
-  const onUpdate = (targetId) => {
+  const onUpdate = useCallback((targetId) => {
     dispatch({
       type: "UPDATE",
       targetId,
     });
-  };
+  }, []);
 
-  const onDelete = (targetId) => {
-    
-  };
+  const onDelete = useCallback((targetId) => {
+      dispatch({
+        type: "DELETE",
+        targetId,
+      });
+  }, []);
+
+  const memoizedDispatches = useMemo(() => {
+    return { onCreate, onUpdate, onDelete };
+  }, []);
 
   return (
     <div className="App">      
       <Header />
-      <TodoEditor onCreate={onCreate} />
-      <TodoList todo={todo} onUpdate={onUpdate} onDelete={onDelete} />
+      <TodoStateContext.Provider value={todo}>
+        <TodoDispatchContext.Provider value={memoizedDispatches}>
+          <TodoEditor />
+          <TodoList />
+        </TodoDispatchContext.Provider>
+      </TodoStateContext.Provider>        
     </div>
   );
   
